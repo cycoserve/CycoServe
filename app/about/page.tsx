@@ -1,10 +1,7 @@
 import Image from "next/image";
 import { Metadata } from "next";
 import { title } from "process";
-import Button from "../components/Button";
 import AboutSection from "../components/About";
-import Hero from "../components/Hero";
-import AboutHero from "./AboutHero";
 import PageHero from "../components/PageHero";
 
 export const metadata = {
