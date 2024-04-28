@@ -7,8 +7,9 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CycoServe | Web Hosting and Development",
-  generator: "CycoServe CMS",
+  title: "CycoServe | Full-Service Digital Marketing Agency",
+  description: "Experience unparalleled digital marketing solutions with CycoServe - where SEO, explainer video creation, web design, and more meet AI-driven strategies for your business success.",
+  generator: "Next js",
   applicationName: "CycoServe",
   referrer: "origin-when-cross-origin",
   keywords: [
