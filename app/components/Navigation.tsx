@@ -1,5 +1,7 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,8 +21,8 @@ function Navigation() {
 
   // Define menu items with ID, title, and URL
   const menuItems = [
-    { id: 1, title: 'Home', url: '/' },
-    { id: 2, title: 'About', url: '/about' },
+    { id: 1, title: 'Experts', url: '/experts' },
+    // { id: 2, title: 'Blog', url: '/blog' },
     { id: 3, title: 'Features', url: '/features' },
     { id: 4, title: 'Services', url: '/services' },
     { id: 5, title: 'Pricing', url: '/pricing' },
@@ -29,15 +31,21 @@ function Navigation() {
   return (
     <>
       <div className="menu">
-        <ul className={`${scrolled ? "text-zinc-900 font-semibold " : "text-white"} flex justify-between items-center gap-8`}>
+        <ul className="flex justify-between items-center gap-8">
           {/* Map over menu items to generate list items */}
           {menuItems.map((item) => (
-            <li key={item.id}>
+            <motion.li 
+              key={item.id}
+              whileHover={{ scale: 1.09 }}
+              whileTap={{ scale: 0.9 }}
+            >
               {/* Use Link component to create clickable links */}
               <Link href={item.url}>
-               {item.title}
+                <p className={`${scrolled ? "text-gray-900 font-semibold" : "text-white"}`}>
+                  {item.title}
+                </p>
               </Link>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

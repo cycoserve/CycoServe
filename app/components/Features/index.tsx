@@ -3,7 +3,7 @@ import React from 'react';
 const Features = () => {
   return (
     <section className="py-12 px-4 bg-gray-100">
-      <div className="container mx-auto px-4 lg:px-0">
+      <div className="container mx-auto lg:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="feature">
             <h3 className="text-xl font-semibold mb-2">VPS Management</h3>

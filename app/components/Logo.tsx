@@ -1,7 +1,6 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 function Logo() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,10 +17,18 @@ function Logo() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
-    <>
-      <div className={`${scrolled ? "font-bold text-zinc-900" : "font-semibold text-white"}`}>CycoServe</div>
-    </>
+    <div className="flex -mt-1 justify-center items-center bg-transparent">
+      <Link href={"/"} >
+      <img
+        src={scrolled ? "/logo-dark.svg" : "/logo-light.svg"}
+        alt="Logo"
+        className="h-8 object-cover"
+      />
+      </Link>
+
+    </div>
   );
 }
 

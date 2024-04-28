@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { date } from "yup";
-import Clock from "./Clock";
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,9 +10,11 @@ const Footer = () => {
       id: 1,
       header: "Company",
       links: [
-        { id: 1, title: "About Us", url: "/about" },
-        { id: 2, title: "Careers", url: "/careers" },
-        { id: 3, title: "Contact Us", url: "/contact" },
+        { id: 1, title: "Home", url: "/" },
+        { id: 2, title: "About", url: "/about" },
+        { id: 3, title: "Features", url: "/features" },
+        { id: 4, title: "Experts", url: "/experts" },
+        { id: 5, title: "Contact", url: "/contact" },
       ],
     },
     {
@@ -50,8 +51,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-800 py-0">
-      <div className="container mx-auto px-4 py-16">
+    <footer className="bg-gray-900 py-0">
+      <div className="container mx-auto px-4 lg:px-0 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
           {/* Map over footer columns to generate columns */}
           {footerColumns.map((column) => (
@@ -65,7 +66,7 @@ const Footer = () => {
                   <motion.li key={link.id} whileHover={{ scale: 1.01 }}>
                     <a
                       href={link.url}
-                      className="text-gray-300 hover:text-gray-400"
+                      className="text-white hover:text-gray-400"
                     >
                       {link.title}
                     </a>

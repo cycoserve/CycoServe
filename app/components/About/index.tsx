@@ -2,8 +2,8 @@ import React from 'react';
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="py-12 px-4 bg-white">
-      <div className="container px-4 lg:px-0 mx-auto">
+    <section className="container py-12 mx-auto px-4 lg:px-0 bg-white">
+      <div className=" mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-3xl font-semibold mb-4">About Us</h2>

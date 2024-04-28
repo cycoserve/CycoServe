@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import AboutHero from "./about/AboutHero";
+import PageHero from "./components/PageHero";
+
 
 function NotFound() {
   return (
     <>
-    <AboutHero />
+    <PageHero title="404 Not Found" />
       <div>404</div>
     </>
   );

@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import AboutSection from "../components/About";
 import Hero from "../components/Hero";
 import AboutHero from "./AboutHero";
+import PageHero from "../components/PageHero";
 
 export const metadata = {
   title: "About Us - CycoServe | Web Hosting & Development",
@@ -40,7 +41,7 @@ export const metadata = {
 export default function About() {
   return (
     <>
-      <AboutHero />
+      <PageHero title="About Us Page" />
       <AboutSection />
     </>
   );

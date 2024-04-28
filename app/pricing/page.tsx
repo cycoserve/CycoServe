@@ -1,23 +1,22 @@
 import React from "react";
-import Features from "../components/Features";
-import PageHero from "../components/PageHero";
 import { Metadata } from "next";
-
+import PageHero from "../components/PageHero";
+import AboutSection from "../components/About";
 
 export const metadata: Metadata = {
-  title: "Features - CycoServe | Web Hosting and Development",
-  description: "",
+  title: "Pricing - CycoServe | Web Hosting and Development",
+  description:
+    "At CycoServe, explore our transparent and competitive pricing options for our top-notch services. Find the perfect plan to suit your business needs.",
   generator: "CycoServe CMS",
   applicationName: "CycoServe",
   referrer: "origin-when-cross-origin",
   keywords: [
     "CycoServe",
-    "Management",
-    "VPS Servers",
-    "AI-Driven Content Creation",
+    "Web Hosting",
+    "Web Design",
+    "Hosting",
     "App Deployment",
-    "Features",
-    "Podcasts",
+    "Pricing",
   ],
   authors: [{ name: "Merle Richardson", url: "https://ahzudirecttech.com" }],
   creator: "Merle Richardson",
@@ -33,13 +32,13 @@ export const metadata: Metadata = {
   },
 };
 
-function FeaturesPage() {
+function page() {
   return (
     <>
-     <PageHero title="Innovative Solutions For You" />
-      <Features />
+      <PageHero title="Pricing Page" />
+      <AboutSection />
     </>
   );
 }
 
-export default FeaturesPage;
+export default page;
