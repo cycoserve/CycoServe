@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
-import ButtonPrimary from "./ButtonPrimary";
 import ButtonSecondary from "./ButtonSecondary";
 
 function Header() {
@@ -38,11 +37,7 @@ function Header() {
           </div>
           <div className="hidden lg:block">
             <div className="flex justify-between items-center gap-4">
-              {/* <ButtonPrimary
-                title="Log In"
-                url="https://station.cycoserve.com/login/"
-              /> */}
-              <ButtonSecondary title="Contact Us" url="/contact-us" />
+              <ButtonSecondary title="Contact Us" btnLink="/contact-us" />
             </div>
           </div>
           <div className="block lg:hidden ">

@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import RootLayout from "../components/Layouts/RootLayout";
-import BlogSection from "../components/Sections/BlogSection";
-import Hero from "../components/Sections/Hero";
+import RootLayout from "../../components/Layouts/RootLayout";
+import BlogSection from "../../components/Sections/BlogSection";
+import Hero from "../../components/Sections/Hero";
 
 function BlogPage() {
   return (

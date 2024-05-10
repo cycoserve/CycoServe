@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import RootLayout from "../components/Layouts/RootLayout";
-import Hero from "../components/Sections/Hero";
+import RootLayout from "../../components/Layouts/RootLayout";
+import Hero from "../../components/Sections/Hero";
 
 function ContentCreation() {
   return (

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Hero from "./components/Sections/Hero";
-import RootLayout from "./components/Layouts/RootLayout";
-import TwoColSection from "./components/Sections/TwoColSection";
-import ThreeColSection from "./components/Sections/ThreeColSection";
-import FourColSection from "./components/Sections/FourColSection";
-import OneColSection from "./components/Sections/OneColSection";
-import BlogSection from "./components/Sections/BlogSection";
-import TitleSection from "./components/Sections/TitleSection";
+import Hero from "../components/Sections/Hero";
+import RootLayout from "../components/Layouts/RootLayout";
+import TwoColSection from "../components/Sections/TwoColSection";
+import ThreeColSection from "../components/Sections/ThreeColSection";
+import FourColSection from "../components/Sections/FourColSection";
+import OneColSection from "../components/Sections/OneColSection";
+import BlogSection from "../components/Sections/BlogSection";
+import TitleSection from "../components/Sections/TitleSection";
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });

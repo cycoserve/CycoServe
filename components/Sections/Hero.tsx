@@ -1,6 +1,5 @@
 import React from "react";
-import ButtonPrimary from "../ButtonPrimary";
-import ButtonSecondary from "../ButtonSecondary";
+
 
 interface HeroProps {
   title: string;
@@ -36,8 +35,8 @@ const Hero: React.FC<HeroProps> = ({
           </h1>
           <p className="text-lg md:text-xl mb-12">{description}</p>
           <div className="buttons inline-flex gap-4">
-            <ButtonPrimary title={bptext} url={bpurl} />
-            <ButtonSecondary title={bstext} url={bsurl} />
+            {/* <ButtonPrimary title={bptext} url={bpurl} />
+            <ButtonSecondary title={bstext} url={bsurl} /> */}
           </div>
         </div>
       </div>

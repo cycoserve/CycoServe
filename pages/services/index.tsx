@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Hero from "../components/Sections/Hero";
-import Features from "../components/Features";
-import RootLayout from "../components/Layouts/RootLayout";
+import Hero from "../../components/Sections/Hero";
+import Features from "../../components/Features";
+import RootLayout from "../../components/Layouts/RootLayout";
 import Head from "next/head";
 
 export default function Pricing() {

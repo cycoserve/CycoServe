@@ -1,5 +1,5 @@
 import React from "react";
-import RootLayout from "../components/Layouts/RootLayout";
+import RootLayout from "../../components/Layouts/RootLayout";
 
 function TenWaysBlogPost() {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "next/head";
-// import { Inter } from "next/font/google";
-import RootLayout from "./components/Layouts/RootLayout";
-import Hero from "./components/Sections/Hero";
-import About from "./components/AboutSection";
+import { Inter } from "next/font/google";
+import RootLayout from "../components/Layouts/RootLayout";
+import Hero from "../components/Sections/Hero";
+import About from "../components/AboutSection";
 
-// const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function AboutPage() {
   return (

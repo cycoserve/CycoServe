@@ -1,6 +1,6 @@
 import React from "react";
-import RootLayout from "../components/Layouts/RootLayout";
-import Hero from "../components/Sections/Hero";
+import RootLayout from "../../components/Layouts/RootLayout";
+import Hero from "../../components/Sections/Hero";
 import Head from "next/head";
 
 function TheImpactBlogPost() {

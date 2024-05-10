@@ -1,10 +1,9 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Hero from "../components/Sections/Hero";
-import Features from "../components/Features";
-import RootLayout from "../components/Layouts/RootLayout";
-import About from "../components/AboutSection";
-import AboutSection from "../components/AboutSection";
+import Hero from "../../components/Sections/Hero";
+import Features from "../../components/Features";
+import RootLayout from "../../components/Layouts/RootLayout";
+import AboutSection from "../../components/AboutSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
