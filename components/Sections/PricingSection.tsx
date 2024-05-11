@@ -13,7 +13,7 @@ const PricingSection: React.FC = () => {
   return (
     <div className="bg-black bg-[url('/assets/homehero-bg.jpg')] bg-cover bg-no-repeat bg-bottom py-16 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mt-16 max-w-2xl bg-zinc-900 ring-2 ring-gray-500 sm:mt-12 lg:mx-0 lg:flex lg:max-w-none backdrop-blur-sm bg-opacity-50 rounded-md ring-opacity-15">
+        <div className="mx-auto mt-16 max-w-2xl bg-zinc-900 ring-2 ring-gray-500 sm:mt-12 lg:mx-0 lg:flex lg:max-w-none bg-opacity-50 rounded-md ring-opacity-15">
           <div className="p-8 sm:p-10 lg:flex-auto">
             <h3 className="text-2xl font-semibold tracking-tight text-white">
               Lifetime Membership

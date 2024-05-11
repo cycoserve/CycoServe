@@ -26,7 +26,7 @@ function Header() {
       <div
         className={`${
           scrolled
-            ? "bg-black bg-opacity-50 backdrop-blur-md shadow-sm border-b-2 border-opacity-25 border-zinc-800"
+            ? "bg-black bg-opacity-80 shadow-sm"
             : "bg-transparent"
         } fixed top-0 left-0 w-full right-0 z-10 py-4 transition duration-300 ease-in-out`}
       >

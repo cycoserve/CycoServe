@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const Footer = () => {
@@ -54,12 +55,7 @@ const Footer = () => {
   return (
     <footer className="bg-black bg-[url('/assets/footer-bg.jpg')] bg-cover bg-bottom pt-24">
       <div className="container mx-auto px-4 lg:px-0 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
-          <div className="text-white">
-            <Image className="-mt-1" src={"/logo-light.svg"} alt="" width={150} height={75}>
-
-            </Image>
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 bg-black p-4 rounded-lg border-2 border-opacity-15 border-zinc-300 bg-opacity-60 ">
           {/* Map over footer columns to generate columns */}
           {footerColumns.map((column) => (
             <div key={column.id}>
@@ -70,12 +66,12 @@ const Footer = () => {
                 {/* Map over footer links within each column */}
                 {column.links.map((link) => (
                   <motion.li key={link.id} whileHover={{ scale: 1.01 }}>
-                    <a
+                    <Link
                       href={link.url}
                       className="text-white hover:text-gray-400"
                     >
                       {link.title}
-                    </a>
+                    </Link>
                   </motion.li>
                 ))}
               </ul>

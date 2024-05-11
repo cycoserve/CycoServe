@@ -1,10 +1,16 @@
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
-
-// import component 👇
 import Drawer from "react-modern-drawer";
-
-//import styles 👇
 import "react-modern-drawer/dist/index.css";
+
+const menuItems = [
+  { id: "1", title: "Home", url: "/" },
+  { id: "2", title: "The Agency", url: "/about" },
+  { id: "3", title: "Why Choose Us?", url: "/why-choose-us" },
+  { id: "4", title: "Services", url: "/services" },
+  { id: "5", title: "Pricing", url: "/pricing" },
+  { id: "6", title: "Core Articles", url: "/blog" },
+];
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +35,10 @@ const MobileMenu = () => {
 
   return (
     <>
-      <button onClick={toggleDrawer} className={`text-${scrolled ? "white" : "white"}`}>
+      <button
+        onClick={toggleDrawer}
+        className={`text-${scrolled ? "white" : "white"}`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -45,14 +54,25 @@ const MobileMenu = () => {
           />
         </svg>
       </button>
-      <Drawer
-        open={isOpen}
-        onClose={toggleDrawer}
-        direction="right"
-        className="bla bla bla"
-      >
-        <div>Hello World</div>
-      </Drawer>
+      <div className="color bg-black">
+        <Drawer
+          lockBackgroundScroll={true}
+          open={isOpen}
+          onClose={toggleDrawer}
+          direction="right"
+          className="mobile menu"
+        >
+          <div className="bg-zinc-950 h-full w-full pt-8">
+            <div className="list flex flex-col justify-stretch h-full items-start px-4 text-white py-4 text-xl gap-4">
+              {menuItems.map((items) => (
+                <Link key={items.id} href={items.url}>
+                  <div className="div">{items.title}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Drawer>
+      </div>
     </>
   );
 };

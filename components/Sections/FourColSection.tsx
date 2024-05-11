@@ -34,7 +34,7 @@ const FourColSection: React.FC<FourColSectionProps> = ({
   return (
     <>
       <div className="px-4 lg:px-0">
-        <section className="container py-4 mx-auto px-4 lg:px-4 bg-gradient-to-l from-zinc-900 to-zinc-950 backdrop-blur-sm rounded-md border-gray-500 border-2 border-opacity-15 my-8">
+        <section className="container py-4 mx-auto px-4 lg:px-4 bg-gradient-to-l from-zinc-900 to-zinc-950 rounded-md border-gray-500 border-2 border-opacity-15 my-8">
           <div className="mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
               <div>

@@ -72,7 +72,7 @@ const BlogSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
               {/* Map through blog posts */}
               {blogPosts.map((post) => (
-                <div key={post.id} className="bg-zinc-950 backdrop-blur-sm rounded-md border-gray-500 border-2 border-opacity-15 p-4">
+                <div key={post.id} className="bg-zinc-950 rounded-md border-gray-500 border-2 border-opacity-15 p-4">
                   <Link href={`/blog/${post.slug}`}>
                     <div>
                       <Image

@@ -30,7 +30,7 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
         <section className="container py-4 mx-auto my-0 ">
           <div className="mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-              <div className=" bg-zinc-950 backdrop-blur-sm rounded-md border-gray-500 border-2 border-opacity-15 p-4">
+              <div className=" bg-zinc-950 rounded-md border-gray-500 border-2 border-opacity-15 p-4">
                 <Image
                   className="w-full rounded-lg mb-4"
                   src={image1}
@@ -43,7 +43,7 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
                 </h2>
                 <p className="text-sm text-gray-100 mb-4">{description1}</p>
               </div>
-              <div className=" bg-zinc-950 backdrop-blur-sm rounded-md border-gray-500 border-2 border-opacity-15 p-4">
+              <div className=" bg-zinc-950 rounded-md border-gray-500 border-2 border-opacity-15 p-4">
                 <Image
                   className="w-full rounded-lg mb-4"
                   src={image2}
@@ -56,7 +56,7 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
                 </h2>
                 <p className="text-sm text-gray-100 mb-4">{description2}</p>
               </div>
-              <div className=" bg-zinc-950 backdrop-blur-sm rounded-md border-gray-500 border-2 border-opacity-15 p-4">
+              <div className=" bg-zinc-950 rounded-md border-gray-500 border-2 border-opacity-15 p-4">
                 <Image
                   className="w-full rounded-lg mb-4"
                   src={image3}
