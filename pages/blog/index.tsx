@@ -3,6 +3,8 @@ import Head from "next/head";
 import RootLayout from "../../components/Layouts/RootLayout";
 import BlogSection from "../../components/Sections/BlogSection";
 import Hero from "../../components/Sections/Hero";
+import SectionWrap from "@/components/elements/SectionWrap";
+import TitleSection from "@/components/Sections/TitleSection";
 
 function BlogPage() {
   return (
@@ -46,7 +48,9 @@ function BlogPage() {
       </Head>
       <RootLayout>
         <Hero
-          background={"/assets/Default_Radio_station_mixing_board_futuristically_powered_by_A_3.jpg"}
+          background={
+            "/assets/Default_Radio_station_mixing_board_futuristically_powered_by_A_3.jpg"
+          }
           title={"Insights, Strategies, and Trends on the CycoServe Blog"}
           description={
             "Stay ahead of the curve with our expertly curated blog, packed with actionable insights, innovative strategies, and the latest trends in digital marketing."
@@ -57,8 +61,10 @@ function BlogPage() {
           bsurl={"/contact-us"}
         />
 
-        <BlogSection />
-        
+        <SectionWrap>
+          <TitleSection subtitle="Get the 411" title="Featured Blog Articles" />
+          <BlogSection />
+        </SectionWrap>
       </RootLayout>
     </>
   );

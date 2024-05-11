@@ -4,13 +4,14 @@ import Hero from "../components/Sections/Hero";
 import Features from "../components/Features";
 import RootLayout from "../components/Layouts/RootLayout";
 import Head from "next/head";
+import PricingSection from "@/components/Sections/PricingSection";
 
 export default function Pricing() {
   return (
     <>
       <Head>
         <title>
-          CycoServe - AI Powered Full Service Digital Marketing Agency
+          Pricing - AI Powered Full Service Digital Marketing Agency
         </title>
         <meta
           name="description"
@@ -47,16 +48,7 @@ export default function Pricing() {
       </Head>
 
       <RootLayout>
-        <Hero
-          background=""
-          title={""}
-          description={""}
-          bptext={""}
-          bpurl={""}
-          bstext={""}
-          bsurl={""}
-        />
-        <Features />
+        <PricingSection />
       </RootLayout>
     </>
   );

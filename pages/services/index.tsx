@@ -16,13 +16,13 @@ export default function Pricing() {
       </Head>
       <RootLayout>
         <Hero
-        background={"/assets/serviceshero-bg.jpg"}
-          title={"Affordable Digital Marketing Services"}
-          description={""}
+        background={"/assets/earth-from-space.jpg"}
+          title={"Elevate Your Digital Presence with CycoServe's Innovative Solutions"}
+          description={"Discover our comprehensive suite of digital marketing services designed to drive growth, engagement, and success for your business. Let's transform your online presence together."}
           bptext={"Learn More"}
-          bpurl={""}
+          bpurl={"/services"}
           bstext={"Conact Us"}
-          bsurl={""}
+          bsurl={"/contact-us"}
         />
         <Features />
       </RootLayout>

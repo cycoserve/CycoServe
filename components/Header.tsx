@@ -26,9 +26,9 @@ function Header() {
       <div
         className={`${
           scrolled
-            ? "bg-black bg-opacity-50 backdrop-blur-md shadow-sm"
+            ? "bg-black bg-opacity-50 backdrop-blur-md shadow-sm border-b-2 border-opacity-25 border-zinc-800"
             : "bg-transparent"
-        } fixed top-0 left-0 right-0 z-10 py-4 transition duration-300 ease-in-out`}
+        } fixed top-0 left-0 w-full right-0 z-10 py-4 transition duration-300 ease-in-out`}
       >
         <div className="inner container px-4 md:px-2 mx-auto flex justify-between items-center">
           <Logo />
@@ -37,7 +37,7 @@ function Header() {
           </div>
           <div className="hidden lg:block">
             <div className="flex justify-between items-center gap-4">
-              <ButtonSecondary title="Contact Us" btnLink="/contact-us" />
+              <ButtonSecondary title="Contact Us" url="/contact-us" />
             </div>
           </div>
           <div className="block lg:hidden ">

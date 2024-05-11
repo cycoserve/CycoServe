@@ -9,6 +9,7 @@ import OneColSection from "../components/Sections/OneColSection";
 import BlogSection from "../components/Sections/BlogSection";
 import TitleSection from "../components/Sections/TitleSection";
 import Head from "next/head";
+import SectionWrap from "@/components/elements/SectionWrap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -97,55 +98,62 @@ export default function Home() {
         </div>
 
         {/* Two Col Section */}
-        <TitleSection
-          subtitle="Your Success, Our Commitment"
-          title="Choose CycoServe: Where Professionalism Meets Generosity"
-        />
-        <TwoColSection
-          title1={"Streamlined Web Development"}
-          description1={
-            "Rest assured with our professional approach using GitHub and CI/CD, safeguarding your code integrity and eliminating worries of loss."
-          }
-          image1={"/assets/development.jpg"}
-          title2={"Generous Hosting Terms"}
-          description2={
-            "Benefit from our cost-effective model - no hosting fees until your web app exceeds generous usage limits, ensuring scalability without lock in."
-          }
-          image2={"/assets/hosting.jpg"}
-        />
-        <div className="three bg-gradient-to-b from-black to-orange-900 pt-4 pb-8">
+        <SectionWrap>
           <TitleSection
-            subtitle="Reliable Radio Hosting Services"
-            title="Seamless Broadcasting Solutions Tailored to Your Frequency"
+            subtitle="Your Success, Our Commitment"
+            title="Choose CycoServe: Where Professionalism Meets Generosity"
           />
-          <ThreeColSection
-            title1={"Unlimited Reach, Unlimited Audience"}
+          <TwoColSection
+            title1={"Streamlined Web Development"}
             description1={
-              "Expand your audience without limits with our radio stream hosting services. Enjoy unlimited listeners and bandwidth for seamless broadcasting."
+              "Rest assured with our professional approach using GitHub and CI/CD, safeguarding your code integrity and eliminating worries of loss."
             }
-            image1={"/assets/radio-mixer.jpg"}
-            title2={"Effortlessly Managed Played"}
+            image1={"/assets/development.jpg"}
+            title2={"Generous Hosting Terms"}
             description2={
-              "Keep the music playing around the clock with our Auto DJ feature. Effortlessly manage your playlists and scheduling for uninterrupted entertainment."
+              "Benefit from our cost-effective model - no hosting fees until your web app exceeds generous usage limits, ensuring scalability without lock in."
             }
-            image2={"/assets/autodj.jpg"}
-            title3={"Podcast Hosting Made Easy"}
-            description3={
-              "Dive into the world of podcasting with ease. Our hosting services extend to podcast hosting, empowering you to share your voice with the world"
-            }
-            image3={"/assets/podcasting.jpg"}
+            image2={"/assets/hosting.jpg"}
           />
-        </div>
+        </SectionWrap>
 
-        {/* Pricing Section */}
+        {/* Radio Broadcasting */}
+        <SectionWrap>
+          <div className="three bg-gradient-to-b from-black to-orange-900 pt-4 pb-8">
+            <TitleSection
+              subtitle="Reliable Radio Hosting Services"
+              title="Seamless Broadcasting Solutions Tailored to Your Frequency"
+            />
+            <ThreeColSection
+              title1={"Unlimited Reach, Unlimited Audience"}
+              description1={
+                "Expand your audience without limits with our radio stream hosting services. Enjoy unlimited listeners and bandwidth for seamless broadcasting."
+              }
+              image1={"/assets/radio-mixer.jpg"}
+              title2={"Effortlessly Managed Playback"}
+              description2={
+                "Keep the music playing around the clock with our Auto DJ feature. Effortlessly manage your playlists and scheduling for uninterrupted entertainment."
+              }
+              image2={"/assets/autodj.jpg"}
+              title3={"Podcast Hosting Made Easy"}
+              description3={
+                "Dive into the world of podcasting with ease. Our hosting services extend to podcast hosting, empowering you to share your voice with the world"
+              }
+              image3={"/assets/podcasting.jpg"}
+            />
+          </div>
+        </SectionWrap>
 
         {/* Blog Section */}
-        <TitleSection
-          subtitle="Stay Informed, Stay Ahead"
-          title="Fuel Your Curiosity: Explore Our Blog for Insights and Inspiration"
-        />
-        <BlogSection />
-        {/* One Col Section */}
+        <SectionWrap>
+          <TitleSection
+            subtitle="Stay Informed, Stay Ahead"
+            title="Fuel Your Curiosity: Explore Our Blog for Insights and Inspiration"
+          />
+          <BlogSection />
+        </SectionWrap>
+
+        {/* News Letter Signup */}
         <TitleSection
           subtitle="Delivered Straight To You Inbox"
           title="Weekly News Letters"
@@ -155,7 +163,6 @@ export default function Home() {
           description={
             "Don't miss out! Stay updated on the latest trends, tips, and insights. Subscribe to our weekly newsletter for exclusive content."
           }
-          image={"/assets/hardworking.jpg"}
         />
       </RootLayout>
     </>
