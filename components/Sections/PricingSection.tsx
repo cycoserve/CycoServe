@@ -16,16 +16,16 @@ const PricingSection: React.FC = () => {
         <div className="mx-auto mt-16 max-w-2xl bg-zinc-900 ring-2 ring-gray-500 sm:mt-12 lg:mx-0 lg:flex lg:max-w-none backdrop-blur-sm bg-opacity-50 rounded-md ring-opacity-15">
           <div className="p-8 sm:p-10 lg:flex-auto">
             <h3 className="text-2xl font-semibold tracking-tight text-white">
-              Lifetime membership
+              Lifetime Membership
             </h3>
             <p className="mt-6 text-base leading-7 text-white">
-              Unlock unlimited access to CycoServe's premium features and
+              Unlock unlimited access to CycoServe&apos;s premium features and
               services with our exclusive lifetime membership offer. Join us
               today!
             </p>
             <div className="mt-10 flex items-center gap-x-4">
               <h4 className="flex-none text-sm font-semibold leading-6 text-white">
-                What’s included
+                What&apos;s included
               </h4>
               <div className="h-px flex-auto bg-white" />
             </div>
