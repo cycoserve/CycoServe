@@ -34,7 +34,7 @@ const FourColSection: React.FC<FourColSectionProps> = ({
   return (
     <>
       <div className="px-4 lg:px-0">
-        <section className="container py-4 mx-auto px-4 lg:px-4 bg-gradient-to-l from-zinc-900 to-zinc-950 rounded-md border-gray-500 border-2 border-opacity-15 my-8">
+        <section className="container py-4 mx-auto px-4 lg:px-4 bg-white rounded-md border-gray-500 border-2 border-opacity-15 my-8">
           <div className="mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
               <div>
@@ -45,10 +45,10 @@ const FourColSection: React.FC<FourColSectionProps> = ({
                   width={500}
                   height={300}
                 />
-                <h2 className="text-xl font-bold text-gray-100 mb-2">
+                <h2 className="text-xl font-bold text-zinc-900 mb-2">
                   {title1}
                 </h2>
-                <p className="text-sm text-gray-100 mb-4 ">{description1}</p>
+                <p className="text-sm text-zinc-900 mb-4 ">{description1}</p>
               </div>
               <div>
                 <Image
@@ -58,10 +58,10 @@ const FourColSection: React.FC<FourColSectionProps> = ({
                   width={500}
                   height={300}
                 />
-                <h2 className="text-xl font-bold text-gray-100 mb-2">
+                <h2 className="text-xl font-bold text-zinc-900 mb-2">
                   {title2}
                 </h2>
-                <p className="text-sm text-gray-100 mb-4">{description2}</p>
+                <p className="text-sm text-zinc-900 mb-4">{description2}</p>
               </div>
               <div>
                 <Image
@@ -71,10 +71,10 @@ const FourColSection: React.FC<FourColSectionProps> = ({
                   width={500}
                   height={300}
                 />
-                <h2 className="text-xl font-bold text-gray-100 mb-2">
+                <h2 className="text-xl font-bold text-zinc-900 mb-2">
                   {title3}
                 </h2>
-                <p className="text-sm text-gray-100 mb-4">{description3}</p>
+                <p className="text-sm text-zinc-900 mb-4">{description3}</p>
               </div>
               <div>
                 <Image
@@ -84,10 +84,10 @@ const FourColSection: React.FC<FourColSectionProps> = ({
                   width={500}
                   height={300}
                 />
-                <h2 className="text-xl font-bold text-gray-100 mb-2">
+                <h2 className="text-xl font-bold text-zinc-900 mb-2">
                   {title4}
                 </h2>
-                <p className="text-sm text-gray-100 mb-4">{description4}</p>
+                <p className="text-sm text-zinc-900 mb-4">{description4}</p>
               </div>
             </div>
           </div>

@@ -66,13 +66,13 @@ const blogPosts = [
 const BlogSection = () => {
   return (
     <>
-      <div className="px-4 lg:px-0">
-        <section className="container py-4 mx-auto my-8">
+      <div className=" my-12 container mx-auto border p-4 rounded-lg border-orange-500  bg-opacity-100  bg-white lg:px-4">
+        <section className="container lg:px-0  py-0 lg:py-0 mx-auto my-0">
           <div className="mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
               {/* Map through blog posts */}
               {blogPosts.map((post) => (
-                <div key={post.id} className="bg-zinc-950 rounded-md border-gray-500 border-2 border-opacity-15 p-4">
+                <div key={post.id} className="bg-white p-2">
                   <Link href={`/blog/${post.slug}`}>
                     <div>
                       <Image
@@ -82,12 +82,12 @@ const BlogSection = () => {
                         width={500}
                         height={300}
                       />
-                      <h2 className="text-xl font-bold text-gray-100 mb-2 hover:text-blue-500 line-clamp-2">
+                      <h2 className="text-xl font-bold text-zinc-900 mb-2 hover:text-zinc-500 line-clamp-2">
                         {post.title}
                       </h2>
                     </div>
                   </Link>
-                  <p className="text-sm text-gray-100 mb-4 line-clamp-3">
+                  <p className="text-sm text-zinc-900 mb-4 line-clamp-2">
                     {post.description}
                   </p>
                 </div>

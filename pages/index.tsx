@@ -10,6 +10,8 @@ import BlogSection from "../components/Sections/BlogSection";
 import TitleSection from "../components/Sections/TitleSection";
 import Head from "next/head";
 import SectionWrap from "@/components/elements/SectionWrap";
+import SwiperComponent from "@/components/SwiperComponent";
+import PricingTable from "@/components/elements/PricingTable";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,7 +42,7 @@ export default function Home() {
           content="CycoServe is a dynamic and innovative full-service digital marketing agency committed to providing transformative solutions for businesses seeking to thrive in the digital landscape."
         />
         <meta property="og:image" content="/assets/development.jpg" />
-        <meta property="og:url" content="https://cycoserve.com" />
+        <meta property="og:url" content="https://cycoserve.com/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@CycoServe" />
         <meta
@@ -57,7 +59,7 @@ export default function Home() {
       <RootLayout>
         <Hero
           background={"/assets/homehero-bg.jpg"}
-          title={"Transform Your Digital Presence with CycoServe"}
+          title={"Transform Your Digital Presence"}
           description={
             "We offer cutting edge digital services that will enhance your companies online presence. At CycoServe, we pioneer digital transformation. Our innovative solutions drive success in the digital era. Partner with us and thrive in the digital landscape."
           }
@@ -67,59 +69,49 @@ export default function Home() {
           bsurl={"/contact-us"}
         />
 
-        <div className="wrapp min-h-full bg-gradient-to-r from-zinc-950 to-black pt-4 pb-8">
+        <div className="features-bg wrapp min-h-ful py-12 ">
           {/* Features Section */}
-          <TitleSection
-            subtitle="Tailored for Success in the Digital Age"
-            title="Transforming Tomorrow: Discover Our Suite of Cutting-Edge Solutions"
-          />
-          <FourColSection
-            title1={"VPS Management"}
-            description1={
-              "Efficient VPS management for streamlined operations and optimal performance reliability."
-            }
-            image1={"/assets/vps-management.jpg"}
-            title2={"Custom Web Design"}
-            description2={
-              "Tailored development of applications to suit your unique needs."
-            }
-            image2={"/assets/custom-web-design.jpg"}
-            title3={"AI-Driven Content Creation"}
-            description3={
-              "Unlocking creativity with AI-powered content creation for unparalleled engagement"
-            }
-            image3={"/assets/ai-content-creation.jpg"}
-            title4={"Radio Stream Hosting"}
-            description4={
-              "Reliable hosting for seamless radio streaming experiences, unmatched quality service."
-            }
-            image4={"/assets/radio-stream-hosting.jpg"}
-          />
+          <div className="div px-4 lg:px-4">
+            <div className="container mx-auto mb-12">
+              <div className="bg-white p-4 border border-orange-500 rounded-lg inset-full max-w-xl">
+                <TitleSection
+                  subtitle="Tailored for Success in the Digital Age"
+                  title="Transforming Tomorrow: Discover Our Suite of Cutting-Edge Solutions"
+                />
+              </div>
+            </div>
+          </div>
+      
+            <SwiperComponent />
+       
         </div>
-
         {/* Two Col Section */}
         <SectionWrap>
-          <TitleSection
-            subtitle="Your Success, Our Commitment"
-            title="Choose CycoServe: Where Professionalism Meets Generosity"
-          />
-          <TwoColSection
-            title1={"Streamlined Web Development"}
-            description1={
-              "Rest assured with our professional approach using GitHub and CI/CD, safeguarding your code integrity and eliminating worries of loss."
-            }
-            image1={"/assets/development.jpg"}
-            title2={"Generous Hosting Terms"}
-            description2={
-              "Benefit from our cost-effective model - no hosting fees until your web app exceeds generous usage limits, ensuring scalability without lock in."
-            }
-            image2={"/assets/hosting.jpg"}
-          />
+          <div className="wrap px-4 py-4">
+            <div className="div rounded-3xl pb-20 pt-12 border-b-4 border-orange-500 bg-gray-100 px-4">
+              <TitleSection
+                subtitle="Your Success, Our Commitment"
+                title="Choose CycoServe: Where Professionalism Meets Generosity"
+              />
+              <TwoColSection
+                title1={"Streamlined Web Development"}
+                description1={
+                  "Rest assured with our professional approach using GitHub and CI/CD, safeguarding your code integrity and eliminating worries of loss."
+                }
+                image1={"/assets/development.jpg"}
+                title2={"Generous Hosting Terms"}
+                description2={
+                  "Benefit from our cost-effective model - no hosting fees until your web app exceeds generous usage limits, ensuring scalability without lock in."
+                }
+                image2={"/assets/hosting.jpg"}
+              />
+            </div>
+          </div>
         </SectionWrap>
 
         {/* Radio Broadcasting */}
         <SectionWrap>
-          <div className="three bg-gradient-to-b from-black to-orange-900 pt-4 pb-8">
+          <div className="three bg-white pt-4 pb-8">
             <TitleSection
               subtitle="Reliable Radio Hosting Services"
               title="Seamless Broadcasting Solutions Tailored to Your Frequency"
@@ -143,27 +135,54 @@ export default function Home() {
             />
           </div>
         </SectionWrap>
+        {/* break */}
+        <div className="features-bg">
+          <SectionWrap>
+            <div className="py-24"></div>
+          </SectionWrap>
+        </div>
+
+        <SectionWrap>
+          <PricingTable />
+        </SectionWrap>
 
         {/* Blog Section */}
         <SectionWrap>
-          <TitleSection
-            subtitle="Stay Informed, Stay Ahead"
-            title="Fuel Your Curiosity: Explore Our Blog for Insights and Inspiration"
-          />
-          <BlogSection />
+          <div className="features-bg py-12 border-orange-500 border-b">
+            <div className="container mx-auto">
+              <div className="px-4 lg:px-0">
+                <div className="bg-white p-4 border border-orange-500 rounded-lg inset-full max-w-xl">
+                  <div className="max-w-lg">
+                    <TitleSection
+                      subtitle="Stay Informed, Stay Ahead"
+                      title="Fuel Your Curiosity: Explore Our Blog for Insights and Inspiration"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="px-4 lg:px-0">
+              <BlogSection />
+            </div>
+          </div>
         </SectionWrap>
 
-        {/* News Letter Signup */}
-        <TitleSection
-          subtitle="Delivered Straight To You Inbox"
-          title="Weekly News Letters"
-        />
-        <OneColSection
-          title={"Sign Up"}
-          description={
-            "Don't miss out! Stay updated on the latest trends, tips, and insights. Subscribe to our weekly newsletter for exclusive content."
-          }
-        />
+
+        <SectionWrap>
+          {/* News Letter Signup */}
+          <TitleSection
+            subtitle="Delivered Straight To You Inbox"
+            title="Weekly News Letters"
+          />
+          <OneColSection
+            title={"Sign Up"}
+            description={
+              "Don't miss out! Stay updated on the latest trends, tips, and insights. Subscribe to our weekly newsletter for exclusive content."
+            }
+          />
+        </SectionWrap>
+
+
       </RootLayout>
     </>
   );

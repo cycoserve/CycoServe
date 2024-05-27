@@ -7,6 +7,7 @@ import Head from "next/head";
 import FourColSection from "@/components/Sections/FourColSection";
 import SectionWrap from "@/components/elements/SectionWrap";
 import TitleSection from "@/components/Sections/TitleSection";
+import SwiperComponent from "@/components/SwiperComponent";
 
 export default function Pricing() {
   return (
@@ -34,28 +35,7 @@ export default function Pricing() {
             subtitle="Tailored for Success in the Digital Age"
             title="Transforming Tomorrow: Discover Our Suite of Cutting-Edge Solutions"
           />
-          <FourColSection
-            title1={"VPS Management"}
-            description1={
-              "Efficient VPS management for streamlined operations and optimal performance reliability."
-            }
-            image1={"/assets/vps-management.jpg"}
-            title2={"Custom Web Design"}
-            description2={
-              "Tailored development of applications to suit your unique needs."
-            }
-            image2={"/assets/custom-web-design.jpg"}
-            title3={"AI-Driven Content Creation"}
-            description3={
-              "Unlocking creativity with AI-powered content creation for unparalleled engagement"
-            }
-            image3={"/assets/ai-content-creation.jpg"}
-            title4={"Radio Stream Hosting"}
-            description4={
-              "Reliable hosting for seamless radio streaming experiences, unmatched quality service."
-            }
-            image4={"/assets/radio-stream-hosting.jpg"}
-          />
+          <SwiperComponent />
         </SectionWrap>
       </RootLayout>
     </>

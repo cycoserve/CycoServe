@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ThreeColSectionProps {
   title1: string;
@@ -30,7 +31,7 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
         <section className="container py-4 mx-auto my-0 ">
           <div className="mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-              <div className=" bg-zinc-950 rounded-md border-gray-500 border-2 border-opacity-15 p-4">
+              <Link href={'/'} className=" bg-white rounded-md  hover:border-b-8 border border-orange-500 hover:border-orange-500 p-4">
                 <Image
                   className="w-full rounded-lg mb-4"
                   src={image1}
@@ -38,12 +39,12 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
                   width={500}
                   height={300}
                 />
-                <h2 className="text-xl font-bold text-gray-100 mb-2">
+                <h2 className="text-xl font-bold text-zinc-900 mb-2">
                   {title1}
                 </h2>
-                <p className="text-sm text-gray-100 mb-4">{description1}</p>
-              </div>
-              <div className=" bg-zinc-950 rounded-md border-gray-500 border-2 border-opacity-15 p-4">
+                <p className="text-sm text-zinc-900 mb-4 line-clamp-2">{description1}</p>
+              </Link>
+              <Link href={'/'} className=" bg-white rounded-md  hover:border-b-8 border border-orange-500 hover:border-orange-500 p-4">
                 <Image
                   className="w-full rounded-lg mb-4"
                   src={image2}
@@ -51,12 +52,12 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
                   width={500}
                   height={300}
                 />
-                <h2 className="text-xl font-bold text-gray-100 mb-2">
+                <h2 className="text-xl font-bold text-zinc-900 mb-2">
                   {title2}
                 </h2>
-                <p className="text-sm text-gray-100 mb-4">{description2}</p>
-              </div>
-              <div className=" bg-zinc-950 rounded-md border-gray-500 border-2 border-opacity-15 p-4">
+                <p className="text-sm text-zinc-900 mb-4 line-clamp-2">{description2}</p>
+              </Link>
+              <Link href="/" className=" bg-white rounded-md hover:border-b-8 border border-orange-500 hover:border-orange-500 p-4">
                 <Image
                   className="w-full rounded-lg mb-4"
                   src={image3}
@@ -64,11 +65,11 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
                   width={500}
                   height={300}
                 />
-                <h2 className="text-xl font-bold text-gray-100 mb-2">
+                <h2 className="text-xl font-bold text-zinc-900 mb-2">
                   {title3}
                 </h2>
-                <p className="text-sm text-gray-100 mb-4">{description3}</p>
-              </div>
+                <p className="text-sm text-zinc-900 mb-4 line-clamp-2">{description3}</p>
+              </Link>
             </div>
           </div>
         </section>

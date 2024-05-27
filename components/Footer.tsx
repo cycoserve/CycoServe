@@ -53,7 +53,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black bg-[url('/assets/footer-bg.jpg')] bg-cover bg-bottom pt-24">
+    <footer className="bg-black bg-[url('')]  bg-cover bg-bottom pt-12">
       <div className="container mx-auto px-4 lg:px-0 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 bg-black p-4 rounded-lg border-2 border-opacity-15 border-zinc-300 bg-opacity-60 ">
           {/* Map over footer columns to generate columns */}

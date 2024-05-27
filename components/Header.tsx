@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import ButtonSecondary from "./ButtonSecondary";
+import Banner from "./Sections/Banner";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);

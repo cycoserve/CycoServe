@@ -5,6 +5,7 @@ import Features from "../components/Features";
 import RootLayout from "../components/Layouts/RootLayout";
 import Head from "next/head";
 import PricingSection from "@/components/Sections/PricingSection";
+import PricingTable from "@/components/elements/PricingTable";
 
 export default function Pricing() {
   return (
@@ -48,7 +49,7 @@ export default function Pricing() {
       </Head>
 
       <RootLayout>
-        <PricingSection />
+      <PricingTable />
       </RootLayout>
     </>
   );

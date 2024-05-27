@@ -51,7 +51,7 @@ function WhyChooseCycoServe() {
       <RootLayout>
         <Hero
           background={"/assets/homehero-bg.jpg"}
-          title={"The CycoServe advantage: industry-leading customer support"}
+          title={"The CycoServe Industry:Advanatage"}
           description={
             "Discover the CycoServe advantage: industry-leading customer support, unbeatable pricing, and a free tier web hosting offer. Choose excellence, choose CycoServe"
           }

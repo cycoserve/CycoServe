@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <>
     <section
-      className="hero-section min-h-screen flex-grow relative text-white pt-32 pb-24 bg-cover bg-bottom bg-no-repeat"
+      className="hero-section flex h-screen md:h-fu lg:h-1/2 py-32 justify-center items-center relative text-white bg-cover bg-bottom bg-no-repeat"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(${background})`,
       }}
