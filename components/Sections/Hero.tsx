@@ -25,12 +25,12 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <>
     <section
-      className="hero-section flex h-screen md:h-fu lg:h-1/2 py-32 justify-center items-center relative text-white bg-cover bg-bottom bg-no-repeat"
+      className="hero-section flex md:h-fu lg:h-1/2 py-16 justify-center rounded-lg items-center relative text-white bg-cover bg-bottom bg-no-repeat"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(${background})`,
       }}
     >
-      <div className="container mx-auto px-4 lg:px-0">
+      <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl text-start">
           <h1 className="text-5xl md:text-7xl pb-4 font-bold leading-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-violet-500">
             {title}  

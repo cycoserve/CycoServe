@@ -12,6 +12,11 @@ import Head from "next/head";
 import SectionWrap from "@/components/elements/SectionWrap";
 import SwiperComponent from "@/components/SwiperComponent";
 import PricingTable from "@/components/elements/PricingTable";
+import HeaderSpace from "@/components/elements/HeaderSpace";
+import Spacer from "@/components/Spacer";
+import HowDoesItWork from "@/components/Sections/HowDoesItWork";
+import StepComponent from "@/components/Sections/StepsComponent";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,19 +62,8 @@ export default function Home() {
       </Head>
 
       <RootLayout>
-        <Hero
-          background={"/assets/homehero-bg.jpg"}
-          title={"Transform Your Digital Presence"}
-          description={
-            "We offer cutting edge digital services that will enhance your companies online presence. At CycoServe, we pioneer digital transformation. Our innovative solutions drive success in the digital era. Partner with us and thrive in the digital landscape."
-          }
-          bptext={"Learn More"}
-          bpurl={"/about"}
-          bstext={"Contact Us"}
-          bsurl={"/contact-us"}
-        />
-
-        <div className="features-bg wrapp min-h-ful py-12 ">
+        <HeaderSpace />
+        <div className="features-bg wrapp min-h-full py-16 ">
           {/* Features Section */}
           <div className="div px-4 lg:px-4">
             <div className="container mx-auto mb-12">
@@ -81,9 +75,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-      
-            <SwiperComponent />
-       
+  
+          <SwiperComponent />
         </div>
         {/* Two Col Section */}
         <SectionWrap>
@@ -135,17 +128,6 @@ export default function Home() {
             />
           </div>
         </SectionWrap>
-        {/* break */}
-        <div className="features-bg">
-          <SectionWrap>
-            <div className="py-24"></div>
-          </SectionWrap>
-        </div>
-
-        <SectionWrap>
-          <PricingTable />
-        </SectionWrap>
-
         {/* Blog Section */}
         <SectionWrap>
           <div className="features-bg py-12 border-orange-500 border-b">
@@ -161,28 +143,27 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="px-4 lg:px-0">
+            <div className="px-4 lg:px-0 my-12">
               <BlogSection />
             </div>
           </div>
         </SectionWrap>
+        <div className="container px-4 lg:px-0 mx-auto">
+          
+        <Hero
+          background={"/assets/homehero-bg.jpg"}
+          title={"Transform Your Digital Presence"}
+          description={
+            "We offer cutting edge digital services that will enhance your companies online presence. At CycoServe, we pioneer digital transformation. Our innovative solutions drive success in the digital era. Partner with us and thrive in the digital landscape."
+          }
+          bptext={"Learn More"}
+          bpurl={"/about"}
+          bstext={"Contact Us"}
+          bsurl={"/contact-us"}
+        />
+        </div>
 
-
-        <SectionWrap>
-          {/* News Letter Signup */}
-          <TitleSection
-            subtitle="Delivered Straight To You Inbox"
-            title="Weekly News Letters"
-          />
-          <OneColSection
-            title={"Sign Up"}
-            description={
-              "Don't miss out! Stay updated on the latest trends, tips, and insights. Subscribe to our weekly newsletter for exclusive content."
-            }
-          />
-        </SectionWrap>
-
-
+        <Spacer />
       </RootLayout>
     </>
   );

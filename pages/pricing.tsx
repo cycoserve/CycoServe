@@ -6,6 +6,8 @@ import RootLayout from "../components/Layouts/RootLayout";
 import Head from "next/head";
 import PricingSection from "@/components/Sections/PricingSection";
 import PricingTable from "@/components/elements/PricingTable";
+import HeaderSpace from "@/components/elements/HeaderSpace";
+import Spacer from "@/components/Spacer";
 
 export default function Pricing() {
   return (
@@ -49,7 +51,9 @@ export default function Pricing() {
       </Head>
 
       <RootLayout>
-      <PricingTable />
+        <HeaderSpace />
+        <PricingTable />
+        <Spacer />
       </RootLayout>
     </>
   );

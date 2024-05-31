@@ -26,7 +26,7 @@ function Navigation() {
     { id: 3, title: 'Why Choose Us?', url: '/why-choose-us' },
     { id: 4, title: 'Services', url: '/services' },
     { id: 5, title: 'Pricing', url: '/pricing' },
-    { id: 5, title: 'Core Articles', url: '/blog' },
+    { id: 6, title: 'Core Articles', url: '/blog' },
   ];
 
   return (

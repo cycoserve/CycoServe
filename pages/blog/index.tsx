@@ -5,6 +5,8 @@ import BlogSection from "../../components/Sections/BlogSection";
 import Hero from "../../components/Sections/Hero";
 import SectionWrap from "@/components/elements/SectionWrap";
 import TitleSection from "@/components/Sections/TitleSection";
+import HeaderSpace from "@/components/elements/HeaderSpace";
+import Spacer from "@/components/Spacer";
 
 function BlogPage() {
   return (
@@ -47,7 +49,13 @@ function BlogPage() {
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
       <RootLayout>
-        <Hero
+        <HeaderSpace />
+
+        <SectionWrap>
+          <TitleSection subtitle="Get the 411" title="Featured Blog Articles" />
+          <BlogSection />
+        </SectionWrap>
+        {/* <Hero
           background={
             "/assets/Default_Radio_station_mixing_board_futuristically_powered_by_A_3.jpg"
           }
@@ -59,12 +67,8 @@ function BlogPage() {
           bpurl={"/about"}
           bstext={"Subscribe"}
           bsurl={"/contact-us"}
-        />
-
-        <SectionWrap>
-          <TitleSection subtitle="Get the 411" title="Featured Blog Articles" />
-          <BlogSection />
-        </SectionWrap>
+        /> */}
+        <Spacer />
       </RootLayout>
     </>
   );

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
+
 const menuItems = [
   { id: "1", title: "Home", url: "/" },
   { id: "2", title: "The Agency", url: "/about" },
@@ -61,6 +62,7 @@ const MobileMenu = () => {
           onClose={toggleDrawer}
           direction="right"
           className="mobile menu"
+          
         >
           <div className="bg-zinc-950 h-full w-full pt-8">
             <div className="list flex flex-col justify-stretch h-full items-start px-4 text-white py-4 text-xl gap-4">

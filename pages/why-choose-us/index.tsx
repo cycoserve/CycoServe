@@ -7,6 +7,8 @@ import LongTextSection from "@/components/Sections/LongText";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import TitleSection from "@/components/Sections/TitleSection";
 import TwoColSection from "@/components/Sections/TwoColSection";
+import HeaderSpace from "@/components/elements/HeaderSpace";
+import Spacer from "@/components/Spacer";
 
 function WhyChooseCycoServe() {
   return (
@@ -49,18 +51,9 @@ function WhyChooseCycoServe() {
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
       <RootLayout>
-        <Hero
-          background={"/assets/homehero-bg.jpg"}
-          title={"The CycoServe Industry:Advanatage"}
-          description={
-            "Discover the CycoServe advantage: industry-leading customer support, unbeatable pricing, and a free tier web hosting offer. Choose excellence, choose CycoServe"
-          }
-          bptext={"Learn More"}
-          bpurl={"/about"}
-          bstext={"Contact Us"}
-          bsurl={"/contact-us"}
-        />
+
         {/* Two Col Section */}
+        <HeaderSpace />
         <SectionWrap>
           <TitleSection
             subtitle="Your Success, Our Commitment"
@@ -79,42 +72,57 @@ function WhyChooseCycoServe() {
             image2={"/assets/hosting.jpg"}
           />
         </SectionWrap>
+
+        <LongTextSection>
+          <p>
+            <ParagraphTitle>
+              Choosing CycoServe means partnering with a team of digital
+              experts dedicated to your success
+            </ParagraphTitle>
+            With a proven track record of delivering results and driving
+            growth for businesses across industries, we bring a wealth of
+            experience and expertise to every project. Our client-centric
+            approach ensures that we take the time to understand your unique
+            needs, challenges, and goals, tailoring our solutions to meet your
+            specific requirements.
+          </p>
+
+          <p>
+            <ParagraphTitle>Solutions For Any Use Case</ParagraphTitle>
+            Whether you&apos;re a startup looking to establish your brand
+            presence, a small business aiming to expand your reach, or a large
+            enterprise seeking to innovate and disrupt, we have the expertise
+            and resources to help you succeed. From cutting-edge digital
+            marketing strategies to innovative web development solutions, we
+            leverage the latest technologies, trends, and techniques to
+            deliver exceptional results.{" "}
+          </p>
+
+          <p>
+            <ParagraphTitle>Unlock Your Full Potential</ParagraphTitle>
+            At CycoServe, we&apos;re more than just a digital marketing agency
+            we&apos;re your partner in success. Let us help you unlock your
+            full potential and achieve your goals in the digital age. Choose
+            CycoServe and experience the difference of working with a team
+            that&apos;s committed to your success every step of the way.
+          </p>
+        </LongTextSection>
         <SectionWrap>
-          <LongTextSection>
-            <p>
-              <ParagraphTitle>
-                Choosing CycoServe means partnering with a team of digital
-                experts dedicated to your success
-              </ParagraphTitle>
-              With a proven track record of delivering results and driving
-              growth for businesses across industries, we bring a wealth of
-              experience and expertise to every project. Our client-centric
-              approach ensures that we take the time to understand your unique
-              needs, challenges, and goals, tailoring our solutions to meet your
-              specific requirements.
-            </p>
-
-            <p>
-              <ParagraphTitle>Solutions For Any Use Case</ParagraphTitle>
-              Whether you&apos;re a startup looking to establish your brand
-              presence, a small business aiming to expand your reach, or a large
-              enterprise seeking to innovate and disrupt, we have the expertise
-              and resources to help you succeed. From cutting-edge digital
-              marketing strategies to innovative web development solutions, we
-              leverage the latest technologies, trends, and techniques to
-              deliver exceptional results.{" "}
-            </p>
-
-            <p>
-              <ParagraphTitle>Unlock Your Full Potential</ParagraphTitle>
-              At CycoServe, we&apos;re more than just a digital marketing agency
-              we&apos;re your partner in success. Let us help you unlock your
-              full potential and achieve your goals in the digital age. Choose
-              CycoServe and experience the difference of working with a team
-              that&apos;s committed to your success every step of the way.
-            </p>
-          </LongTextSection>
+          <div className="container mx-auto">
+            <Hero
+              background={"/assets/homehero-bg.jpg"}
+              title={"The CycoServe Industry:Advanatage"}
+              description={
+                "Discover the CycoServe advantage: industry-leading customer support, unbeatable pricing, and a free tier web hosting offer. Choose excellence, choose CycoServe"
+              }
+              bptext={"Learn More"}
+              bpurl={"/about"}
+              bstext={"Contact Us"}
+              bsurl={"/contact-us"}
+            />
+          </div>
         </SectionWrap>
+        <Spacer />
       </RootLayout>
     </>
   );

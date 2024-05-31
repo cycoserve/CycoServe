@@ -10,6 +10,8 @@ import SectionWrap from "@/components/elements/SectionWrap";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import Image from "next/image";
 import OneColSection from "@/components/Sections/OneColSection";
+import Spacer from "@/components/Spacer";
+import HeaderSpace from "@/components/elements/HeaderSpace";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,18 +56,7 @@ export default function AboutPage() {
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
       <RootLayout>
-        <Hero
-          background={"/assets/about-hero-bg.jpg"}
-          title={"The Agency: Discover CycoServe's Vision and Mission"}
-          description={
-            "At CycoServe, we're more than just a digital marketing agency. We're innovators, collaborators, and visionaries dedicated to driving your success."
-          }
-          bptext={"Pricing"}
-          bpurl={"/pricing"}
-          bstext={"Contact Us"}
-          bsurl={"/contact-us"}
-        />
-
+        <HeaderSpace />
         <SectionWrap>
           <TitleSection
             subtitle="Unveiling Our Journey to Success"
@@ -134,8 +125,19 @@ export default function AboutPage() {
                 </div>
 
               </div>
-
-
+              <SectionWrap>
+                <Hero
+                  background={"/assets/about-hero-bg.jpg"}
+                  title={"The Agency: Discover CycoServe's Vision and Mission"}
+                  description={
+                    "At CycoServe, we're more than just a digital marketing agency. We're innovators, collaborators, and visionaries dedicated to driving your success."
+                  }
+                  bptext={"Pricing"}
+                  bpurl={"/pricing"}
+                  bstext={"Contact Us"}
+                  bsurl={"/contact-us"}
+                />
+              </SectionWrap>
               <div className="grid grid-cols md:grid-cols-2 gap-12 justify-items-start items-center mb-12">
                 <div className="">
                   <ParagraphTitle>Why Partner With Us?</ParagraphTitle>
@@ -164,9 +166,7 @@ export default function AboutPage() {
             </div>
           </LongTextSection>
         </SectionWrap>
-        <SectionWrap>
-          <OneColSection title={"Sign Up For The List"} description={"Don't miss out! Stay updated on the latest trends, tips, and insights. Subscribe to our weekly newsletter for exclusive content"} />
-        </SectionWrap>
+        <Spacer />
       </RootLayout>
     </>
   );

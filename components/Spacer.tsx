@@ -3,7 +3,7 @@ import React from 'react'
 function Spacer() {
   return (
 <>
-<div className="spacing py-24"></div>
+<div className="spacing py-12"></div>
 </>
   )
 }

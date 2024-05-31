@@ -66,7 +66,7 @@ const blogPosts = [
 const BlogSection = () => {
   return (
     <>
-      <div className=" my-12 container mx-auto border p-4 rounded-lg border-orange-500  bg-opacity-100  bg-white lg:px-4">
+      <div className=" my-0 container mx-auto border p-4 rounded-lg border-orange-500  bg-opacity-100  bg-white lg:px-4">
         <section className="container lg:px-0  py-0 lg:py-0 mx-auto my-0">
           <div className="mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
