@@ -40,7 +40,7 @@ function Navigation() {
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
             >
-              {/* Use Link component to create clickable links */}
+              {/* Use Link component to  */}
               <Link href={item.url}>
                 <p className={`${scrolled ? "text-gray-100 font-semibold" : "text-white"}`}>
                   {item.title}
