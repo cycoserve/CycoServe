@@ -22,7 +22,7 @@ function Navigation() {
   // Define menu items with ID, title, and URL
   const menuItems = [
     { id: 1, title: 'The Agency', url: '/about' },
-    // { id: 2, title: 'Blog', url: '/blog' },
+    { id: 2, title: 'How It Works', url: '/blog' },
     { id: 3, title: 'Why Choose Us?', url: '/why-choose-us' },
     { id: 4, title: 'Services', url: '/services' },
     { id: 5, title: 'Pricing', url: '/pricing' },

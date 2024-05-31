@@ -5,7 +5,6 @@ import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import ButtonSecondary from "./ButtonSecondary";
 import Banner from "./Sections/Banner";
-import { SignInWithMetamaskButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import ButtonPrimary from "./ButtonPrimary";
 import Link from "next/link";
 
@@ -38,37 +37,26 @@ function Header() {
           <div className="hidden lg:block">
             <Navigation />
           </div>
-
           <div className="inline-flex">
             <div className="block">
               <div className="mr-8">
-                <SignedIn>
                   <div className="flex justify-center items-center gap-4">
                     <div className="text-white text-sm hover:text-gray-400 font-semibold">
                       <Link href={'/dashboard'}>
                           Dashboard
                       </Link>
-                  
                     </div>
-
                     <div className="rounded-full border-2 h-8 w-8 border-gray-100">
-                      <UserButton />
                     </div>
                   </div>
-
-
-                </SignedIn>
               </div>
             </div>
-            <SignedOut>
               <div className="mr-4">
                 <ButtonPrimary title="Sign In" url="https://station.cycoserve.com/login" />
               </div>
-            </SignedOut>
             <div className="div lg:hidden">
               <MobileMenu />
             </div>
-
           </div>
         </div>
       </div>
