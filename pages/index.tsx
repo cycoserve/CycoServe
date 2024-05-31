@@ -81,7 +81,7 @@ export default function Home() {
         {/* Two Col Section */}
         <SectionWrap>
           <div className="wrap px-4 py-4">
-            <div className="div rounded-3xl pb-20 pt-12 border-b-4 border-orange-500 bg-gray-100 px-4">
+            <div className="div rounded-3xl pb-20 pt-12 border-b-4 border-orange-500 bg-gray-100 px-0">
               <TitleSection
                 subtitle="Your Success, Our Commitment"
                 title="Choose CycoServe: Where Professionalism Meets Generosity"

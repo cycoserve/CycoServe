@@ -1,3 +1,4 @@
+import { Divider } from "@mui/material";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Drawer from "react-modern-drawer";
@@ -61,15 +62,17 @@ const MobileMenu = () => {
           open={isOpen}
           onClose={toggleDrawer}
           direction="right"
-          className="mobile menu"
-          
+          className="mobile-menu"
+          overlayColor={'black'}
+
         >
-          <div className="bg-zinc-950 h-full w-full pt-8">
-            <div className="list flex flex-col justify-stretch h-full items-start px-4 text-white py-4 text-xl gap-4">
+          <div className="bg-orange-400 h-full w-full pt-8">
+            <div className="list flex flex-col justify-stretch h-full items-start px-6 text-zinc-900 py-8 text-xl gap-4">
               {menuItems.map((items) => (
-                <Link key={items.id} href={items.url}>
+                <><Link key={items.id} href={items.url}>
                   <div className="div">{items.title}</div>
                 </Link>
+                </>
               ))}
             </div>
           </div>

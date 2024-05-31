@@ -3,10 +3,9 @@ import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
-import ButtonSecondary from "./ButtonSecondary";
-import Banner from "./Sections/Banner";
 import ButtonPrimary from "./ButtonPrimary";
-import Link from "next/link";
+
+
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,22 +37,9 @@ function Header() {
             <Navigation />
           </div>
           <div className="inline-flex">
-            <div className="block">
-              <div className="mr-8">
-                  <div className="flex justify-center items-center gap-4">
-                    <div className="text-white text-sm hover:text-gray-400 font-semibold">
-                      <Link href={'/dashboard'}>
-                          Dashboard
-                      </Link>
-                    </div>
-                    <div className="rounded-full border-2 h-8 w-8 border-gray-100">
-                    </div>
-                  </div>
-              </div>
+            <div className="mr-4">
+              <ButtonPrimary title="Sign In" url="https://station.cycoserve.com/login" />
             </div>
-              <div className="mr-4">
-                <ButtonPrimary title="Sign In" url="https://station.cycoserve.com/login" />
-              </div>
             <div className="div lg:hidden">
               <MobileMenu />
             </div>
