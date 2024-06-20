@@ -53,7 +53,7 @@ const SwiperComponent = () => {
 
   return (
     <div className="px-4 lg:px-0">
-      <section className="container py-12 mx-auto px-4 lg:px-4 bg-white rounded-md shadow-sm shadow-orange-700  border border-orange-500 my-8">
+      <section className="container py-12 mx-auto px-4 lg:px-4 bg-white rounded-md  ring-1 ring-orange-500 my-8">
         <div className="mx-auto">
           <Swiper
             spaceBetween={30}

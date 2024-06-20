@@ -4,18 +4,15 @@ import Hero from "../components/Sections/Hero";
 import RootLayout from "../components/Layouts/RootLayout";
 import TwoColSection from "../components/Sections/TwoColSection";
 import ThreeColSection from "../components/Sections/ThreeColSection";
-import FourColSection from "../components/Sections/FourColSection";
-import OneColSection from "../components/Sections/OneColSection";
-import BlogSection from "../components/Sections/BlogSection";
 import TitleSection from "../components/Sections/TitleSection";
 import Head from "next/head";
 import SectionWrap from "@/components/elements/SectionWrap";
 import SwiperComponent from "@/components/SwiperComponent";
-import PricingTable from "@/components/elements/PricingTable";
 import HeaderSpace from "@/components/elements/HeaderSpace";
 import Spacer from "@/components/Spacer";
-import HowDoesItWork from "@/components/Sections/HowDoesItWork";
-import StepComponent from "@/components/Sections/StepsComponent";
+import ProductsList from "@/components/products/ProductsList";
+import AppsList from "@/components/apps/AppsList";
+import ArticlesList from "@/components/articles/ArticlesList";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -75,7 +72,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-  
+
           <SwiperComponent />
         </div>
         {/* Two Col Section */}
@@ -128,6 +125,10 @@ export default function Home() {
             />
           </div>
         </SectionWrap>
+        <SectionWrap>
+          <ProductsList />
+          <AppsList />
+        </SectionWrap>
         {/* Blog Section */}
         <SectionWrap>
           <div className="features-bg py-12 border-orange-500 border-b">
@@ -144,23 +145,23 @@ export default function Home() {
               </div>
             </div>
             <div className="px-4 lg:px-0 my-12">
-              <BlogSection />
+              <ArticlesList />
             </div>
           </div>
         </SectionWrap>
         <div className="container px-4 lg:px-0 mx-auto">
-          
-        <Hero
-          background={"/assets/homehero-bg.jpg"}
-          title={"Transform Your Digital Presence"}
-          description={
-            "We offer cutting edge digital services that will enhance your companies online presence. At CycoServe, we pioneer digital transformation. Our innovative solutions drive success in the digital era. Partner with us and thrive in the digital landscape."
-          }
-          bptext={"Learn More"}
-          bpurl={"/about"}
-          bstext={"Contact Us"}
-          bsurl={"/contact-us"}
-        />
+
+          <Hero
+            background={"/assets/homehero-bg.jpg"}
+            title={"Transform Your Digital Presence"}
+            description={
+              "We offer cutting edge digital services that will enhance your companies online presence. At CycoServe, we pioneer digital transformation. Our innovative solutions drive success in the digital era. Partner with us and thrive in the digital landscape."
+            }
+            bptext={"Learn More"}
+            bpurl={"/about"}
+            bstext={"Contact Us"}
+            bsurl={"/contact-us"}
+          />
         </div>
 
         <Spacer />

@@ -3,13 +3,11 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import RootLayout from "../../components/Layouts/RootLayout";
 import Hero from "../../components/Sections/Hero";
-import About from "../../components/AboutSection";
 import LongTextSection from "@/components/Sections/LongText";
 import TitleSection from "@/components/Sections/TitleSection";
 import SectionWrap from "@/components/elements/SectionWrap";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import Image from "next/image";
-import OneColSection from "@/components/Sections/OneColSection";
 import Spacer from "@/components/Spacer";
 import HeaderSpace from "@/components/elements/HeaderSpace";
 
@@ -80,7 +78,7 @@ export default function AboutPage() {
                     full potential and achieve their goals.
                   </p>
                 </div>
-                <div className="p-4 border hover:shadow-lg rounded-lg">
+                <div className="p-4 ring-1 ring-zinc-200 hover:cursor-pointer hover:shadow-lg rounded-lg">
                   <Image src={"/assets/podcasting.jpg"} alt="image" height={500} width={900} className="rounded-lg" />
                   <ParagraphTitle>How We Started The Journey</ParagraphTitle>
                   <p>

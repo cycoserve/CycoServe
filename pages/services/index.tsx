@@ -10,8 +10,9 @@ import TitleSection from "@/components/Sections/TitleSection";
 import SwiperComponent from "@/components/SwiperComponent";
 import HeaderSpace from "@/components/elements/HeaderSpace";
 import Spacer from "@/components/Spacer";
+import ServicesList from "@/components/services/ServicesList";
 
-export default function Pricing() {
+export default function ServicesPage() {
   return (
     <>
       <Head>
@@ -38,7 +39,7 @@ export default function Pricing() {
             subtitle="Tailored for Success in the Digital Age"
             title="Transforming Tomorrow: Discover Our Suite of Cutting-Edge Solutions"
           />
-          <SwiperComponent />
+      <ServicesList />
 
         </SectionWrap>
         <div className="container mx-auto px-4 lg:px-0">

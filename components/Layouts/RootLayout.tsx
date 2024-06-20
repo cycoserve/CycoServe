@@ -4,19 +4,20 @@ import { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
 
+
 interface RootLayoutProps {
-    children:ReactNode;
+  children: ReactNode;
 }
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <div>
       <header>
-      <Header />
+        <Header />
       </header>
       <main>{children}</main>
       <footer>
-     <Footer />
+        <Footer />
       </footer>
     </div>
   );

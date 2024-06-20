@@ -1,0 +1,88 @@
+import React, { useState, useEffect } from 'react';
+import { DataGrid, GridColDef, GridCellParams } from '@mui/x-data-grid';
+
+type {{Uppercase}} = {
+  id: string;
+  title: string;
+  imageUrl: string;
+  excerpt: string;
+  content: string;
+  published: boolean;
+  createdAt: {
+    seconds: number;
+    nanoseconds: number;
+  };
+};
+
+const columns: GridColDef[] = [
+  {
+    field: 'imageUrl',
+    headerName: 'Image',
+    width: 100,
+    renderCell: (params: GridCellParams) => (
+      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding:'4px' }}>
+        <img src={params.value as string} alt="{{Uppercase}}" style={{ maxWidth: '100%', maxHeight: '100%' }} />
+      </div>
+    ),
+  },
+  { field: 'title', headerName: 'Title', width: 300 },
+
+  {
+    field: 'excerpt',
+    headerName: 'Excerpt',
+    width: 400,
+    renderCell: (params: GridCellParams) => (
+      <div dangerouslySetInnerHTML={{ __html: params.value as string }} />
+    ),
+  },
+  {
+    field: 'published',
+    headerName: 'Published',
+    width: 200,
+    renderCell: (params: GridCellParams) => (
+      <span>{params.value ? 'Yes' : 'No'}</span>
+    ),
+  },
+  { field: 'id', headerName: 'ID', width: 100 },
+];
+
+const {{Uppercase}}Table = () => {
+  const [{{lowercase}}s, set{{Uppercase}}s] = useState<{{Uppercase}}[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const fetch{{Uppercase}}s = async () => {
+      try {
+        const response = await fetch(`/api/{{lowercase}}s`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch {{lowercase}}s');
+        }
+        const data: {{Uppercase}}[] = await response.json();
+        set{{Uppercase}}s(data);
+      } catch (error) {
+        console.error('Error fetching {{lowercase}}s:', error);
+        // Handle error fetching {{lowercase}}s
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetch{{Uppercase}}s();
+  }, []);
+
+  return (
+    <div style={{ height: 600, width: '100%' }}>
+      <DataGrid
+        rows={{{lowercase}}s}
+        columns={columns}
+        loading={loading}
+        checkboxSelection
+        autoHeight
+        onRowDoubleClick={(params) => console.log('Row double-clicked:', params.row)}
+        onRowSelectionModelChange={(selection) => console.log('Selection changed:', selection)}
+      />
+    </div>
+  );
+};
+
+export default {{Uppercase}}Table;

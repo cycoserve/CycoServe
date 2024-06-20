@@ -27,8 +27,8 @@ function Header() {
     <>
       <div
         className={`${scrolled
-          ? "bg-black bg-opacity-80 shadow-sm"
-          : "transparent"
+          ? "bg-black shadow-sm"
+          : "bg-black"
           } fixed top-0 left-0 w-full right-0 z-10 py-4 transition duration-300 ease-in-out`}
       >
         <div className="inner container px-4 md:px-2 mx-auto flex justify-between items-center">

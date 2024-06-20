@@ -1,73 +1,41 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import withAuth from '@/utils/withAuth';
+import Logo from '../Logo';
+import Sidebar from './SideBar';
+
 
 // Shared Tailwind CSS classes
 const sharedClasses = {
-    container: 'flex h-screen overflow-hidden',
-    sidebar: 'bg-zinc-900 text-white w-64 flex-shrink-0',
-    sidebarContent: 'p-4',
-    sidebarLink: 'block p-4 hover:bg-zinc-800 rounded-lg transition-colors duration-200',
-    mainContent: 'flex-1 bg-zinc-100 overflow-y-auto px-4 lg:px-0',
-};
-
-interface SidebarProps { }
-
-const Sidebar: React.FC<SidebarProps> = () => {
-    return (
-        <div className={sharedClasses.sidebar}>
-            <div className={sharedClasses.sidebarContent}>
-                <h1 className="text-2xl font-bold">Admin Dashboard</h1>
-            </div>
-            <nav className="mt-4">
-                <Link href="/dashboard" className={sharedClasses.sidebarLink}>
-                    Dashboard
-                </Link>
-                <Link href="/dashboard/products" className={sharedClasses.sidebarLink}>
-                    Products
-                </Link>
-                <Link href="/dashboard/orders" className={sharedClasses.sidebarLink}>
-                    Orders
-                </Link>
-                <Link href="/dashboard/customers" className={sharedClasses.sidebarLink}>
-                    Customers
-                </Link>
-                <Link href="/dashboard/settings" className={sharedClasses.sidebarLink}>
-                    Settings
-                </Link>
-            </nav>
-        </div>
-    );
+  container: 'flex h-screen overflow-hidden',
+  mainContent: 'flex-1 bg-white overflow-y-auto px-4 lg:px-0',
 };
 
 interface MainContentProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 const MainContent: React.FC<MainContentProps> = ({ children }) => {
-    return <div className={sharedClasses.mainContent}>{children}</div>;
+  return <div className={sharedClasses.mainContent}>{children}</div>;
 };
 
 interface DashLayoutProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 const DashLayout: React.FC<DashLayoutProps> = ({ children }) => {
-    return (
-        <>
-            <Head>
-                <title>Admin Dashboard</title>
-                <meta name="description" content="Admin dashboard layout" />
-            </Head>
-            <div className={sharedClasses.container}>
-                <div className='hidden bg-black lg:block'>
-                    <Sidebar />
-                </div>
-
-                <MainContent>{children}</MainContent>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <Head>
+        <title>CycoServe Dashboard</title>
+        <meta name="description" content="Admin dashboard for changing various data objects and settings." />
+      </Head>
+      <div className={sharedClasses.container}>
+        <Sidebar />
+        <MainContent>{children}</MainContent>
+      </div>
+    </>
+  );
 };
 
-export default DashLayout;
+export default withAuth(DashLayout);

@@ -1,0 +1,20 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../../utils/firebase';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const {{pluralLowercase}}Collection = collection(db, '{{pluralLowercase}}');
+    const querySnapshot = await getDocs({{pluralLowercase}}Collection);
+
+    const {{pluralLowercase}} = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+
+    res.status(200).json({{pluralLowercase}});
+  } catch (error) {
+    console.error('Error fetching {{pluralLowercase}} from Firestore:', error);
+    res.status(500).json({ message: 'Failed to fetch {{pluralLowercase}}' });
+  }
+}

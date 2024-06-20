@@ -10,7 +10,7 @@ interface DashboardPageTitleProps {
 const DashboardPageTitle: React.FC<DashboardPageTitleProps> = ({ children, subtitle }) => {
     return (
         <>
-            <div className='text-2xl flex flex-col font-semibold mb-2 container mx-auto'>
+            <div className='text-2xl flex flex-col font-semibold mb-6 container mx-auto'>
                 {children}
                 <div className='font-thin text-sm '>{subtitle}</div>
             </div>

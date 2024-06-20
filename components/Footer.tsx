@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const footerColumns = [
@@ -54,7 +55,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-black bg-[url('')]  bg-cover bg-bottom pt-12">
+      <footer className="bg-black relative bg-[url('')]  bg-cover bg-bottom pt-12">
         <div className="lower bg-black py-4 border-t border-t-gray-700">
           <div className="container px-4 mx-auto text-white text-sm">
             <p> &copy; {currentYear} CycoServe,LLC. All rights reserved. </p>

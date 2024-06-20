@@ -1,0 +1,32 @@
+/* styles/Dashboard.module.css */
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+}
+
+.widget {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.widget p {
+    font-size: 2rem;
+    color: #666;
+}

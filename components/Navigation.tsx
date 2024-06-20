@@ -1,10 +1,20 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
-function Navigation() {
+interface MenuItem {
+  id: string;
+  title: string;
+  url: string;
+}
+
+const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,14 +29,28 @@ function Navigation() {
     };
   }, []);
 
-  // Define menu items with ID, title, and URL
-  const menuItems = [
-    { id: 1, title: 'The Agency', url: '/about' },
-    { id: 3, title: 'Why Choose Us?', url: '/why-choose-us' },
-    { id: 4, title: 'Services', url: '/services' },
-    { id: 5, title: 'Pricing', url: '/pricing' },
-    { id: 6, title: 'Core Articles', url: '/blog' },
-  ];
+  useEffect(() => {
+    const fetchMenuItems = async () => {
+      try {
+        const response = await axios.get('/api/navigations');
+        setMenuItems(response.data);
+      } catch (error) {
+        setError('Failed to load navigation menu');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMenuItems();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   return (
     <>
@@ -39,9 +63,9 @@ function Navigation() {
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
             >
-              {/* Use Link component to  */}
+              {/* Use Link component to navigate */}
               <Link href={item.url}>
-                <p className={`${scrolled ? "text-gray-100 font-semibold" : "text-white"}`}>
+                <p className={`${scrolled ? "text-white font-semibold" : "text-white"}`}>
                   {item.title}
                 </p>
               </Link>
@@ -51,6 +75,6 @@ function Navigation() {
       </div>
     </>
   );
-}
+};
 
 export default Navigation;

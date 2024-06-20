@@ -1,22 +1,30 @@
+import DashboardPageTitle from '@/components/Dashboards/DashboardPageTitle'
 import DashLayout from '@/components/Layouts/DashLayouts'
-import RootLayout from '@/components/Layouts/RootLayout'
-import HeaderSpace from '@/components/elements/HeaderSpace'
 import SectionWrap from '@/components/elements/SectionWrap'
 import React from 'react'
+import DashboardComponent from '@/components/Dashboards/DashboardComponent'
+import withAuth from '@/utils/withAuth'
 
 function Dashboard() {
     return (
         <>
             <DashLayout>
                 <SectionWrap>
-                    <div className="div container px-4 border mx-auto h-full py-24">
-                        The Dashboard information here
-                    </div>
+                    <div className="div flex items-center container lg:px-8 mx-auto ">
+                        <DashboardPageTitle subtitle={'View, Add and Edit all products'}>
+                            Dashboard
+                        </DashboardPageTitle>
 
+
+                    </div>
+                    <div className="container mx-auto flex ">
+                        <DashboardComponent />
+                    </div>
                 </SectionWrap>
+
             </DashLayout>
         </>
     )
 }
 
-export default Dashboard
+export default withAuth(Dashboard);
