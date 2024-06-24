@@ -6,9 +6,9 @@ import 'react-quill/dist/quill.snow.css';
 
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
-interface ArticleFormProps {}
+interface WebsiteFormProps {}
 
-const ArticleForm: React.FC<ArticleFormProps> = () => {
+const WebsiteForm: React.FC<WebsiteFormProps> = () => {
   const [title, setTitle] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [excerpt, setExcerpt] = useState('');
@@ -55,7 +55,7 @@ const ArticleForm: React.FC<ArticleFormProps> = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const newArticle = {
+    const newWebsite = {
       title,
       slug,
       imageUrl,
@@ -68,8 +68,8 @@ const ArticleForm: React.FC<ArticleFormProps> = () => {
     };
 
     try {
-      await addDoc(collection(db, 'articles'), newArticle);
-      alert('Article created successfully');
+      await addDoc(collection(db, 'websites'), newWebsite);
+      alert('Website created successfully');
       // Reset form fields
       setTitle('');
       setSlug('');
@@ -209,7 +209,7 @@ const ArticleForm: React.FC<ArticleFormProps> = () => {
             type="submit"
             className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 ring-1 rounded-sm transition duration-300"
           >
-            Create Article
+            Create Website
           </button>
         </div>
       </div>
@@ -217,4 +217,4 @@ const ArticleForm: React.FC<ArticleFormProps> = () => {
   );
 };
 
-export default ArticleForm;
+export default WebsiteForm;

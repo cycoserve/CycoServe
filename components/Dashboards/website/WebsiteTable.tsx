@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DataGrid, GridColDef, GridCellParams } from '@mui/x-data-grid';
 
-type Article = {
+type Website = {
   id: string;
   title: string;
   imageUrl: string;
@@ -21,7 +21,7 @@ const columns: GridColDef[] = [
     width: 100,
     renderCell: (params: GridCellParams) => (
       <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding:'4px' }}>
-        <img src={params.value as string} alt="Article" style={{ maxWidth: '100%', maxHeight: '100%' }} />
+        <img src={params.value as string} alt="Website" style={{ maxWidth: '100%', maxHeight: '100%' }} />
       </div>
     ),
   },
@@ -46,34 +46,34 @@ const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 100 },
 ];
 
-const ArticlesTable = () => {
-  const [articles, setArticles] = useState<Article[]>([]);
+const WebsiteTable = () => {
+  const [websites, setWebsites] = useState<Website[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const fetchArticles = async () => {
+    const fetchWebsites = async () => {
       try {
-        const response = await fetch('/api/articles');
+        const response = await fetch(`/api/websites`);
         if (!response.ok) {
-          throw new Error('Failed to fetch articles');
+          throw new Error('Failed to fetch websites');
         }
-        const data: Article[] = await response.json();
-        setArticles(data);
+        const data: Website[] = await response.json();
+        setWebsites(data);
       } catch (error) {
-        console.error('Error fetching articles:', error);
-        // Handle error fetching articles
+        console.error('Error fetching websites:', error);
+        // Handle error fetching websites
       } finally {
         setLoading(false);
       }
     };
 
-    fetchArticles();
+    fetchWebsites();
   }, []);
 
   return (
     <div style={{ height: 600, width: '100%' }}>
       <DataGrid
-        rows={articles}
+        rows={websites}
         columns={columns}
         loading={loading}
         checkboxSelection
@@ -85,4 +85,4 @@ const ArticlesTable = () => {
   );
 };
 
-export default ArticlesTable;
+export default WebsiteTable;

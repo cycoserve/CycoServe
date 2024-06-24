@@ -1,0 +1,79 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+   match /users/{userId} {
+      allow read, write: if true;
+    }
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+    match /products/{productId} {
+      allow read, write: if true;
+    }
+    match /customers/{customerId} {
+      allow read, write: if true;
+    }
+    match /posts/{postId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /services/{serviceId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /companies/{companyId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /caseStudies/{caseStudyId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /solutions/{solutionId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /videos/{videoId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /teamMembers/{teamMemberId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /apps/{appId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /navigations/{navigationId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /aiTools/{aiToolId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /articles/{articleId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /artists/{artistId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /snakes/{snakeId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /wives/{wifeId} {
+      allow write: if true;
+			allow read: if true;
+    }
+    match /rings/{ringId} {
+      allow write: if true;
+			allow read: if true;
+    }
+
+  }
+}

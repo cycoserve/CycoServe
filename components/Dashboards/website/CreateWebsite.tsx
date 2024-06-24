@@ -1,12 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import ArticleForm from './CreateArticleForm';
+import WebsiteForm from './WebsiteForm';  // Replace Website with the dataset name in uppercase
 import Link from 'next/link';
 
-
-
-export default function CreateArticle() {
+export default function CreateWebsite() {
     const [open, setOpen] = React.useState(false);
 
     const toggleDrawer = (newOpen: boolean) => () => {
@@ -21,14 +19,14 @@ export default function CreateArticle() {
             }}
             role="presentation"
         >
-            <ArticleForm />
+            <WebsiteForm />  {/* Replace Website with the dataset name in uppercase */}
         </Box>
     );
 
     return (
         <div>
-            <Link href={'/dashboard/articles/create'}>
-                <button className="border flex-1 w-32 bg-blue-600 rounded-lg py-1 px-4 ring-1 hover:bg-blue-500 text-white font-semibold">
+            <Link href={`/dashboard/websites/create`}>
+                <button className="border flex-1 w-32 bg-blue-600 text-sm rounded-lg py-1 px-4 ring-1 hover:bg-blue-500 text-white font-semibold">
                     Add New
                 </button>
             </Link>
@@ -39,6 +37,3 @@ export default function CreateArticle() {
         </div>
     );
 }
-
-
-// onClick={toggleDrawer(true)}

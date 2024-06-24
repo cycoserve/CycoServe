@@ -7,7 +7,7 @@ import 'react-quill/dist/quill.snow.css';
 
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
-interface Article {
+interface Website {
   id: string;
   title: string;
   imageUrl: string;
@@ -23,7 +23,7 @@ interface Article {
   };
 }
 
-const EditArticle: React.FC = () => {
+const EditWebsite: React.FC = () => {
   const router = useRouter();
   const { id } = router.query;
 
@@ -39,33 +39,33 @@ const EditArticle: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchArticle = async () => {
+    const fetchWebsite = async () => {
       if (id) {
         try {
-          const docRef = doc(db, 'articles', id as string);
+          const docRef = doc(db, 'websites', id as string);
           const docSnap = await getDoc(docRef);
 
           if (docSnap.exists()) {
-            const article = docSnap.data() as Article;
-            setTitle(article.title);
-            setImageUrl(article.imageUrl);
-            setExcerpt(article.excerpt);
-            setContent(article.content);
-            setSlug(article.slug);
-            setTags(article.tags);
-            setCategory(article.category);
+            const website = docSnap.data() as Website;
+            setTitle(website.title);
+            setImageUrl(website.imageUrl);
+            setExcerpt(website.excerpt);
+            setContent(website.content);
+            setSlug(website.slug);
+            setTags(website.tags);
+            setCategory(website.category);
           } else {
             setError('No such document!');
           }
         } catch (error) {
-          setError('Failed to fetch article data');
+          setError('Failed to fetch website data');
         } finally {
           setLoading(false);
         }
       }
     };
 
-    fetchArticle();
+    fetchWebsite();
   }, [id]);
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -103,7 +103,7 @@ const EditArticle: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const updatedArticle = {
+    const updatedWebsite = {
       title,
       slug,
       imageUrl,
@@ -116,10 +116,10 @@ const EditArticle: React.FC = () => {
     };
 
     try {
-      const docRef = doc(db, 'articles', id as string);
-      await updateDoc(docRef, updatedArticle);
-      alert('Article updated successfully');
-      router.push('/dashboard/articles');
+      const docRef = doc(db, 'websites', id as string);
+      await updateDoc(docRef, updatedWebsite);
+      alert('Website updated successfully');
+      router.push('/dashboard/websites');
     } catch (error) {
       console.error('Error updating document: ', error);
     }
@@ -244,7 +244,7 @@ const EditArticle: React.FC = () => {
             type="submit"
             className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 ring-1 rounded-md transition duration-300"
           >
-            Update Article
+            Update Website
           </button>
         </div>
       </div>
@@ -252,4 +252,4 @@ const EditArticle: React.FC = () => {
   );
 };
 
-export default EditArticle;
+export default EditWebsite;

@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { getAuth, onAuthStateChanged, } from 'firebase/auth';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/utils/firebase'; // Adjust import path for Firebase config
 
-interface User {
+interface UserProfile {
   uid: string;
   displayName: string | null;
   email: string | null;
@@ -13,10 +13,10 @@ interface User {
   // Add more fields as needed
 }
 
-interface ProfileProps {} // No need for explicit user prop type
+interface UserProfileProps {} // No need for explicit user prop type
 
-const Profile: React.FC<ProfileProps> = () => {
-  const [user, setUser] = useState<User | null>(null);
+const UserProfile: React.FC<UserProfileProps> = () => {
+  const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const auth = getAuth();
 
@@ -52,7 +52,7 @@ const Profile: React.FC<ProfileProps> = () => {
   };
 
   return (
-    <div className="profile-container flex flex-col justify-center items-center gap-2">
+    <div className="profile-container flex justify-center items-center gap-4">
       {isLoading ? (
         <p>Loading profile...</p>
       ) : (
@@ -60,13 +60,10 @@ const Profile: React.FC<ProfileProps> = () => {
           {user && ( // Conditionally render user details if user exists
             <>
               {user.photoURL && (
-                <img src={user.photoURL} alt="Profile" className="profile-avatar rounded-full w-24 h-auto" />
+                <img src={user.photoURL} alt="Profile" className="profile-avatar rounded-full w-8 h-auto" />
               )}
-              <h3>{user.displayName}</h3>
-              <p>{user.email}</p>
-              {user.bio && <p>Bio: {user.bio}</p>}
-              <Link href={'/dashboard'} className="text-orange-400 hover:text-orange-800">Dashboard Area</Link>
-              <button onClick={handleAddToDatabase}>Add to Database</button>
+              <div className='text-lg'>{user.displayName}</div>
+              {/* <p>{user.email}</p> */}
             </>
           )}
         </>
@@ -75,4 +72,4 @@ const Profile: React.FC<ProfileProps> = () => {
   );
 };
 
-export default Profile;
+export default UserProfile;

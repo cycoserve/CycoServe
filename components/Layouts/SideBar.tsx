@@ -4,6 +4,7 @@ import Logo from '../Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp, faTachometerAlt, faFileAlt, faBox, faUsers, faCog, faShoppingCart, faMusic, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
+import Profile from '../Profile';
 
 const Sidebar: React.FC = () => {
   // Example data for navigation items
@@ -16,13 +17,22 @@ const Sidebar: React.FC = () => {
         { label: 'Overview', link: '/dashboard' },
       ],
     },
-    {
-      heading: 'Customer Management',
-      link: '/dashboard/customer-management',
+    // {
+    //   heading: 'Customer Management',
+    //   link: '/dashboard/customer-management',
+    //   icon: faUsers,
+    //   items: [
+    //     { label: 'All Customers', link: '/dashboard/customers' },
+    //     { label: 'Add Customer', link: '/dashboard/customers/create' },
+    //   ],
+    // },
+        {
+      heading: 'User Management',
+      link: '/dashboard/user-management',
       icon: faUsers,
       items: [
-        { label: 'All Customers', link: '/dashboard/customers' },
-        { label: 'Add Customer', link: '/dashboard/customers/create' },
+        { label: 'All Users', link: '/dashboard/users' },
+        { label: 'Add User', link: '/dashboard/users/create' },
       ],
     },
     {
@@ -36,15 +46,15 @@ const Sidebar: React.FC = () => {
         { label: 'Add Order', link: '/dashboard/orders/create' },
       ],
     },
-    {
-      heading: 'Social Media Accounts',
-      link: '/dashboard/social-media-accounts',
-      icon: faUsers,
-      items: [
-        { label: 'All Social Accounts', link: '/dashboard/social-media-accounts' },
-        { label: 'Add Account', link: '/dashboard/social-media-accounts/create' },
-      ],
-    },
+    // {
+    //   heading: 'Social Media Accounts',
+    //   link: '/dashboard/social-media-accounts',
+    //   icon: faUsers,
+    //   items: [
+    //     { label: 'All Social Accounts', link: '/dashboard/social-media-accounts' },
+    //     { label: 'Add Account', link: '/dashboard/social-media-accounts/create' },
+    //   ],
+    // },
     {
       heading: 'Content Management',
       link: '/dashboard/content-management',
@@ -52,28 +62,29 @@ const Sidebar: React.FC = () => {
       items: [
         { label: 'Core Articles', link: '/dashboard/articles' },
         { label: 'Add Article', link: '/dashboard/articles/create' },
-        { label: 'Front Page Config', link: '/dashboard/settings' },
         { label: 'Videos', link: '/dashboard/videos' },
         { label: 'Add Video', link: '/dashboard/videos/create' },
-        { label: 'Music Management', link: '/dashboard/music' },
-        { label: 'Add Music', link: '/dashboard/music/create' },
         { label: 'Artists', link: '/dashboard/artists' },
         { label: 'Add Artist', link: '/dashboard/artists/create' },
-      ],
-    },
-    {
-      heading: 'Website Management',
-      link: '/dashboard/website-management',
-      icon: faShoppingCart,
-      items: [
-        { label: 'All Websites', link: '/dashboard/websites' },
-        { label: 'Add Website', link: '/dashboard/websites/create' },
         { label: 'Website Showcases', link: '/dashboard/website-showcases' },
-        { label: 'Add Showcase', link: '/dashboard/website-showcases/create' },
-        { label: 'Templates', link: '/dashboard/templates' },
-        { label: 'Add Template', link: '/dashboard/templates/create' },
+        { label: 'Add Showcase', link: '/dashboard/websites/create' },
+        { label: 'Websites', link: '/dashboard/websites' },
+        { label: 'Add Website', link: '/dashboard/websites/create' },
       ],
     },
+    // {
+    //   heading: 'Website Management',
+    //   link: '/dashboard/website-management',
+    //   icon: faShoppingCart,
+    //   items: [
+    //     { label: 'All Websites', link: '/dashboard/websites' },
+    //     { label: 'Add Website', link: '/dashboard/websites/create' },
+    //     { label: 'Website Showcases', link: '/dashboard/website-showcases' },
+    //     { label: 'Add Showcase', link: '/dashboard/website-showcases/create' },
+    //     { label: 'Templates', link: '/dashboard/templates' },
+    //     { label: 'Add Template', link: '/dashboard/templates/create' },
+    //   ],
+    // },
     {
       heading: 'Radio Management',
       link: '/dashboard/radio-management',
@@ -98,34 +109,34 @@ const Sidebar: React.FC = () => {
           { label: 'Add Album', link: '/dashboard/artists/albums/create' },
         ],
       },
-      {
-        heading: 'Music Management',
-        link: '/dashboard/music-management',
-        icon: faMusic,
-        items: [
-          { label: 'All Music', link: '/dashboard/music' },
-          { label: 'Add Music', link: '/dashboard/music/create' },
-          { label: 'Genres', link: '/dashboard/music/genres' },
-          { label: 'Add Genre', link: '/dashboard/music/genres/create' },
-          { label: 'Artists', link: '/dashboard/music/artists' },
-          { label: 'Add Artist', link: '/dashboard/music/artists/create' },
-          { label: 'Albums', link: '/dashboard/music/albums' },
-          { label: 'Add Album', link: '/dashboard/music/albums/create' },
-        ],
-      },
-      {
-        heading: 'Video Management',
-        link: '/dashboard/video-management',
-        icon: faVideo,
-        items: [
-          { label: 'All Videos', link: '/dashboard/videos' },
-          { label: 'Add Video', link: '/dashboard/videos/create' },
-          { label: 'Categories', link: '/dashboard/videos/categories' },
-          { label: 'Add Category', link: '/dashboard/videos/categories/create' },
-          { label: 'Channels', link: '/dashboard/videos/channels' },
-          { label: 'Add Channel', link: '/dashboard/videos/channels/create' },
-        ],
-      },
+      // {
+      //   heading: 'Music Management',
+      //   link: '/dashboard/music-management',
+      //   icon: faMusic,
+      //   items: [
+      //     { label: 'All Music', link: '/dashboard/music' },
+      //     { label: 'Add Music', link: '/dashboard/music/create' },
+      //     { label: 'Genres', link: '/dashboard/music/genres' },
+      //     { label: 'Add Genre', link: '/dashboard/music/genres/create' },
+      //     { label: 'Artists', link: '/dashboard/music/artists' },
+      //     { label: 'Add Artist', link: '/dashboard/music/artists/create' },
+      //     { label: 'Albums', link: '/dashboard/music/albums' },
+      //     { label: 'Add Album', link: '/dashboard/music/albums/create' },
+      //   ],
+      // },
+      // {
+      //   heading: 'Video Management',
+      //   link: '/dashboard/video-management',
+      //   icon: faVideo,
+      //   items: [
+      //     { label: 'All Videos', link: '/dashboard/videos' },
+      //     { label: 'Add Video', link: '/dashboard/videos/create' },
+      //     { label: 'Categories', link: '/dashboard/videos/categories' },
+      //     { label: 'Add Category', link: '/dashboard/videos/categories/create' },
+      //     { label: 'Channels', link: '/dashboard/videos/channels' },
+      //     { label: 'Add Channel', link: '/dashboard/videos/channels/create' },
+      //   ],
+      // },
             
     {
       heading: 'Settings',
@@ -172,8 +183,9 @@ const Sidebar: React.FC = () => {
       <div className="px-8 mt-4 flex-grow">
         <nav className="flex flex-col gap-4">
           <div>
-            <p className="text-lg text-yellow-300">Hi, Ahzu! Welcome In</p>
+            <p className=" text-white inline-flex items-center gap-4"><Profile /></p>
             <div className="border-t border-zinc-700 h-px mt-2"></div>
+            {/* <Profile /> */}
           </div>
           {navigationSections.map((section, index) => (
             <React.Fragment key={index}>
