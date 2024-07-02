@@ -1,5 +1,4 @@
 import DashboardPageTitle from '@/components/Dashboards/DashboardPageTitle'
-import CreateProduct from '@/components/Dashboards/product/CreateProduct'
 import DashLayout from '@/components/Layouts/DashLayouts'
 import SectionWrap from '@/components/elements/SectionWrap'
 import React from 'react'

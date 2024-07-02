@@ -51,7 +51,7 @@ export default function Pricing() {
       </Head>
 
       <RootLayout>
-        <HeaderSpace />
+        <Spacer />
         <PricingTable />
         <Spacer />
       </RootLayout>

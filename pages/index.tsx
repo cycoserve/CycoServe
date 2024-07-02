@@ -59,7 +59,7 @@ export default function Home() {
       </Head>
 
       <RootLayout>
-        <HeaderSpace />
+ 
         <div className="features-bg wrapp min-h-full py-16 ">
           {/* Features Section */}
           <div className="div px-4 lg:px-4">
@@ -76,7 +76,7 @@ export default function Home() {
           <SwiperComponent />
         </div>
         {/* Two Col Section */}
-        <SectionWrap>
+    
           <div className="wrap px-4 py-4">
             <div className="div rounded-3xl pb-20 pt-12 border-b-4 border-orange-500 bg-gray-100 px-0">
               <TitleSection
@@ -97,10 +97,7 @@ export default function Home() {
               />
             </div>
           </div>
-        </SectionWrap>
 
-        {/* Radio Broadcasting */}
-        <SectionWrap>
           <div className="three bg-white pt-4 pb-8">
             <TitleSection
               subtitle="Reliable Radio Hosting Services"
@@ -124,13 +121,13 @@ export default function Home() {
               image3={"/assets/podcasting.jpg"}
             />
           </div>
-        </SectionWrap>
-        <SectionWrap>
-          <ProductsList />
-          <AppsList />
-        </SectionWrap>
+        {/* </SectionWrap> */}
+        {/* <SectionWrap>
+          {/* <ProductsList />
+          <AppsList /> */}
+        {/* </SectionWrap> */} 
         {/* Blog Section */}
-        <SectionWrap>
+        {/* <SectionWrap>
           <div className="features-bg py-12 border-orange-500 border-b">
             <div className="container mx-auto">
               <div className="px-4 lg:px-0">
@@ -148,7 +145,7 @@ export default function Home() {
               <ArticlesList />
             </div>
           </div>
-        </SectionWrap>
+        </SectionWrap> */}
         <div className="container px-4 lg:px-0 mx-auto">
 
           <Hero

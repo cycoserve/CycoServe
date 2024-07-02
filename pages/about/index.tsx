@@ -9,7 +9,7 @@ import SectionWrap from "@/components/elements/SectionWrap";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import Image from "next/image";
 import Spacer from "@/components/Spacer";
-import HeaderSpace from "@/components/elements/HeaderSpace";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,7 +54,7 @@ export default function AboutPage() {
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
       <RootLayout>
-        <HeaderSpace />
+        <Spacer />
         <SectionWrap>
           <TitleSection
             subtitle="Unveiling Our Journey to Success"

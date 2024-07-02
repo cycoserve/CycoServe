@@ -51,9 +51,8 @@ function WhyChooseCycoServe() {
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
       <RootLayout>
-
+        <Spacer />
         {/* Two Col Section */}
-        <HeaderSpace />
         <SectionWrap>
           <TitleSection
             subtitle="Your Success, Our Commitment"
@@ -108,10 +107,10 @@ function WhyChooseCycoServe() {
           </p>
         </LongTextSection>
         <SectionWrap>
-          <div className="container mx-auto">
+          <div className="container mx-auto px-4 lg:px-0">
             <Hero
               background={"/assets/homehero-bg.jpg"}
-              title={"The CycoServe Industry:Advanatage"}
+              title={"The CycoServe Advanatage"}
               description={
                 "Discover the CycoServe advantage: industry-leading customer support, unbeatable pricing, and a free tier web hosting offer. Choose excellence, choose CycoServe"
               }

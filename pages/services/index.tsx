@@ -22,24 +22,13 @@ export default function ServicesPage() {
         {/* Add any meta tags, stylesheets, or scripts here */}
       </Head>
       <RootLayout>
-        {/* <Hero
-          background={"/assets/earth-from-space.jpg"}
-          title={"Your Digital Presence, Our Innovative Solutions"}
-          description={
-            "Discover our comprehensive suite of digital marketing services designed to drive growth, engagement, and success for your business. Let's transform your online presence together."
-          }
-          bptext={"Learn More"}
-          bpurl={"/services"}
-          bstext={"Conact Us"}
-          bsurl={"/contact-us"}
-        /> */}
-        <HeaderSpace />
+        <Spacer />
         <SectionWrap>
           <TitleSection
             subtitle="Tailored for Success in the Digital Age"
             title="Transforming Tomorrow: Discover Our Suite of Cutting-Edge Solutions"
           />
-      <ServicesList />
+          {/* <ServicesList /> */}
 
         </SectionWrap>
         <div className="container mx-auto px-4 lg:px-0">

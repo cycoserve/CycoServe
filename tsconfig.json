@@ -16,6 +16,7 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "db.js", "db.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "db.js", "db.js", "types/editorjs.d.ts"],
+
   "exclude": ["node_modules"]
 }

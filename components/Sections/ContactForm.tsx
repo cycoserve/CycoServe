@@ -7,13 +7,13 @@ import Image from 'next/image';
 const inputClasses = 'mt-1 block w-full px-3 py-2 border border-zinc-300 rounded-md shadow-sm focus:outline-none focus:ring-zinc-400 focus:border-zinc-400 sm:text-sm';
 const textClasses = 'block text-sm font-medium text-zinc-700';
 const containerClasses = 'container mx-auto py-8';
-const cardClasses = 'bg-white shadow-md rounded-lg p-6';
+const cardClasses = 'bg-white shadow-md rounded-lg p-6 ring-2 ring-gray-100';
 const buttonClasses = 'bg-orange-500 text-white py-1 px-8 rounded-full hover:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-50';
 
 const ContactForm = () => {
   return (
     <div className={containerClasses}>
-      <div className="max-w-full px-4 lg:px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="max-w-full px-4 lg:px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className={cardClasses}>
           <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
           <Formik

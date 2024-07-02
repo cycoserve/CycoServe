@@ -57,15 +57,18 @@ const UserProfile: React.FC<UserProfileProps> = () => {
         <p>Loading profile...</p>
       ) : (
         <>
-          {user && ( // Conditionally render user details if user exists
+        <div className='flex justify-center items-center'>
+                    {user && (
             <>
               {user.photoURL && (
-                <img src={user.photoURL} alt="Profile" className="profile-avatar rounded-full w-8 h-auto" />
+                <img src={user.photoURL} alt="Profile" className="profile-avatar rounded-full w-6 h-auto" />
               )}
-              <div className='text-lg'>{user.displayName}</div>
-              {/* <p>{user.email}</p> */}
+              <div className='text-sm'>{user.displayName}</div>
+              <p className='text-sm'>Logged in as: {user.email}</p>
             </>
           )}
+        </div>
+
         </>
       )}
     </div>

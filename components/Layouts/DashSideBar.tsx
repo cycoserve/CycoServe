@@ -18,12 +18,16 @@ import People from '@mui/icons-material/People';
 import PermMedia from '@mui/icons-material/PermMedia';
 import Dns from '@mui/icons-material/Dns';
 import Public from '@mui/icons-material/Public';
+import { Tv } from '@mui/icons-material';
 
-const data = [
-  { icon: <People />, label: 'Authentication' },
-  { icon: <Dns />, label: 'Database' },
-  { icon: <PermMedia />, label: 'Storage' },
-  { icon: <Public />, label: 'Hosting' },
+const dashboardData = [
+  { icon: <Dns />, label: 'Overview', route: '/dashboard' },
+  { icon: <People />, label: 'Visit Website', route: '/' },
+];
+
+const contentData = [
+  { icon: <People />, label: 'Articles', route: '/dashboard/articles' },
+  { icon: <Tv />, label: 'Videos', route: '/dashboard/videos' },
 ];
 
 const FireNav = styled(List)<{ component?: React.ElementType }>({
@@ -55,8 +59,8 @@ export default function DashSideBar () {
           },
           palette: {
             mode: 'dark',
-            primary: { main: 'rgb(102, 157, 246)' },
-            background: { paper: 'rgb(5, 30, 52)' },
+            primary: { main: '#ffffff' },
+            background: { paper: '#000000' },
           },
         })}
       >
@@ -73,6 +77,7 @@ export default function DashSideBar () {
                   letterSpacing: 0,
                 }}
               />
+              <div className='pb-7 pt-6'></div>
             </ListItemButton>
             <Divider />
             <ListItem component="div" disablePadding>
@@ -142,7 +147,7 @@ export default function DashSideBar () {
                 }}
               >
                 <ListItemText
-                  primary="Build"
+                  primary="Dashboard"
                   primaryTypographyProps={{
                     fontSize: 15,
                     fontWeight: 'medium',
@@ -168,9 +173,129 @@ export default function DashSideBar () {
                 />
               </ListItemButton>
               {open &&
-                data.map((item) => (
+                dashboardData.map((item) => (
                   <ListItemButton
-                  component="a" href="/dashboard"
+                  component="a" href={item.route}
+                    key={item.label}
+                    sx={{ py: 0, minHeight: 32, color: 'rgba(255,255,255,.8)' }}
+                  >
+                    <ListItemIcon sx={{ color: 'inherit' }}>
+                      {item.icon}
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={item.label}
+                      primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
+                    />
+                  </ListItemButton>
+                ))}
+            </Box>
+            <Divider />
+            <Box
+              sx={{
+                bgcolor: open ? 'rgba(71, 98, 130, 0.2)' : null,
+                pb: open ? 2 : 0,
+              }}
+            >
+              <ListItemButton
+                alignItems="flex-start"
+                onClick={() => setOpen(!open)}
+                sx={{
+                  px: 3,
+                  pt: 2.5,
+                  pb: open ? 0 : 2.5,
+                  '&:hover, &:focus': { '& svg': { opacity: open ? 1 : 0 } },
+                }}
+              >
+                <ListItemText
+                  primary="Manage Content"
+                  primaryTypographyProps={{
+                    fontSize: 15,
+                    fontWeight: 'medium',
+                    lineHeight: '20px',
+                    mb: '2px',
+                  }}
+                  secondary="Authentication, Firestore Database, Realtime Database, Storage, Hosting, Functions, and Machine Learning"
+                  secondaryTypographyProps={{
+                    noWrap: true,
+                    fontSize: 12,
+                    lineHeight: '16px',
+                    color: open ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,0.5)',
+                  }}
+                  sx={{ my: 0 }}
+                />
+                <KeyboardArrowDown
+                  sx={{
+                    mr: -1,
+                    opacity: 0,
+                    transform: open ? 'rotate(-180deg)' : 'rotate(0)',
+                    transition: '0.2s',
+                  }}
+                />
+              </ListItemButton>
+              {open &&
+                contentData.map((item) => (
+                  <ListItemButton
+                  component="a" href={item.route}
+                    key={item.label}
+                    sx={{ py: 0, minHeight: 32, color: 'rgba(255,255,255,.8)' }}
+                  >
+                    <ListItemIcon sx={{ color: 'inherit' }}>
+                      {item.icon}
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={item.label}
+                      primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
+                    />
+                  </ListItemButton>
+                ))}
+            </Box>
+            <Divider />
+            <Box
+              sx={{
+                bgcolor: open ? 'rgba(71, 98, 130, 0.2)' : null,
+                pb: open ? 2 : 0,
+              }}
+            >
+              <ListItemButton
+                alignItems="flex-start"
+                onClick={() => setOpen(!open)}
+                sx={{
+                  px: 3,
+                  pt: 2.5,
+                  pb: open ? 0 : 2.5,
+                  '&:hover, &:focus': { '& svg': { opacity: open ? 1 : 0 } },
+                }}
+              >
+                <ListItemText
+                  primary=""
+                  primaryTypographyProps={{
+                    fontSize: 15,
+                    fontWeight: 'medium',
+                    lineHeight: '20px',
+                    mb: '2px',
+                  }}
+                  secondary="Authentication, Firestore Database, Realtime Database, Storage, Hosting, Functions, and Machine Learning"
+                  secondaryTypographyProps={{
+                    noWrap: true,
+                    fontSize: 12,
+                    lineHeight: '16px',
+                    color: open ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,0.5)',
+                  }}
+                  sx={{ my: 0 }}
+                />
+                <KeyboardArrowDown
+                  sx={{
+                    mr: -1,
+                    opacity: 0,
+                    transform: open ? 'rotate(-180deg)' : 'rotate(0)',
+                    transition: '0.2s',
+                  }}
+                />
+              </ListItemButton>
+              {open &&
+                contentData.map((item) => (
+                  <ListItemButton
+                  component="a" href={item.route}
                     key={item.label}
                     sx={{ py: 0, minHeight: 32, color: 'rgba(255,255,255,.8)' }}
                   >

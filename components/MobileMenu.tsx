@@ -10,8 +10,8 @@ const menuItems = [
   { id: "2", title: "The Agency", url: "/about" },
   { id: "3", title: "Why Choose Us?", url: "/why-choose-us" },
   { id: "4", title: "Services", url: "/services" },
-  { id: "5", title: "Pricing", url: "/pricing" },
-  { id: "6", title: "Core Articles", url: "/blog" },
+  { id: "4", title: "Contact", url: "/contact-us" },
+
 ];
 
 const MobileMenu = () => {
@@ -44,7 +44,7 @@ const MobileMenu = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="0 0 24 24"
+          viewBox="0 0 28 28"
           strokeWidth="1.5"
           stroke="currentColor"
           className="w-8 h-8"
@@ -66,7 +66,7 @@ const MobileMenu = () => {
           overlayColor={'black'}
 
         >
-          <div className="bg-orange-400 h-full w-full pt-8">
+          <div className="bg-gray-100 h-full w-full pt-8">
             <div className="list flex flex-col justify-stretch h-full items-start px-6 text-zinc-900 py-8 text-xl gap-4">
               {menuItems.map((items) => (
                 <><Link key={items.id} href={items.url}>

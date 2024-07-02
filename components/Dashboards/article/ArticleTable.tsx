@@ -71,12 +71,12 @@ const ArticlesTable = () => {
   }, []);
 
   return (
-    <div style={{ height: 600, width: '100%' }}>
+    <div style={{ height: '50%', width: '100%' }}>
       <DataGrid
         rows={articles}
         columns={columns}
         loading={loading}
-        checkboxSelection
+        // checkboxSelection
         autoHeight
         onRowDoubleClick={(params) => console.log('Row double-clicked:', params.row)}
         onRowSelectionModelChange={(selection) => console.log('Selection changed:', selection)}

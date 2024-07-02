@@ -19,12 +19,12 @@ function Logo() {
   }, []);
 
   return (
-    <div className="flex -mt-1 justify-center items-center bg-transparent">
+    <div className="flex -mt-2 justify-center items-center bg-transparent">
       <Link href={"/"} >
       <img
         src={scrolled ? "/logo-light.svg" : "/logo-light.svg"}
         alt="Logo"
-        className="h-8 object-cover"
+        className="h-6 object-cover"
       />
       </Link>
 

@@ -27,9 +27,9 @@ function Header() {
     <>
       <div
         className={`${scrolled
-          ? "bg-black shadow-sm"
+          ? "bg-black shadow-sm py-2"
           : "bg-black"
-          } fixed top-0 left-0 w-full right-0 z-10 py-4 transition duration-300 ease-in-out`}
+          } fixed top-0 left-0 w-full right-0 z-10 py-2 transition duration-500 ease-in-out`}
       >
         <div className="inner container px-4 md:px-2 mx-auto flex justify-between items-center">
           <Logo />
@@ -38,7 +38,7 @@ function Header() {
           </div>
           <div className="inline-flex">
             <div className="mr-4">
-              <ButtonPrimary title="Sign In" url="https://station.cycoserve.com/login" />
+              <ButtonPrimary title="Sign In" url="/signin" />
             </div>
             <div className="div lg:hidden">
               <MobileMenu />

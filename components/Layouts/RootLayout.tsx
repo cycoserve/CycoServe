@@ -15,7 +15,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <header>
         <Header />
       </header>
-      <main>{children}</main>
+      <main className='pt-12'>{children}</main>
       <footer>
         <Footer />
       </footer>

@@ -1,6 +1,4 @@
 import DashboardPageTitle from '@/components/Dashboards/DashboardPageTitle'
-import ProductTable from '@/components/Dashboards/product/ProductTable'
-import CreateProduct from '@/components/Dashboards/product/CreateProduct'
 import DashLayout from '@/components/Layouts/DashLayouts'
 import SectionWrap from '@/components/elements/SectionWrap'
 import React from 'react'
@@ -15,13 +13,13 @@ function EditArtist() {
                         <DashboardPageTitle subtitle={'View, Add and Edit all Edit Artist'}>
                             Edit Artist 
                         </DashboardPageTitle>
-                        <CreateProduct />
+                 
                     </div>
 
 
 
                     <div className="div container bg-white rounded-lg mx-auto h-full">
-                        <ProductTable />
+                   
                     </div>
                 </SectionWrap>
             </DashLayout>
