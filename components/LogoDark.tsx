@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-function Logo() {
+function LogoDark() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function Logo() {
     <div className="flex -mt-2 justify-center items-center bg-transparent">
       <Link href={"/"} >
       <img
-        src={scrolled ? "/logo-dark.svg" : "/logo-light.svg"}
+        src={scrolled ? "/logo-dark.svg" : "/logo-dark.svg"}
         alt="Logo"
         className=" h-8 object-cover"
       />
@@ -32,4 +32,4 @@ function Logo() {
   );
 }
 
-export default Logo;
+export default LogoDark;

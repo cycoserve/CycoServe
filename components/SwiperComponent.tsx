@@ -65,6 +65,7 @@ const SwiperComponent = () => {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 4 },
             }}
+            className="custom-swiper"
           >
             {slides.map((slide, index) => (
               <SwiperSlide key={index}>
@@ -86,6 +87,20 @@ const SwiperComponent = () => {
           </Swiper>
         </div>
       </section>
+      <style jsx global>{`
+        .custom-swiper .swiper-button-next,
+        .custom-swiper .swiper-button-prev {
+          color: white;
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 20px;
+          border-radius: 50%;
+        }
+
+        .custom-swiper .swiper-button-next:after,
+        .custom-swiper .swiper-button-prev:after {
+          font-size: 20px;
+        }
+      `}</style>
     </div>
   );
 };

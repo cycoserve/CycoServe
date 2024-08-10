@@ -1,16 +1,12 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Hero from "../../components/Sections/Hero";
-import Features from "../../components/Features";
 import RootLayout from "../../components/Layouts/RootLayout";
 import Head from "next/head";
-import FourColSection from "@/components/Sections/FourColSection";
 import SectionWrap from "@/components/elements/SectionWrap";
 import TitleSection from "@/components/Sections/TitleSection";
-import SwiperComponent from "@/components/SwiperComponent";
-import HeaderSpace from "@/components/elements/HeaderSpace";
 import Spacer from "@/components/Spacer";
-import ServicesList from "@/components/services/ServicesList";
+
 
 export default function ServicesPage() {
   return (
@@ -23,14 +19,6 @@ export default function ServicesPage() {
       </Head>
       <RootLayout>
         <Spacer />
-        <SectionWrap>
-          <TitleSection
-            subtitle="Tailored for Success in the Digital Age"
-            title="Transforming Tomorrow: Discover Our Suite of Cutting-Edge Solutions"
-          />
-          {/* <ServicesList /> */}
-
-        </SectionWrap>
         <div className="container mx-auto px-4 lg:px-0">
           <Hero
             background={"/assets/homehero-bg.jpg"}

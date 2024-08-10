@@ -1,24 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const gradientClasses = 'bg-gradient-to-r from-blue-500 to-purple-500'
-const textClasses = 'text-white'
-const paddingClasses = 'p-8'
-const centerTextClasses = 'text-center'
-const buttonClasses = 'bg-white text-purple-500 px-4 py-2 rounded-r-lg'
-const inputClasses = 'p-2 rounded-l-lg border border-white mr-2'
+const MailListSignUp: React.FC = () => {
+  const [email, setEmail] = useState('');
 
-const WelcomeComponent = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission (e.g., send to API)
+    console.log('Email submitted:', email);
+    // Reset form
+    setEmail('');
+  };
+
   return (
-    <div className={`${gradientClasses} ${textClasses} ${paddingClasses} ${centerTextClasses}`}>
-      <h1 className="text-4xl font-bold uppercase">Welcome to Our Website</h1>
-      <p className="text-lg my-4">Explore our amazing features and services</p>
-      <form className="flex items-center justify-center my-4">
-        <input type="email" placeholder="Enter your email" className={inputClasses} />
-        <button className={buttonClasses}>Subscribe</button>
-      </form>
-      <p className="text-sm">We will not sell your information.</p>
-    </div>
-  )
-}
+    <section className="bg-blue-600 py-16">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-white text-center mb-8">Stay Updated</h2>
+        <p className="text-white text-center mb-8">
+          Subscribe to our newsletter for the latest updates on AI technology and digital services.
+        </p>
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+          <div className="flex">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              required
+              className="flex-grow px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+            <button
+              type="submit"
+              className="bg-yellow-500 text-blue-900 px-6 py-2 rounded-r-lg font-semibold hover:bg-yellow-400 transition duration-300"
+            >
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  );
+};
 
-export default WelcomeComponent
+export default MailListSignUp;

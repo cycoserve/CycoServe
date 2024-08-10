@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-
-
 const menuItems = [
   {
     id:"1",
@@ -33,7 +31,7 @@ const menuItems = [
   },
 ]
 
-const Navigation: React.FC = () => {
+const SecondNavigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -50,7 +48,6 @@ const Navigation: React.FC = () => {
     };
   }, []);
 
-
   if (error) {
     return <div>{error}</div>;
   }
@@ -59,16 +56,14 @@ const Navigation: React.FC = () => {
     <>
       <div className="menu">
         <ul className="flex justify-between items-center gap-8 list-none">
-          {/* Map over menu items to generate list items */}
           {menuItems.map((item) => (
             <motion.li 
               key={item.id}
               whileHover={{ scale: 1.09 }}
               whileTap={{ scale: 0.9 }}
             >
-              {/* Use Link component to navigate */}
               <Link href={item.url}>
-                <p className={`${scrolled ? "text-zinc-900 font-semibold" : "text-white"}`}>
+                <p className={`${scrolled ? "text-black font-semibold" : "text-black"}`}>
                   {item.title}
                 </p>
               </Link>
@@ -80,4 +75,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default Navigation;
+export default SecondNavigation;

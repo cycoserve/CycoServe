@@ -1,13 +1,11 @@
-"use client";
 import React, { useState, useEffect } from "react";
-import Navigation from "./Navigation";
+import SecondNavigation from "./SecondNavigation";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import ButtonPrimary from "./ButtonPrimary";
+import LogoDark from "./LogoDark";
 
-
-
-function Header() {
+function SecondHeader() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,15 +24,16 @@ function Header() {
   return (
     <>
       <div
-        className={`${scrolled
-          ? "bg-white shadow-sm py-2"
-          : "bg-transparent py-2"
-          } fixed top-0 left-0 w-full right-0 z-10 py-0 transition duration-600 ease-in-out`}
+        className={`${
+          scrolled
+            ? "shadow-md"
+            : ""
+        } fixed top-0 left-0 w-full right-0 z-10 py-2 bg-white transition duration-600 ease-in-out`}
       >
         <div className="inner container px-4 md:px-2 mx-auto flex justify-between items-center">
-          <Logo />
+         <LogoDark />
           <div className="hidden lg:block">
-            <Navigation />
+            <SecondNavigation />
           </div>
           <div className="inline-flex">
             <div className="mr-4">
@@ -50,4 +49,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default SecondHeader;

@@ -66,7 +66,7 @@ const MobileMenu = () => {
           overlayColor={'black'}
 
         >
-          <div className="bg-gray-100 h-full w-full pt-8">
+          <div className="bg-white h-full w-full pt-8">
             <div className="list flex flex-col justify-stretch h-full items-start px-6 text-zinc-900 py-8 text-xl gap-4">
               {menuItems.map((items) => (
                 <><Link key={items.id} href={items.url}>
