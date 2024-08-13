@@ -6,11 +6,11 @@ import Header from '../Header';
 import SecondHeader from '../SecondHeader';
 import Footer from '../Footer';
 
-interface RootLayoutProps {
+interface BranchLayoutProps {
   children: ReactNode;
 }
 
-const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
+const BranchLayout: React.FC<BranchLayoutProps> = ({ children }) => {
   const router = useRouter();
   const isHomePage = router.pathname === '/';
 
@@ -20,7 +20,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <header>
         {isHomePage ? <Header /> : <SecondHeader />}
       </header>
-      <main className=''>{children}</main>
+      <main className='pt-24'>{children}</main>
       <footer>
         <Footer />
       </footer>
@@ -28,4 +28,4 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   );
 };
 
-export default RootLayout;
+export default BranchLayout;

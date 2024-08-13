@@ -9,6 +9,8 @@ import TitleSection from "@/components/Sections/TitleSection";
 import TwoColSection from "@/components/Sections/TwoColSection";
 import HeaderSpace from "@/components/elements/HeaderSpace";
 import Spacer from "@/components/Spacer";
+import PageEndHero from "@/components/elements/PageEndHero";
+import BranchLayout from "@/components/Layouts/BranchLayout";
 
 function WhyChooseCycoServe() {
   return (
@@ -50,7 +52,7 @@ function WhyChooseCycoServe() {
         />
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
-      <RootLayout>
+      <BranchLayout>
         <Spacer />
         {/* Two Col Section */}
         <SectionWrap>
@@ -108,7 +110,7 @@ function WhyChooseCycoServe() {
         </LongTextSection>
         <SectionWrap>
           <div className="container mx-auto px-4 lg:px-0">
-            <Hero
+            <PageEndHero
               background={"/assets/homehero-bg.jpg"}
               title={"The CycoServe Advanatage"}
               description={
@@ -121,8 +123,7 @@ function WhyChooseCycoServe() {
             />
           </div>
         </SectionWrap>
-        <Spacer />
-      </RootLayout>
+      </BranchLayout>
     </>
   );
 }

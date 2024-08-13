@@ -1,7 +1,8 @@
 // contexts/AuthContext.tsx
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { getAuth, onAuthStateChanged, User, signOut } from 'firebase/auth';
-import firebase_app from '@/utils/firebaseConfig';
+import { firebase_app, db } from "@/utils/firebaseConfig";
+
 
 const auth = getAuth(firebase_app);
 

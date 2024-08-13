@@ -12,6 +12,8 @@ import Spacer from "@/components/Spacer";
 import OurTeam from "@/components/Sections/OurTeam";
 import MissionVision from "@/components/Sections/MissionVision";
 import MailListSignUp from "@/components/Sections/MailListSignUp";
+import PageEndHero from "@/components/elements/PageEndHero";
+import BranchLayout from "@/components/Layouts/BranchLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,13 +57,9 @@ export default function AboutPage() {
         />
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
-      <RootLayout>
+      <BranchLayout>
         <Spacer />
         <SectionWrap>
-          <TitleSection
-            subtitle="Unveiling Our Journey to Success"
-            title="Discover the Story Behind CycoServe: Innovators in Digital Excellence"
-          />
           <LongTextSection>
             <div className="text-zinc-900">
               <div className="grid grid-cols-1 md:grid-cols-2 justify-start items-center gap-12 mb-12">
@@ -74,8 +72,7 @@ export default function AboutPage() {
                     className="rounded-lg"
                   />
                   <ParagraphTitle>
-                    Your gateway to digital transformation and success in the
-                    digital age
+                    Your gateway to digital transformation and success.
                   </ParagraphTitle>
                   <p>
                     At CycoServe, we&apos;re more than just a digital marketing
@@ -138,19 +135,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <SectionWrap>
-                <Hero
-                  background={"/assets/about-hero-bg.jpg"}
-                  title={"The Agency: Discover CycoServe's Vision and Mission"}
-                  description={
-                    "At CycoServe, we're more than just a digital marketing agency. We're innovators, collaborators, and visionaries dedicated to driving your success."
-                  }
-                  bptext={"Pricing"}
-                  bpurl={"/pricing"}
-                  bstext={"Contact Us"}
-                  bsurl={"/contact-us"}
-                />
-              </SectionWrap>
+
               <div className="grid grid-cols md:grid-cols-2 gap-12 justify-items-start items-center mb-12">
                 <div className="">
                   <ParagraphTitle>Why Partner With Us?</ParagraphTitle>
@@ -181,10 +166,24 @@ export default function AboutPage() {
             </div>
           </LongTextSection>
         </SectionWrap>
-        <OurTeam />
+        <SectionWrap>
+          <OurTeam />
+        </SectionWrap>
         <MissionVision />
-        <MailListSignUp />
-      </RootLayout>
+        <SectionWrap>
+          <PageEndHero
+            background={"/assets/about-hero-bg.jpg"}
+            title={"The Agency: Discover CycoServe's Vision and Mission"}
+            description={
+              "At CycoServe, we're more than just a digital marketing agency. We're innovators, collaborators, and visionaries dedicated to driving your success."
+            }
+            bptext={"Pricing"}
+            bpurl={"/pricing"}
+            bstext={"Contact Us"}
+            bsurl={"/contact-us"}
+          />
+        </SectionWrap>
+      </BranchLayout>
     </>
   );
 }

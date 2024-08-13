@@ -8,7 +8,7 @@ interface SectionWrapProps {
 const SectionWrap: React.FC<SectionWrapProps> = ({children}) => {
   return (
     <>
-      <div className="wrapp  bg-transparent pb-12">
+      <div className="max-w-7xl mx-auto  bg-transparent pb-12">
         {children}
       </div>
     </>

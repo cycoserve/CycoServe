@@ -18,8 +18,7 @@ export default function ServicesPage() {
         {/* Add any meta tags, stylesheets, or scripts here */}
       </Head>
       <RootLayout>
-        <Spacer />
-        <div className="container mx-auto px-4 lg:px-0">
+     
           <Hero
             background={"/assets/homehero-bg.jpg"}
             title={"Transform Your Digital Presence"}
@@ -31,8 +30,6 @@ export default function ServicesPage() {
             bstext={"Contact Us"}
             bsurl={"/contact-us"}
           />
-        </div>
-        <Spacer />
       </RootLayout>
     </>
   );

@@ -27,11 +27,11 @@ function Header() {
     <>
       <div
         className={`${scrolled
-          ? "bg-white shadow-sm py-2"
+          ? "bg-white py-2 shadow-md"
           : "bg-transparent py-2"
           } fixed top-0 left-0 w-full right-0 z-10 py-0 transition duration-600 ease-in-out`}
       >
-        <div className="inner container px-4 md:px-2 mx-auto flex justify-between items-center">
+        <div className="px-4 md:px-4 mx-auto flex justify-between items-center">
           <Logo />
           <div className="hidden lg:block">
             <Navigation />

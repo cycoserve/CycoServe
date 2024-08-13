@@ -9,6 +9,8 @@ import Head from "next/head";
 import SwiperComponent from "@/components/SwiperComponent";
 import VideoSwiperComponent from "@/components/VideoSwiperComponent";
 import Spacer from "@/components/Spacer";
+import PageEndHero from "@/components/elements/PageEndHero";
+import SectionWrap from "@/components/elements/SectionWrap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,20 +66,23 @@ export default function Home() {
           bsurl={"/contact-us"}
         />
         <div className="features-bg wrapp min-h-full py-16 ">
-          {/* Features Section */}
-          <div className="div px-4 lg:px-4">
-            <div className="container mx-auto mb-12">
-              <div className="bg-white p-4 border border-orange-500 rounded-lg inset-full max-w-xl">
-                <TitleSection
-                  subtitle="Tailored for Success in the Digital Age"
-                  title="Transforming Tomorrow: Discover Our Suite of Cutting-Edge Solutions"
-                />
+          <SectionWrap>
+            {/* Features Section */}
+            <div className="div">
+              <div className="container mx-auto mb-12">
+                <div className="bg-white p-4 border border-orange-500 rounded-lg inset-full max-w-xl">
+                  <TitleSection
+                    subtitle="Tailored for Success in the Digital Age"
+                    title="Transforming Tomorrow: Discover Our Suite of Cutting-Edge Solutions"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+            <SwiperComponent />
+          </SectionWrap>
 
-          <SwiperComponent />
-          
+       
+
           <div className="mt-16">
             <div className="container mx-auto mb-12">
               <div className="bg-white p-4 border border-orange-500 rounded-lg inset-full max-w-xl">
@@ -92,8 +97,8 @@ export default function Home() {
         </div>
         {/* Two Col Section */}
 
-        <div className="wrap px-4 py-4">
-          <div className="div rounded-3xl pb-20 pt-12 border-b-4 border-orange-500 bg-gray-100 px-0">
+        <div className=" py-4">
+          <div className="div pb-20 pt-12 border-b-4 border-orange-500 bg-white">
             <TitleSection
               subtitle="Your Success, Our Commitment"
               title="Choose CycoServe: Where Professionalism Meets Generosity"
@@ -137,7 +142,7 @@ export default function Home() {
           />
         </div>
         <div className="container px-4 lg:px-0 mx-auto">
-          <Hero
+          <PageEndHero
             background={"/assets/homehero-bg.jpg"}
             title={"Transform Your Digital Presence"}
             description={
@@ -149,7 +154,6 @@ export default function Home() {
             bsurl={"/contact-us"}
           />
         </div>
-
         <Spacer />
       </RootLayout>
     </>
