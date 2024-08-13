@@ -21,11 +21,6 @@ const menuItems = [
   },
   {
     id:"4",
-    title:"Documentation",
-    url:"/documentation",
-  },
-  {
-    id:"5",
     title:"Contact Us",
     url:"/contact-us",
   },
