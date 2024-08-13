@@ -83,7 +83,7 @@ export default function Home() {
 
        
 
-          <div className="mt-16">
+          {/* <div className="mt-16">
             <div className="container mx-auto mb-12">
               <div className="bg-white p-4 border border-orange-500 rounded-lg inset-full max-w-xl">
                 <TitleSection
@@ -93,7 +93,7 @@ export default function Home() {
               </div>
             </div>
             <VideoSwiperComponent />
-          </div>
+          </div> */}
         </div>
         {/* Two Col Section */}
 
