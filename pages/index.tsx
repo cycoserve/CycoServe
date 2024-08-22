@@ -7,12 +7,10 @@ import ThreeColSection from "../components/Sections/ThreeColSection";
 import TitleSection from "../components/Sections/TitleSection";
 import Head from "next/head";
 import SwiperComponent from "@/components/SwiperComponent";
-import VideoSwiperComponent from "@/components/VideoSwiperComponent";
 import Spacer from "@/components/Spacer";
 import PageEndHero from "@/components/elements/PageEndHero";
 import SectionWrap from "@/components/elements/SectionWrap";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -58,7 +56,7 @@ export default function Home() {
       <RootLayout>
         <Hero
           title={"CycoServe Digital Marketing"}
-          description={"Launch you web project faster with assisted services."}
+          description={"Launch your web project faster with AI assisted service providers guiding you every step of the way. Create NLP Agents, AI Assistants and more."}
           background={"/assets/contacthero-bg.jpg"}
           bptext={"Get Started"}
           bpurl={""}

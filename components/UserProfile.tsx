@@ -42,7 +42,7 @@ const UserProfile = ({ userId }: UserProfileProps) => {
   }, [userId]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="flex justify-center items-center">Loading...</div>;
   }
 
   if (error) {

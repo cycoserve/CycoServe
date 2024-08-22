@@ -31,7 +31,7 @@ function Header() {
           : "bg-transparent py-2"
           } fixed top-0 left-0 w-full right-0 z-10 py-0 transition duration-600 ease-in-out`}
       >
-        <div className="px-4 md:px-4 mx-auto flex justify-between items-center">
+        <div className="container px-4 md:px-4 mx-auto flex justify-between items-center">
           <Logo />
           <div className="hidden lg:block">
             <Navigation />

@@ -1,14 +1,15 @@
 // contexts/AuthContext.tsx
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { getAuth, onAuthStateChanged, User, signOut } from 'firebase/auth';
-import { firebase_app, db } from "@/utils/firebaseConfig";
+import { firebase_app } from "@/utils/firebaseConfig";
+
 
 
 const auth = getAuth(firebase_app);
 
 interface AuthContextType {
     user: User | null;
-    loading: boolean; // Add loading property
+    loading: boolean;
     logout: () => void;
 }
 
@@ -49,7 +50,13 @@ export const AuthContextProvider: React.FC<AuthContextProviderProps> = ({ childr
 
     return (
         <AuthContext.Provider value={{ user, loading, logout }}>
-            {loading ? <div>Loading...</div> : children}
+            {loading ? (
+                <div className='flex justify-center items-center min-h-[100vh]'>
+                   Loading...
+                </div>
+            ) : (
+                children
+            )}
         </AuthContext.Provider>
     );
 };

@@ -20,14 +20,15 @@ function Logo() {
 
   return (
     <div className="flex -mt-2 justify-center items-center bg-transparent">
-      <Link href={"/"} >
-      <img
-        src={scrolled ? "/logo-dark.svg" : "/logo-light.svg"}
-        alt="Logo"
-        className=" h-8 object-cover"
-      />
+      <Link href="/" >
+        <Image
+          src={scrolled ? "/logo-dark.svg" : "/logo-light.svg"}
+          alt="Logo"
+          width={150}
+          height={100}
+          className="h-8 object-cover"
+        />
       </Link>
-
     </div>
   );
 }

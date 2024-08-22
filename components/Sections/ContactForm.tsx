@@ -125,38 +125,7 @@ const ContactForm = () => {
             )}
           </Formik>
         </div>
-        <div className={cardClasses}>
-          <h2 className="text-lg font-semibold mb-4">Contact Information</h2>
-          <div className="mt-4">
-            <Image
-              src="/assets/contacthero-bg.jpg"
-              alt="map"
-              width={400}
-              height={300}
-              className="w-full rounded-lg shadow-md"
-            />
-          </div>
-          <div className='grid grid-cols-2 py-4 lg:grid-cols-2'>
-            <div className="div py-4 px-2">
-              <p className="text-zinc-700 mb-2">2400 Las Vegas Blvd</p>
-              <p className="text-zinc-700 mb-2">Las Vegas, United States</p>
-              <p className="text-zinc-700 mb-2">sales@cycoserve.com</p>
-              <p className="text-zinc-700">+1-(725)-261-6028</p>
-            </div>
-            <div className="div py-4 px-2">
-              <div className="mt-0">
-                <p className="text-zinc-700 mb-2">Offering Free consultations:</p>
-                <ul className="list-disc list-inside">
-                  <li className="text-zinc-700">Marketing Strategies</li>
-                  <li className="text-zinc-700">SEO Packages</li>
-                  <li className="text-zinc-700">Social Media Growth</li>
-                  <li className="text-zinc-700">Ad Management</li>
-                  <li className="text-zinc-700">Email Marketing</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   );

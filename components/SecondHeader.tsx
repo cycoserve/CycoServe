@@ -30,7 +30,7 @@ function SecondHeader() {
             : "shadow-sm border-b"
         } fixed top-0 left-0 w-full right-0 z-10 py-2 bg-white transition duration-600 ease-in-out`}
       >
-        <div className="inner container px-4 md:px-2 mx-auto flex justify-between items-center">
+        <div className="container px-4 md:px-2 mx-auto flex justify-between items-center">
          <LogoDark />
           <div className="hidden lg:block">
             <SecondNavigation />

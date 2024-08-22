@@ -25,6 +25,8 @@ function LogoDark() {
         src={scrolled ? "/logo-dark.svg" : "/logo-dark.svg"}
         alt="Logo"
         className=" h-8 object-cover"
+        width={150}
+        height={100}
       />
       </Link>
 
