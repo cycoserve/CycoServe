@@ -1,19 +1,16 @@
 import React from "react";
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import RootLayout from "../../components/Layouts/RootLayout";
-import Hero from "../../components/Sections/Hero";
 import LongTextSection from "@/components/Sections/LongText";
-import TitleSection from "@/components/Sections/TitleSection";
 import SectionWrap from "@/components/elements/SectionWrap";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import Image from "next/image";
 import Spacer from "@/components/Spacer";
 import OurTeam from "@/components/Sections/OurTeam";
 import MissionVision from "@/components/Sections/MissionVision";
-import MailListSignUp from "@/components/Sections/MailListSignUp";
 import PageEndHero from "@/components/elements/PageEndHero";
 import BranchLayout from "@/components/Layouts/BranchLayout";
+import HeroAbout from "@/components/Sections/HeroAbout";
 
 const inter = Inter({ subsets: ["latin"] });
 

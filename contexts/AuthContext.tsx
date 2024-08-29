@@ -51,8 +51,8 @@ export const AuthContextProvider: React.FC<AuthContextProviderProps> = ({ childr
     return (
         <AuthContext.Provider value={{ user, loading, logout }}>
             {loading ? (
-                <div className='flex justify-center items-center min-h-[100vh]'>
-                   Loading...
+                <div className='bg-black flex justify-center items-center min-h-[100vh]'>
+                 
                 </div>
             ) : (
                 children

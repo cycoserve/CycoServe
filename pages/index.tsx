@@ -12,6 +12,7 @@ import PageEndHero from "@/components/elements/PageEndHero";
 import SectionWrap from "@/components/elements/SectionWrap";
 
 
+
 export default function Home() {
   return (
     <>
@@ -55,19 +56,19 @@ export default function Home() {
 
       <RootLayout>
         <Hero
-          title={"CycoServe Digital Marketing"}
-          description={"Launch your web project faster with AI assisted service providers guiding you every step of the way. Create NLP Agents, AI Assistants and more."}
+          title={"Your Portable Marketing Agency"}
+          description={"Empower your business with a fully portable marketing agency, seamlessly integrating AI-driven strategies and on-the-go solutions for unmatched growth anywhere, anytime."}
           background={"/assets/contacthero-bg.jpg"}
-          bptext={"Get Started"}
-          bpurl={""}
-          bstext={"Hire Us"}
-          bsurl={"/contact-us"}
+          bptext={"Download"}
+          bpurl={"https://github.com/cycoserve"}
+          bstext={"Guides"}
+          bsurl={"/documentation"}
         />
         <div className="features-bg wrapp min-h-full py-16 ">
           <SectionWrap>
             {/* Features Section */}
             <div className="div">
-              <div className="container mx-auto mb-12">
+              <div className="container mx-auto mb-12 px-4 md:px-0">
                 <div className="bg-white p-4 border border-orange-500 rounded-lg inset-full max-w-xl">
                   <TitleSection
                     subtitle="Tailored for Success in the Digital Age"
@@ -78,25 +79,11 @@ export default function Home() {
             </div>
             <SwiperComponent />
           </SectionWrap>
-
-       
-
-          {/* <div className="mt-16">
-            <div className="container mx-auto mb-12">
-              <div className="bg-white p-4 border border-orange-500 rounded-lg inset-full max-w-xl">
-                <TitleSection
-                  subtitle="Explore Our Video Showcase"
-                  title="Dive into Our Visual Journey: Watch, Learn, and Be Inspired"
-                />
-              </div>
-            </div>
-            <VideoSwiperComponent />
-          </div> */}
         </div>
-        {/* Two Col Section */}
 
+      {/* 2 Col Section */}
         <div className=" py-4">
-          <div className="div pb-20 pt-12 border-b-4 border-orange-500 bg-white">
+          <div className="div pb-20 pt-12  bg-gray-200">
             <TitleSection
               subtitle="Your Success, Our Commitment"
               title="Choose CycoServe: Where Professionalism Meets Generosity"

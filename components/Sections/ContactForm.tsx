@@ -27,7 +27,6 @@ const ContactForm = () => {
             validationSchema={Yup.object({
               name: Yup.string().required('Required'),
               email: Yup.string().email('Invalid email address').required('Required'),
-              phone: Yup.string().required('Required'),
               services: Yup.string().required('Required'),
               message: Yup.string().required('Required'),
             })}
@@ -77,19 +76,6 @@ const ContactForm = () => {
                     placeholder="johndoe@example.com"
                   />
                   <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="phone" className={textClasses}>
-                    Phone Number
-                  </label>
-                  <Field
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className={inputClasses}
-                    placeholder="123-456-7890"
-                  />
-                  <ErrorMessage name="phone" component="div" className="text-red-500 text-sm" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="services" className={textClasses}>

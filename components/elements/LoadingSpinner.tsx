@@ -16,11 +16,22 @@ const LoadingSpinner: React.FC = () => {
           background: "#000000",
         }}
       >
-        <div className="flex flex-col justify-center items-center gap-4">
-        <Image src="/logo-light.svg" alt="" width={400} height={60} className="animate-ping" />
-        {/* <CircularProgress /> */}
-        </div>
+        <div className="relative w-24 h-24">
+          {/* Circle Loader */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-20 h-20 bg-[url('/circle-loader-1.svg')] bg-contain bg-center animate-ping"></div>
+          </div>
 
+          {/* Spinner on Top */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-12 h-12 bg-[url('/c-spinner.svg')] bg-contain bg-center rounded-full animate-spin-reverse"></div>
+          </div>
+
+             {/* Spinner in middle */}
+             <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-6 h-6 bg-[url('/c-spinner-middle.svg')] bg-contain bg-center rounded-full animate-spin"></div>
+          </div>
+        </div>
       </Box>
     </>
   );

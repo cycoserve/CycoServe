@@ -9,7 +9,7 @@ interface ButtonSecondaryProps {
 const ButtonSecondary:React.FC<ButtonSecondaryProps> = ({ title, url }) => {
   return (
     <Link href={url}>
-      <button className="bg-white border shadow-sm hover:shadow-lg hover:bg-slate-100 text-gray-900 font-bold py-1 px-2 rounded-full transition duration-300">
+      <button className="bg-white hover:bg-gray-200 shadow-sm hover:shadow-lg text-black font-bold p-1 rounded-full transition duration-300 min-w-32">
         {title}
       </button>
     </Link>

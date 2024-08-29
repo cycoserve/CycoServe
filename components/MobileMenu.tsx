@@ -1,17 +1,19 @@
-import { Divider } from "@mui/material";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
-
+import ButtonPrimary from "./ButtonPrimary";
+import Image from "next/image";
+import ButtonExplore from "./ButtonExplore";
+import SearchComponent from "./SearchComponent";
 
 const menuItems = [
-  { id: "1", title: "Home", url: "/" },
-  { id: "2", title: "The Agency", url: "/about" },
-  { id: "3", title: "Why Choose Us?", url: "/why-choose-us" },
-  { id: "4", title: "Services", url: "/services" },
-  { id: "4", title: "Contact", url: "/contact-us" },
-
+  { id: "1", title: "Knowledge Base", url: "/" },
+  { id: "2", title: "Special Features", url: "/about" },
+  { id: "3", title: "Agent Services", url: "/services" },
+  { id: "4", title: "API Integrations", url: "/ai-apps" },
+  { id: "5", title: "Blog Articles", url: "/articles" },
+  { id: "6", title: "Contact Us", url: "/contact-us" },
 ];
 
 const MobileMenu = () => {
@@ -39,7 +41,7 @@ const MobileMenu = () => {
     <>
       <button
         onClick={toggleDrawer}
-        className={`text-${scrolled ? "white" : "white"}`}
+        className={`text-${scrolled ? "black" : "white"}`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +49,7 @@ const MobileMenu = () => {
           viewBox="0 0 28 28"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-8 h-8"
+          className="w-10 h-10"
         >
           <path
             strokeLinecap="round"
@@ -56,23 +58,46 @@ const MobileMenu = () => {
           />
         </svg>
       </button>
-      <div className="color bg-black">
+      <div className=" rounded-lg">
         <Drawer
           lockBackgroundScroll={true}
           open={isOpen}
           onClose={toggleDrawer}
           direction="right"
           className="mobile-menu"
-          overlayColor={'black'}
-
+          overlayColor="white"
+          size={300}
         >
-          <div className="bg-white h-full w-full pt-8">
-            <div className="list flex flex-col justify-stretch h-full items-start px-6 text-zinc-900 py-8 text-xl gap-4">
-              {menuItems.map((items) => (
-                <><Link key={items.id} href={items.url}>
-                  <div className="div">{items.title}</div>
-                </Link>
-                </>
+          <div className="bg-orange-500 h-full w-full">
+            {/* Logo */}
+            <div className="bg-white px-2 pt-4 pb-2">
+              <Image src={"/logo-dark.svg"} alt={""} width={150} height={100} />
+            </div>
+            {/* Action Buttons */}
+            <div className="pt-2 pb-4 bg-white px-2 flex flex-row gap-2 justify-between items-center">
+              <ButtonPrimary title={"Download"} url={"https://github.com/cycoserve"} />
+              <ButtonExplore title={"Guides"} url={"/documentation"} />
+            </div>
+            {/* Search */}
+            <div className="pt-2 pb-4 bg-white px-2 flex flex-row gap-2 justify-between items-center">
+              <SearchComponent />
+            </div>
+
+            <div className="list flex flex-col justify-stretch h-full items-start text-zinc-900 py-0 text-xl gap-0">
+              {menuItems.map((item) => (
+                <React.Fragment key={item.id}>
+                  <div className="w-full">
+                    {/* Top Divider */}
+                    <div className="w-full h-[1px] bg-orange-300" />
+                    <Link href={item.url}>
+                      <div className="p-4 text-white hover:bg-orange-600 hover:text-white transition duration-200">
+                        {item.title}
+                      </div>
+                    </Link>
+                    {/* Bottom Divider */}
+                    <div className="w-full h-[1px] bg-orange-300" />
+                  </div>
+                </React.Fragment>
               ))}
             </div>
           </div>

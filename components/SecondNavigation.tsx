@@ -58,7 +58,7 @@ const SecondNavigation: React.FC = () => {
               whileTap={{ scale: 0.9 }}
             >
               <Link href={item.url}>
-                <p className={`${scrolled ? "text-black font-semibold" : "text-black"}`}>
+                <p className={`${scrolled ? "text-zinc-800 font-semibold hover:bg-orange-500 hover:text-white hover:shadow-xl px-4 py-1 rounded-full" : "text-zinc-800 font-semibold hover:bg-orange-500 hover:text-white hover:shadow-xl px-4 py-1 rounded-full "}`}>
                   {item.title}
                 </p>
               </Link>

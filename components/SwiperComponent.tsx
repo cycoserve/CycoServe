@@ -10,45 +10,47 @@ import Image from "next/image";
 const SwiperComponent = () => {
   const slides = [
     {
-      title: "VPS Management",
-      description: "Efficient VPS management for streamlined operations and optimal performance reliability.",
+      id: "1",
+      url: "#",
+      title: "GPU Server Management",
+      description: "Efficient GPU Server Management for streamlined operations and optimal performance reliability.",
       image: "/assets/vps-management.jpg",
     },
     {
-      title: "Custom Web Design",
+      id: "2",
+      url: "#",
+      title: "Custom Web Development",
       description: "Tailored development of applications to suit your unique needs.",
       image: "/assets/custom-web-design.jpg",
     },
     {
-      title: "AI-Driven Content Creation",
+      id: "3",
+      url: "#",
+      title: "AI Agent Creation",
       description: "Unlocking creativity with AI-powered content creation for unparalleled engagement",
       image: "/assets/ai-content-creation.jpg",
     },
     {
+      id: "4",
+      url: "#",
       title: "Radio Stream Hosting",
       description: "Reliable hosting for seamless radio streaming experiences, unmatched quality service.",
       image: "/assets/radio-stream-hosting.jpg",
     },
     {
-      title: "VPS Management",
+      id: "5",
+      url: "#",
+      title: "CPU Server Hosting",
       description: "Efficient VPS management for streamlined operations and optimal performance reliability.",
       image: "/assets/vps-management.jpg",
     },
-    {
-      title: "Custom Web Design",
-      description: "Tailored development of applications to suit your unique needs.",
-      image: "/assets/custom-web-design.jpg",
-    },
-    {
-      title: "AI-Driven Content Creation",
-      description: "Unlocking creativity with AI-powered content creation for unparalleled engagement",
-      image: "/assets/ai-content-creation.jpg",
-    },
-    {
-      title: "Radio Stream Hosting",
-      description: "Reliable hosting for seamless radio streaming experiences, unmatched quality service.",
-      image: "/assets/radio-stream-hosting.jpg",
-    },
+    // {
+    //   id: "6",
+    //   url: "#",
+    //   title: "UI/UX Design",
+    //   description: "Tailored development of applications to suit your unique needs.",
+    //   image: "/assets/custom-web-design.jpg",
+    // },
   ];
 
   return (
@@ -56,14 +58,14 @@ const SwiperComponent = () => {
       <section className="container py-12 mx-auto px-4 lg:px-4 bg-white rounded-md  ring-1 ring-orange-500 my-8">
         <div className="mx-auto">
           <Swiper
-            spaceBetween={30}
-            slidesPerView={1}
+            spaceBetween={10}
+            slidesPerView={2}
             navigation
             modules={[Navigation, Pagination]}
             breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 4 },
+              640: { slidesPerView: 2 },
+              768: { slidesPerView: 3 },
+              1024: { slidesPerView: 2 },
             }}
             className="custom-swiper"
           >
@@ -80,7 +82,7 @@ const SwiperComponent = () => {
                   <h2 className="text-xl text-start font-bold text-zinc-900 mb-2">
                     {slide.title}
                   </h2>
-                  <p className="text-sm text-zinc-900 mb-4">{slide.description}</p>
+                  <p className="text-[1.09rem] text-zinc-900 mb-4">{slide.description}</p>
                 </div>
               </SwiperSlide>
             ))}
@@ -88,19 +90,28 @@ const SwiperComponent = () => {
         </div>
       </section>
       <style jsx global>{`
-        .custom-swiper .swiper-button-next,
-        .custom-swiper .swiper-button-prev {
-          color: white;
-          background-color: rgba(0, 0, 0, 0.5);
-          padding: 20px;
-          border-radius: 50%;
-        }
+  .custom-swiper .swiper-button-next,
+  .custom-swiper .swiper-button-prev {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 10%;
+  }
 
-        .custom-swiper .swiper-button-next:after,
-        .custom-swiper .swiper-button-prev:after {
-          font-size: 20px;
-        }
-      `}</style>
+  .custom-swiper .swiper-button-next:after,
+  .custom-swiper .swiper-button-prev:after {
+    font-size: 25px;
+  }
+
+  /* Hide the buttons on mobile devices */
+  @media (max-width: 768px) {
+    .custom-swiper .swiper-button-next,
+    .custom-swiper .swiper-button-prev {
+      display: none;
+    }
+  }
+`}</style>
+
     </div>
   );
 };
