@@ -56,9 +56,9 @@ export default function Home() {
 
       <RootLayout>
         <Hero
-          title={"Your Portable Marketing Agency"}
-          description={"Empower your business with a fully portable marketing agency, seamlessly integrating AI-driven strategies and on-the-go solutions for unmatched growth anywhere, anytime."}
-          background={"/assets/contacthero-bg.jpg"}
+          title={"Your Portable Digital Marketing Agency"}
+          description={"A fully portable digital marketing agency, seamlessly integrating AI-driven strategies and on-the-go solutions."}
+          background={""}
           bptext={"Download"}
           bpurl={"https://github.com/cycoserve"}
           bstext={"Guides"}

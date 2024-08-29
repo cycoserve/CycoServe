@@ -23,14 +23,14 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section
-      className="hero-section min-h-screen flex items-center justify-center relative text-white bg-cover bg-center bg-no-repeat"
+      className="hero-section min-h-screen flex flex-col pt-8 items-center justify-center relative text-white bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${background})`,
+        backgroundImage: `linear-gradient(to bottom, black, black), url(${background})`,
       }}
     >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center max-w-5xl mx-auto">
-          <h1 className="text-6xl md:text-6xl lg:text-8xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-violet-500 min-h-full pb-4">
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-violet-500 min-h-full pb-4">
             {title}
           </h1>
           <p className="max-w-xl mx-auto text-[1.1rem] mb-8 leading-relaxed md:leading-relaxed lg:leading-relaxed">

@@ -73,7 +73,7 @@ const SwiperComponent = () => {
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-start">
                   <Image
-                    className="w-full aspect-video object-cover rounded-lg mb-4 shadow-lg shadow-blue-900/5 hover:shadow-blue-500/35"
+                    className="w-full aspect-square object-cover rounded-lg mb-4 shadow-lg shadow-blue-900/5 hover:shadow-blue-500/35"
                     src={slide.image}
                     alt={slide.title}
                     width={500}
