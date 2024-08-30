@@ -59,13 +59,13 @@ const SwiperComponent = () => {
         <div className="mx-auto">
           <Swiper
             spaceBetween={10}
-            slidesPerView={2}
+            slidesPerView={3}
             navigation
             modules={[Navigation, Pagination]}
             breakpoints={{
               640: { slidesPerView: 2 },
               768: { slidesPerView: 3 },
-              1024: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 },
             }}
             className="custom-swiper"
           >

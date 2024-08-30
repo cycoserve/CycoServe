@@ -20,9 +20,9 @@ const YouTubeChannelData = () => {
   // State to store the channel data
   const [channelData, setChannelData] = useState<ChannelData | null>(null);
   // Replace 'YOUR_API_KEY' with your actual YouTube API key
-  const apiKey = "AIzaSyANytKx38XNYU3_K9tGGY2PDBVNTkeR54M";
+  const apiKey = "";
   // Replace 'CHANNEL_ID' with the ID of the YouTube channel you want to fetch data from
-  const channelId = "UCqADe-i3_vGhJxzq4UXOsVQ";
+  const channelId = "";
 
   useEffect(() => {
     // Function to fetch channel data

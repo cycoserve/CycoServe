@@ -39,6 +39,7 @@
     "mysql2": "^3.10.0",
     "next": "14.2.3",
     "openapi": "^1.0.1",
+    "playht": "^0.9.9-alpha.3",
     "react": "^18",
     "react-dom": "^18",
     "react-firebase-hooks": "^5.1.1",
@@ -54,7 +55,7 @@
   },
   "devDependencies": {
     "@types/editorjs__header": "^2.6.3",
-    "@types/node": "^20",
+    "@types/node": "^20.16.2",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-google-recaptcha": "^2.1.9",

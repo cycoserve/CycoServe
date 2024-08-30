@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import ButtonPrimary from "./ButtonPrimary";
 import LogoDark from "./LogoDark";
+import SecondMobileMenu from "./SecondMobileMenu";
 
 function SecondHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,22 +26,20 @@ function SecondHeader() {
     <>
       <div
         className={`${
-          scrolled
-            ? "shadow-md"
-            : "shadow-sm border-b"
+          scrolled ? "shadow-md" : "shadow-sm border-b"
         } fixed top-0 left-0 w-full right-0 z-10 py-2 bg-white transition duration-600 ease-in-out`}
       >
         <div className="container px-4 md:px-2 mx-auto flex justify-between items-center">
-         <LogoDark />
+          <LogoDark />
           <div className="hidden lg:block">
             <SecondNavigation />
           </div>
           <div className="inline-flex">
-            <div className="mr-4">
+            <div className="mr-4 hidden md:inline-block">
               <ButtonPrimary title="Sign In" url="/signin" />
             </div>
             <div className="div lg:hidden">
-              <MobileMenu />
+              <SecondMobileMenu />
             </div>
           </div>
         </div>

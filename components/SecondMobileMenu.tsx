@@ -41,7 +41,7 @@ const MobileMenu = () => {
     <>
       <button
         onClick={toggleDrawer}
-        className={`text-${scrolled ? "black" : "white"}`}
+        className={`text-${scrolled ? "black" : "black"}`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

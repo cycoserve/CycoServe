@@ -11,8 +11,6 @@ import Spacer from "@/components/Spacer";
 import PageEndHero from "@/components/elements/PageEndHero";
 import SectionWrap from "@/components/elements/SectionWrap";
 
-
-
 export default function Home() {
   return (
     <>
@@ -57,7 +55,9 @@ export default function Home() {
       <RootLayout>
         <Hero
           title={"Your Portable Digital Marketing Agency"}
-          description={"A fully portable digital marketing agency, seamlessly integrating AI-driven strategies and on-the-go solutions."}
+          description={
+            "A fully portable digital marketing agency, seamlessly integrating AI-driven strategies and on-the-go solutions."
+          }
           background={""}
           bptext={"Download"}
           bpurl={"https://github.com/cycoserve"}
@@ -81,7 +81,7 @@ export default function Home() {
           </SectionWrap>
         </div>
 
-      {/* 2 Col Section */}
+        {/* 2 Col Section */}
         <div className=" py-4">
           <div className="div pb-20 pt-12  bg-gray-200">
             <TitleSection
