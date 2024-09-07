@@ -10,6 +10,7 @@ import SwiperComponent from "@/components/SwiperComponent";
 import Spacer from "@/components/Spacer";
 import PageEndHero from "@/components/elements/PageEndHero";
 import SectionWrap from "@/components/elements/SectionWrap";
+import FAQComponent from "@/components/FAQComponent";
 
 export default function Home() {
   return (
@@ -126,6 +127,12 @@ export default function Home() {
             image3={"/assets/podcasting.jpg"}
           />
         </div>
+
+        {/* FAQ Section */}
+        <div className="bg-gray-100 py-12">
+          <FAQComponent />
+        </div>
+
         <div className="container px-4 lg:px-0 mx-auto">
           <PageEndHero
             background={"/assets/homehero-bg.jpg"}

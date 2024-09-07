@@ -3,15 +3,9 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import React from 'react';
 import RootLayout from '@/components/Layouts/RootLayout';
-import SectionWrap from '@/components/elements/SectionWrap';
-import HeaderSpace from '@/components/elements/HeaderSpace';
-import TitleSection from '@/components/Sections/TitleSection';
-import Spacer from '@/components/Spacer';
 import Head from 'next/head';
 import Image from 'next/image';
-import ArticlesList from '@/components/articles/ArticlesList';
-import Contain from '@/components/Layouts/Contain';
-import BlogSidebar from '@/components/Layouts/BlogSidebar';
+import Link from 'next/link';
 
 interface Article {
   id: string;
@@ -19,6 +13,8 @@ interface Article {
   content: string;
   slug: string;
   imageUrl: string;
+  author: string;
+  date: string;
 }
 
 interface ArticlePageProps {
@@ -27,51 +23,57 @@ interface ArticlePageProps {
 
 const ArticlePage: React.FC<ArticlePageProps> = ({ article }) => {
   const router = useRouter();
+  const defaultImageUrl = '/assets/default-article-image.jpg'; // Make sure to add a default image to your public folder
 
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return <div className="flex justify-center items-center h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-orange-500"></div>
+    </div>;
   }
 
   if (!article) {
-    return <div>Article not found</div>;
+    return <div className="text-center text-2xl text-gray-800 mt-20">Article not found</div>;
   }
+
+  const imageUrl = article.imageUrl && article.imageUrl.startsWith('http') ? article.imageUrl : defaultImageUrl;
 
   return (
     <>
       <Head>
-        <title>{article.title} - Browse CycoServe articles, CMS, CRM, E-commerce...</title>
-        <meta name="description" content={article.content} />
-        <meta name="keywords" content={`${article.title}, digital marketing, AI, full article, agency, technology, SEO, web design, content creation, marketing strategies`} />
-        <meta name="author" content="CycoServe Team" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={`${article.title} - CycoServe articles`} />
-        <meta property="og:description" content={article.content} />
-        <meta property="og:image" content={article.imageUrl} />
+        <title>{article.title} - CycoServe Blog</title>
+        <meta name="description" content={article.content.substring(0, 160)} />
+        <meta property="og:title" content={`${article.title} - CycoServe Blog`} />
+        <meta property="og:description" content={article.content.substring(0, 160)} />
+        <meta property="og:image" content={imageUrl} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@CycoServe" />
-        <meta name="twitter:title" content={`${article.title} - CycoServe articles`} />
-        <meta name="twitter:description" content={article.content} />
-        <meta name="twitter:image" content={article.imageUrl} />
       </Head>
       <RootLayout>
-        <HeaderSpace />
-        <Contain>
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 min-h-screen pt-12">
-            <div className="lg:col-span-3">
-              <img src={article.imageUrl} alt={article.title} className="mb-4 w-full aspect-video rounded-lg object-cover" width={1920} height={400} />
-              <h1>{article.title}</h1>
-              <hr />
-              <div className="mb-20">
-              <div dangerouslySetInnerHTML={{ __html: article.content }}></div>
-              </div>
+        <div className="max-w-4xl mx-auto px-4 py-16">
+          <Link href="/articles" className="inline-block mb-8 text-orange-500 hover:text-orange-600 transition-colors duration-300">
+            ← Back to Articles
+          </Link>
+          <article>
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">{article.title}</h1>
+            <div className="flex items-center text-gray-600 mb-8">
+              <span className="mr-4">{article.author}</span>
+              <span>{article.date}</span>
             </div>
-            <div className="lg:col-span-1">
-              <BlogSidebar />
+            <div className="relative w-full h-96 mb-8">
+              <img
+                src={imageUrl}
+                alt={article.title}
+                className="rounded-lg object-cover w-full h-full"
+              />
             </div>
+            <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: article.content }}></div>
+          </article>
+        </div>
+        <div className="bg-gray-100 py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Related Articles</h2>
+            {/* Add related articles component here */}
           </div>
-        </Contain>
-        <Spacer />
+        </div>
       </RootLayout>
     </>
   );
@@ -85,8 +87,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const paths = articles.map(article => ({
       params: { slug: article.slug },
     }));
-
-    console.log('Generated paths:', paths); // Log the generated paths
 
     return { paths, fallback: true };
   } catch (error) {
@@ -107,7 +107,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     return {
       props: { article },
-      revalidate: 1, // Enable ISR with a 1-second revalidation
+      revalidate: 60, // Enable ISR with a 60-second revalidation
     };
   } catch (error) {
     console.error('Error fetching article:', error);

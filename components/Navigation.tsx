@@ -23,6 +23,11 @@ const menuItems = [
   },
   {
     id:"4",
+    title:"Podcasts",
+    url:"/podcasts",
+  },
+  {
+    id:"5",
     title:"Contact Us",
     url:"/contact-us",
   },

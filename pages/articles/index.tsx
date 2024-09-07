@@ -1,13 +1,7 @@
-import Image from "next/image";
-import Hero from "../../components/Sections/Hero";
-import RootLayout from "../../components/Layouts/RootLayout";
 import Head from "next/head";
-import SectionWrap from "@/components/elements/SectionWrap";
-import TitleSection from "@/components/Sections/TitleSection";
-import HeaderSpace from "@/components/elements/HeaderSpace";
-import Spacer from "@/components/Spacer";
+import RootLayout from "../../components/Layouts/RootLayout";
 import ArticlesList from "@/components/articles/ArticlesList";
-
+import HeaderSpace from "@/components/elements/HeaderSpace";
 
 export default function ArticlesPage() {
     return (
@@ -16,43 +10,40 @@ export default function ArticlesPage() {
                 <title>
                     Articles - CycoServe | A.I. Powered Full-Service Digital Marketing Agency
                 </title>
-                {/* Add any meta tags, stylesheets, or scripts here */}
+                <meta name="description" content="Explore the latest insights and trends in digital marketing, AI, and business growth strategies on the CycoServe blog." />
             </Head>
             <RootLayout>
-                {/* <Hero
-          background={"/assets/earth-from-space.jpg"}
-          title={"Your Digital Presence, Our Innovative Solutions"}
-          description={
-            "Discover our comprehensive suite of digital marketing services designed to drive growth, engagement, and success for your business. Let's transform your online presence together."
-          }
-          bptext={"Learn More"}
-          bpurl={"/services"}
-          bstext={"Conact Us"}
-          bsurl={"/contact-us"}
-        /> */}
                 <HeaderSpace />
-                <SectionWrap>
-                    <TitleSection
-                        subtitle="All Articles "
-                        title="Welcome to our Articles page"
-                    />
-                    <ArticlesList />
-
-                </SectionWrap>
-                <div className="container mx-auto px-4 lg:px-0">
-                    <Hero
-                        background={"/assets/homehero-bg.jpg"}
-                        title={"Transform Your Digital Presence"}
-                        description={
-                            "We offer cutting edge digital services that will enhance your companies online presence. At CycoServe, we pioneer digital transformation. Our innovative solutions drive success in the digital era. Partner with us and thrive in the digital landscape."
-                        }
-                        bptext={"Learn More"}
-                        bpurl={"/about"}
-                        bstext={"Contact Us"}
-                        bsurl={"/contact-us"}
-                    />
+                <div className="bg-gradient-to-b from-orange-100 to-white">
+                    <div className="container mx-auto px-4 py-16">
+                        <h1 className="text-5xl font-bold text-center mb-4 text-gray-800">CycoServe Blog</h1>
+                        <p className="text-xl text-center text-gray-600 mb-12">Insights, Trends, and Strategies for Digital Success</p>
+                        <ArticlesList />
+                    </div>
                 </div>
-                <Spacer />
+                <div className="bg-gray-100 py-16">
+                    <div className="container mx-auto px-4">
+                        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Stay Informed with CycoServe</h2>
+                        <p className="text-lg text-center text-gray-600 mb-12">
+                            Subscribe to our newsletter for the latest updates, tips, and industry insights.
+                        </p>
+                        <div className="max-w-md mx-auto">
+                            <form className="flex">
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    className="flex-grow px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                                />
+                                <button
+                                    type="submit"
+                                    className="bg-orange-500 text-white px-6 py-2 rounded-r-lg hover:bg-orange-600 transition-colors duration-300"
+                                >
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </RootLayout>
         </>
     );
