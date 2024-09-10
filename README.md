@@ -1,7 +1,3 @@
-Here’s an updated version of the **ReadMe** file for your **CycoServe** GitHub repository, reflecting the new project URL and including the image you've provided:
-
----
-
 # CycoServe
 
 ![CycoServe VPS Management](https://raw.githubusercontent.com/cycoserve/CycoServe/master/public/assets/vps-management.jpg)
