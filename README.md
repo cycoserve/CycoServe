@@ -29,7 +29,7 @@ To run and develop the CycoServe application, you will need:
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/cycoserve/cycoserve.git
-   cd cycoserve-website
+   cd cycoserve
    ```
 
 2. **Install Dependencies**
