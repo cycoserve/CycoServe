@@ -19,7 +19,7 @@ const YouTubeChannelVideos = () => {
   // State to store the list of videos
   const [videos, setVideos] = useState<VideoData[]>([]);
   // Replace 'YOUR_API_KEY' with your actual YouTube API key
-  const apiKey = "AIzaSyANytKx38XNYU3_K9tGGY2PDBVNTkeR54M";
+  const apiKey = "";
   // Replace 'CHANNEL_ID' with the ID of the YouTube channel you want to fetch data from
   const channelId = "UCqADe-i3_vGhJxzq4UXOsVQ";
 
