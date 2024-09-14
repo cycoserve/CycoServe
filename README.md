@@ -45,7 +45,7 @@ To get started with CycoServe, follow these steps:
 
 4. Open your browser and navigate to `http://localhost:3000`.
 
-For a more detailed guide, check the **[QuickStart Guide](https://docs.cycoserve.com)** in our documentation.
+For a more detailed guide, check the **[QuickStart Guide](https://docs.cycoserve.com/readme/quickstart)** in our documentation.
 
 ## Features
 
