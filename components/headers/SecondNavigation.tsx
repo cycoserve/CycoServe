@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { menuItems } from './data/menuItems'; // Import the dynamic menu items
+import { menuItems } from './data/menuItems';
 
 const SecondNavigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);

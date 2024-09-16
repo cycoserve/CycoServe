@@ -34,7 +34,7 @@ function SecondHeader() {
           </div>
           <div className="inline-flex">
             <div className="mr-4 hidden md:inline-block">
-              <ButtonPrimary title="Sign In" url="/signin" />
+              <ButtonPrimary title="Downlaod" url="https://github.com/cycoserve/CycoServe" />
             </div>
             <div className="div lg:hidden">
               <SecondMobileMenu />

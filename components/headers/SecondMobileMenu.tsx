@@ -6,15 +6,9 @@ import ButtonPrimary from "../ui/ButtonPrimary";
 import Image from "next/image";
 import ButtonExplore from "../ui/ButtonExplore";
 import SearchComponent from "../Sections/SearchComponent";
+import { menuItems } from './data/menuItems';
 
-const menuItems = [
-  { id: "1", title: "Knowledge Base", url: "/" },
-  { id: "2", title: "Special Features", url: "/about" },
-  { id: "3", title: "Agent Services", url: "/services" },
-  { id: "4", title: "API Integrations", url: "/ai-apps" },
-  { id: "5", title: "Blog Articles", url: "/articles" },
-  { id: "6", title: "Contact Us", url: "/contact-us" },
-];
+
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
