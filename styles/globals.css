@@ -229,7 +229,7 @@ ul ul {
   background-size: cover;
   background-position: center center;
   background-repeat: repeat;
-  background-image: url('/path/to/your/background-image.jpg');
+  /* background-image: url('/path/to/your/background-image.jpg'); */
 }
 
 /* Custom scrollbar styles */

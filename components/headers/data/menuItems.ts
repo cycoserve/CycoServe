@@ -13,16 +13,11 @@ export const menuItems = [
     },
     {
       id: "3",
-      title: "Services",
-      url: "/services",
-    },
-    {
-      id: "4",
       title: "Docs",
       url: "https://docs.cycoserve.com",
     },
     {
-      id: "5",
+      id: "4",
       title: "Contact Us",
       url: "/contact-us",
     },

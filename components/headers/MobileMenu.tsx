@@ -7,14 +7,14 @@ import Image from "next/image";
 import ButtonExplore from "../ui/ButtonExplore";
 import SearchComponent from "../Sections/SearchComponent";
 
+
 const menuItems = [
-  { id: "1", title: "Documentation", url: "https://docs.cycoserve.com" },
-  { id: "2", title: "About", url: "/about" },
-  { id: "3", title: "AI Agents", url: "/ai-agents" },
-  { id: "4", title: "API Integrations", url: "/ai-integrations" },
-  { id: "5", title: "Blog Articles", url: "blog" },
-  { id: "6", title: "Contact Us", url: "/contact-us" },
+  { id: "1", title: "About", url: "/about" },
+  { id: "2", title: "Why Choose Us", url: "/why-choose-us" },
+  { id: "3", title: "Docs", url: "https://docs.cycoserve.com/" },
+  { id: "4", title: "Contact Us", url: "/contact-us" },
 ];
+
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);

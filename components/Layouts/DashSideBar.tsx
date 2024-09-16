@@ -15,9 +15,7 @@ import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import Home from '@mui/icons-material/Home';
 import Settings from '@mui/icons-material/Settings';
 import People from '@mui/icons-material/People';
-import PermMedia from '@mui/icons-material/PermMedia';
 import Dns from '@mui/icons-material/Dns';
-import Public from '@mui/icons-material/Public';
 import { Tv } from '@mui/icons-material';
 
 const dashboardData = [

@@ -1,14 +1,12 @@
 import React from "react";
 import Head from "next/head";
-import LongTextSection from "@/components/Sections/LongText";
 import SectionWrap from "@/components/elements/SectionWrap";
-import ParagraphTitle from "@/components/elements/ParagraphTitle";
-import Image from "next/image";
 import Spacer from "@/components/ui/Spacer";
-import OurTeam from "@/components/Sections/OurTeam";
 import MissionVision from "@/components/Sections/MissionVision";
 import PageEndHero from "@/components/elements/PageEndHero";
 import BranchLayout from "@/components/Layouts/BranchLayout";
+
+
 
 export default function AboutPage() {
   return (

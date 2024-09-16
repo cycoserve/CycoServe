@@ -6,7 +6,7 @@ import SecondHeader from '../headers/SecondHeader';
 import Footer from '../footers/Footer';
 import LoadingSpinner from '@/components/elements/LoadingSpinner';
 import { CookieNotice } from '../cookie-notice';
-import AIHelpChat from '../AIHelpChat';
+
 
 
 interface RootLayoutProps {
@@ -38,7 +38,6 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <main>{children}</main>
       <CookieNotice />
       <footer>
-        <AIHelpChat />
         <Footer />
       </footer>
     </div>
