@@ -1,15 +1,14 @@
 import React from "react";
 import Head from "next/head";
 import SectionWrap from "@/components/elements/SectionWrap";
-import LongTextSection from "@/components/Sections/LongText";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import TitleSection from "@/components/Sections/TitleSection";
 import TwoColSection from "@/components/Sections/TwoColSection";
 import Spacer from "@/components/ui/Spacer";
-import PageEndHero from "@/components/elements/PageEndHero";
-import BranchLayout from "@/components/Layouts/BranchLayout";
-
-
+// import PageEndHero from "@/components/elements/PageEndHero";
+import RootLayout from "@/components/Layouts/RootLayout";
+import { NewsletterSignupComponent } from "@/components/newsletter-signup";
+// import Hero from "@/components/Sections/Hero";
 
 function WhyChooseUs() {
   return (
@@ -51,9 +50,58 @@ function WhyChooseUs() {
         />
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
-      <BranchLayout>
+      <RootLayout>
+        <div className="flex flex-col justify-center items-center bg-gradient-to-b from-black to-zinc-950 pb-24 min-h-screen">
+          <SectionWrap>
+            <Spacer />
+            <TitleSection
+              subtitle="Whay Choose Us?"
+              title="CycoServeis dedicated to high quality and ease of use."
+            />
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
+              <div>
+                <ParagraphTitle>
+                  Choosing CycoServe means partnering with a team of digital
+                  experts dedicated to your success
+                </ParagraphTitle>
+                <div className="text-white">
+                  With a proven track record of delivering results and driving
+                  growth for businesses across industries, we bring a wealth of
+                  experience and expertise to every project. Our client-centric
+                  approach ensures that we take the time to understand your
+                  unique needs, challenges, and goals, tailoring our solutions
+                  to meet your specific requirements.
+                </div>
+              </div>
+
+              <div>
+                <ParagraphTitle>Solutions For Any Use Case</ParagraphTitle>
+                <div className="text-white">
+                  Whether you&apos;re a startup looking to establish your brand
+                  presence, a small business aiming to expand your reach, or a
+                  large enterprise seeking to innovate and disrupt, we have the
+                  expertise and resources to help you succeed. From cutting-edge
+                  digital marketing strategies to innovative web development
+                  solutions, we leverage the latest technologies, trends, and
+                  techniques to deliver exceptional results.{" "}
+                </div>
+              </div>
+
+              <div>
+                <ParagraphTitle>Unlock Your Full Potential</ParagraphTitle>
+                <div className="text-white">
+                  At CycoServe, we&apos;re more than just a digital marketing
+                  agency we&apos;re your partner in success. Let us help you
+                  unlock your full potential and achieve your goals in the
+                  digital age. Choose CycoServe and experience the difference of
+                  working with a team that&apos;s committed to your success
+                  every step of the way.
+                </div>
+              </div>
+            </div>
+          </SectionWrap>
+        </div>
         <Spacer />
-        {/* Two Col Section */}
         <SectionWrap>
           <TitleSection
             subtitle="Your Success, Our Commitment"
@@ -71,58 +119,11 @@ function WhyChooseUs() {
             }
             image2={"/assets/hosting.jpg"}
           />
+          <Spacer />
+          <NewsletterSignupComponent />
+          <Spacer />
         </SectionWrap>
-
-        <LongTextSection>
-          <p>
-            <ParagraphTitle>
-              Choosing CycoServe means partnering with a team of digital
-              experts dedicated to your success
-            </ParagraphTitle>
-            With a proven track record of delivering results and driving
-            growth for businesses across industries, we bring a wealth of
-            experience and expertise to every project. Our client-centric
-            approach ensures that we take the time to understand your unique
-            needs, challenges, and goals, tailoring our solutions to meet your
-            specific requirements.
-          </p>
-
-          <p>
-            <ParagraphTitle>Solutions For Any Use Case</ParagraphTitle>
-            Whether you&apos;re a startup looking to establish your brand
-            presence, a small business aiming to expand your reach, or a large
-            enterprise seeking to innovate and disrupt, we have the expertise
-            and resources to help you succeed. From cutting-edge digital
-            marketing strategies to innovative web development solutions, we
-            leverage the latest technologies, trends, and techniques to
-            deliver exceptional results.{" "}
-          </p>
-
-          <p>
-            <ParagraphTitle>Unlock Your Full Potential</ParagraphTitle>
-            At CycoServe, we&apos;re more than just a digital marketing agency
-            we&apos;re your partner in success. Let us help you unlock your
-            full potential and achieve your goals in the digital age. Choose
-            CycoServe and experience the difference of working with a team
-            that&apos;s committed to your success every step of the way.
-          </p>
-        </LongTextSection>
-        <SectionWrap>
-          <div className="container mx-auto px-4 lg:px-0">
-            <PageEndHero
-              background={"/assets/homehero-bg.jpg"}
-              title={"The CycoServe Advanatage"}
-              description={
-                "Discover the CycoServe advantage: industry-leading customer support, unbeatable pricing, and a free tier web hosting offer. Choose excellence, choose CycoServe"
-              }
-              bptext={"Learn More"}
-              bpurl={"/about"}
-              bstext={"Contact Us"}
-              bsurl={"/contact-us"}
-            />
-          </div>
-        </SectionWrap>
-      </BranchLayout>
+      </RootLayout>
     </>
   );
 }

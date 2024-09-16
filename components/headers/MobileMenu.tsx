@@ -59,7 +59,7 @@ const MobileMenu = () => {
           onClose={toggleDrawer}
           direction="right"
           className="mobile-menu"
-          overlayColor="white"
+          overlayColor="black"
           size={280}
         >
           <div className="bg-black h-full w-full">

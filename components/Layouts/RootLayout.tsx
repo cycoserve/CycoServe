@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../headers/Header';
-import SecondHeader from '../headers/SecondHeader';
 import Footer from '../footers/Footer';
 import LoadingSpinner from '@/components/elements/LoadingSpinner';
 import { CookieNotice } from '../cookie-notice';
@@ -16,7 +15,7 @@ interface RootLayoutProps {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-  const isHomePage = router.pathname === '/';
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -33,7 +32,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <div>
       <header>
-        {isHomePage ? <Header /> : <SecondHeader />}
+       <Header />
       </header>
       <main>{children}</main>
       <CookieNotice />

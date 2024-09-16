@@ -5,8 +5,8 @@ import Spacer from "@/components/ui/Spacer";
 import MissionVision from "@/components/Sections/MissionVision";
 import PageEndHero from "@/components/elements/PageEndHero";
 import BranchLayout from "@/components/Layouts/BranchLayout";
-
-
+import RootLayout from "@/components/Layouts/RootLayout";
+import { NewsletterSignupComponent } from "@/components/newsletter-signup";
 
 export default function AboutPage() {
   return (
@@ -48,9 +48,15 @@ export default function AboutPage() {
         />
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
-      <BranchLayout>
-        <MissionVision />
-        {/* <SectionWrap>
+      <RootLayout>
+        <div className="flex flex-col justify-center items-center bg-gradient-to-tr from-purple-900 to-black min-h-[75vh]">
+          <SectionWrap>
+            <MissionVision />
+          </SectionWrap>
+        </div>
+        <Spacer />
+        <SectionWrap>
+          {/* <SectionWrap>
           <LongTextSection>
             <div className="text-zinc-900">
               <div className="grid grid-cols-1 md:grid-cols-2 justify-start items-center gap-12 mb-12">
@@ -157,26 +163,15 @@ export default function AboutPage() {
             </div>
           </LongTextSection>
         </SectionWrap> */}
-        {/* <SectionWrap>
+          {/* <SectionWrap>
           <OurTeam />
         </SectionWrap> */}
-        <div className="bg-white">
-          <SectionWrap>
-            <PageEndHero
-              background={"/assets/about-hero-bg.jpg"}
-              title={"The Agency: Discover CycoServe's Vision and Mission"}
-              description={
-                "At CycoServe, we're more than just a digital marketing agency. We're innovators, collaborators, and visionaries dedicated to driving your success."
-              }
-              bptext={"Pricing"}
-              bpurl={"/pricing"}
-              bstext={"Contact Us"}
-              bsurl={"/contact-us"}
-            />
-          </SectionWrap>
+          <div className="bg-black">
+            <NewsletterSignupComponent />
+          </div>
           <Spacer />
-        </div>
-      </BranchLayout>
+        </SectionWrap>
+      </RootLayout>
     </>
   );
 }

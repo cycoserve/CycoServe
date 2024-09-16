@@ -20,7 +20,7 @@ const TwoColSection: React.FC<TwoColSectionProps> = ({
 }) => {
   return (
     <>
-      <div className="px-4 lg:px-0">
+      <div className="">
         <section className="container mx-auto">
           <div className="mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">

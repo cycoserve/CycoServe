@@ -10,6 +10,7 @@ import PageEndHero from "@/components/elements/PageEndHero";
 import SectionWrap from "@/components/elements/SectionWrap";
 import TopBanner from "@/components/elements/TopBanner";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
+import Spacer from "@/components/ui/Spacer";
 
 
 
@@ -130,6 +131,7 @@ export default function Home() {
         <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="max-w-7xl mx-auto">
           <NewsletterSignupComponent />
         </motion.div>
+        <Spacer />
       </RootLayout>
     </>
   );
