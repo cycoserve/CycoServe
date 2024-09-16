@@ -1,6 +1,6 @@
 import React from "react";
-import ButtonPrimary from "../ButtonPrimary";
-import ButtonSecondary from "../ButtonSecondary";
+import ButtonPrimary from "@/components/ui/ButtonPrimary";
+import ButtonSecondary from "@/components/ui/ButtonSecondary";
 
 interface HeroProps {
   title: string;

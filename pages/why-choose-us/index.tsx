@@ -5,11 +5,13 @@ import LongTextSection from "@/components/Sections/LongText";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import TitleSection from "@/components/Sections/TitleSection";
 import TwoColSection from "@/components/Sections/TwoColSection";
-import Spacer from "@/components/Spacer";
+import Spacer from "@/components/ui/Spacer";
 import PageEndHero from "@/components/elements/PageEndHero";
 import BranchLayout from "@/components/Layouts/BranchLayout";
 
-function WhyChooseCycoServe() {
+
+
+function WhyChooseUs() {
   return (
     <>
       <Head>
@@ -125,4 +127,4 @@ function WhyChooseCycoServe() {
   );
 }
 
-export default WhyChooseCycoServe;
+export default WhyChooseUs;

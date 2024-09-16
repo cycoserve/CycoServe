@@ -1,13 +1,9 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import Hero from "../components/Sections/Hero";
-import Features from "../components/Features";
 import RootLayout from "../components/Layouts/RootLayout";
 import Head from "next/head";
-import PricingSection from "@/components/Sections/PricingSection";
 import PricingTable from "@/components/elements/PricingTable";
-import HeaderSpace from "@/components/elements/HeaderSpace";
-import Spacer from "@/components/Spacer";
+import Spacer from "@/components/ui/Spacer";
+
+
 
 export default function Pricing() {
   return (

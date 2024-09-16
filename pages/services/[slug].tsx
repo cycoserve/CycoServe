@@ -8,9 +8,9 @@ import SectionWrap from '@/components/elements/SectionWrap';
 import HeaderSpace from '@/components/elements/HeaderSpace';
 import TitleSection from '@/components/Sections/TitleSection';
 import ServicesList from '@/components/services/ServicesList';
-import Spacer from '@/components/Spacer';
+import Spacer from '@/components/ui/Spacer';
 import Head from 'next/head';
-import PricingTable from '@/components/elements/PricingTable';
+
 
 interface Service {
   id: string;

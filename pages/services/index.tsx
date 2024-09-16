@@ -1,17 +1,17 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import Hero from "../../components/Sections/Hero";
 import RootLayout from "../../components/Layouts/RootLayout";
 import Head from "next/head";
 import SectionWrap from "@/components/elements/SectionWrap";
 import TitleSection from "@/components/Sections/TitleSection";
-import Spacer from "@/components/Spacer";
+import Spacer from "@/components/ui/Spacer";
+
 
 interface ServiceCardProps {
   title: string;
   description: string;
   icon: string;
 }
+
 
 const ServicesCard: React.FC<ServiceCardProps> = ({ title, description, icon }) => (
   <div className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg">
@@ -71,7 +71,6 @@ export default function ServicesPage() {
         <title>
           Services - CycoServe | Full-Service Digital Marketing Agency
         </title>
-        {/* Add any meta tags, stylesheets, or scripts here */}
       </Head>
       <RootLayout>
         <Hero

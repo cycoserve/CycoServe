@@ -7,7 +7,7 @@ import RootLayout from '@/components/Layouts/RootLayout';
 import SectionWrap from '@/components/elements/SectionWrap';
 import HeaderSpace from '@/components/elements/HeaderSpace';
 import TitleSection from '@/components/Sections/TitleSection';
-import Spacer from '@/components/Spacer';
+import Spacer from '@/components/ui/Spacer';
 import AiToolsList from '@/components/ai-tools/AiToolsList';
 import Head from 'next/head';
 

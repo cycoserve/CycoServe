@@ -1,6 +1,5 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
-import ButtonPrimary from "../ButtonPrimary";
-import BuyNowButton from "../BuyNowButton";
+import BuyNowButton from "../ui/BuyNowButton";
 
 const includedFeatures = [
   "Private Dashboard Access",

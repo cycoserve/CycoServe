@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
-import Header from '../Header';
-import SecondHeader from '../SecondHeader';
-import Footer from '../Footer';
-import LoadingSpinner from '@/components/elements/LoadingSpinner'; // Import the new LoadingSpinner
+import Header from '../headers/Header';
+import SecondHeader from '../headers/SecondHeader';
+import Footer from '../footers/Footer';
+import LoadingSpinner from '@/components/elements/LoadingSpinner';
+import { CookieNotice } from '../cookie-notice';
+import AIHelpChat from '../AIHelpChat';
+
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -33,7 +36,9 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
         {isHomePage ? <Header /> : <SecondHeader />}
       </header>
       <main>{children}</main>
+      <CookieNotice />
       <footer>
+        <AIHelpChat />
         <Footer />
       </footer>
     </div>

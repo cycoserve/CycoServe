@@ -1,15 +1,15 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import Head from "next/head";
 import Hero from "../components/Sections/Hero";
 import RootLayout from "../components/Layouts/RootLayout";
 import TwoColSection from "../components/Sections/TwoColSection";
 import ThreeColSection from "../components/Sections/ThreeColSection";
 import TitleSection from "../components/Sections/TitleSection";
-import Head from "next/head";
-import SwiperComponent from "@/components/SwiperComponent";
-import Spacer from "@/components/Spacer";
+import SwiperComponent from "@/components/Sections/SwiperComponent";
+import Spacer from "@/components/ui/Spacer";
 import PageEndHero from "@/components/elements/PageEndHero";
 import SectionWrap from "@/components/elements/SectionWrap";
+
+
 
 export default function Podcasts() {
   return (

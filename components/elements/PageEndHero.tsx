@@ -1,7 +1,7 @@
 import React from "react";
-import ButtonPrimary from "../ButtonPrimary";
-import ButtonSecondary from "../ButtonSecondary";
-import { info } from "console";
+import ButtonPrimary from "../ui/ButtonPrimary";
+import ButtonSecondary from "../ui/ButtonSecondary";
+
 
 
 interface PageEndHeroProps {
@@ -26,7 +26,7 @@ const PageEndHero: React.FC<PageEndHeroProps> = ({
   return (
     <>
     <section
-      className="hero-section min-h-[100vh] my-8 flex md:h-fu lg:h-1/2 justify-center px-4 items-center relative text-white bg-cover bg-bottom bg-no-repeat rounded-lg"
+      className="hero-section min-h-[100vh] my-8 flex md:h-fu lg:h-1/2 justify-center items-center relative text-white bg-cover bg-top bg-no-repeat rounded-lg border border-zinc-800 hover:border-orange-500"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(${background})`,
       }}

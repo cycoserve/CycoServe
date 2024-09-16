@@ -6,4 +6,21 @@ const nextConfig = {
   },
 }
 
+webpack: (config, { isServer }) => {
+  // Only run this on the server
+  if (isServer) {
+    config.resolve.fallback = config.resolve.fallback || {};
+    config.resolve.fallback.fs = false;
+  }
+
+  return config;
+},
+
+module.exports = {
+  env: {
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+  },
+}
+
+
 module.exports = nextConfig

@@ -5,7 +5,7 @@ import Head from "next/head";
 import SectionWrap from "@/components/elements/SectionWrap";
 import TitleSection from "@/components/Sections/TitleSection";
 import HeaderSpace from "@/components/elements/HeaderSpace";
-import Spacer from "@/components/Spacer";
+import Spacer from "@/components/ui/Spacer";
 import AiToolsList from "@/components/ai-tools/AiToolsList";
 
 export default function AIToolsPage() {

@@ -3,6 +3,8 @@ import RootLayout from "../../components/Layouts/RootLayout";
 import ArticlesList from "@/components/articles/ArticlesList";
 import HeaderSpace from "@/components/elements/HeaderSpace";
 
+
+
 export default function ArticlesPage() {
     return (
         <>
@@ -14,14 +16,14 @@ export default function ArticlesPage() {
             </Head>
             <RootLayout>
                 <HeaderSpace />
-                <div className="bg-gradient-to-b from-orange-100 to-white">
+                <div className="bg-white">
                     <div className="container mx-auto px-4 py-16">
                         <h1 className="text-5xl font-bold text-center mb-4 text-gray-800">CycoServe Blog</h1>
                         <p className="text-xl text-center text-gray-600 mb-12">Insights, Trends, and Strategies for Digital Success</p>
                         <ArticlesList />
                     </div>
                 </div>
-                <div className="bg-gray-100 py-16">
+                <div className="bg-white py-16">
                     <div className="container mx-auto px-4">
                         <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Stay Informed with CycoServe</h2>
                         <p className="text-lg text-center text-gray-600 mb-12">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Logo from '../Logo';
+import Logo from '../headers/Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp, faTachometerAlt, faFileAlt, faBox, faUsers, faCog, faShoppingCart, faMusic, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';

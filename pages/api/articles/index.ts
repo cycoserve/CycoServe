@@ -1,7 +1,7 @@
 // pages/api/articles/index.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../../utils/firebase';
+import { db } from '@/utils/firebase';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {

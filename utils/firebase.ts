@@ -1,7 +1,7 @@
 // utils/firebase.ts
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
-import { getFirestore, Firestore, collection, addDoc,  } from 'firebase/firestore';
+import { getFirestore, Firestore, collection, addDoc, getDoc  } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 
@@ -23,4 +23,4 @@ const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
 const store = getStorage(firebaseApp)
 
-export { auth, db, firebaseApp, Firestore, collection, addDoc, store };
+export { auth, db, firebaseApp, Firestore, collection, addDoc, getDoc, store };

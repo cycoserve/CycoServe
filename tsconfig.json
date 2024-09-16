@@ -12,11 +12,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "db.js", "db.js", "types/editorjs.d.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "db.js", "db.js", "types/editorjs.d.ts", "pages/api/contact.js"],
 
   "exclude": ["node_modules"]
 }

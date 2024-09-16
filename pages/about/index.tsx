@@ -1,18 +1,14 @@
 import React from "react";
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import LongTextSection from "@/components/Sections/LongText";
 import SectionWrap from "@/components/elements/SectionWrap";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import Image from "next/image";
-import Spacer from "@/components/Spacer";
+import Spacer from "@/components/ui/Spacer";
 import OurTeam from "@/components/Sections/OurTeam";
 import MissionVision from "@/components/Sections/MissionVision";
 import PageEndHero from "@/components/elements/PageEndHero";
 import BranchLayout from "@/components/Layouts/BranchLayout";
-import HeroAbout from "@/components/Sections/HeroAbout";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function AboutPage() {
   return (
@@ -55,8 +51,8 @@ export default function AboutPage() {
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
       <BranchLayout>
-        <Spacer />
-        <SectionWrap>
+        <MissionVision />
+        {/* <SectionWrap>
           <LongTextSection>
             <div className="text-zinc-900">
               <div className="grid grid-cols-1 md:grid-cols-2 justify-start items-center gap-12 mb-12">
@@ -71,7 +67,7 @@ export default function AboutPage() {
                   <ParagraphTitle>
                     Your gateway to digital transformation and success.
                   </ParagraphTitle>
-                  <p>
+                  <p className="text-white">
                     At CycoServe, we&apos;re more than just a digital marketing
                     agency. We&apos;re a team of passionate innovators,
                     creators, and strategists dedicated to helping businesses
@@ -90,7 +86,7 @@ export default function AboutPage() {
                     className="rounded-lg"
                   />
                   <ParagraphTitle>How We Started The Journey</ParagraphTitle>
-                  <p>
+                  <p className="text-white">
                     Our journey began with a vision to revolutionize the digital
                     marketing industry. Founded by a team of seasoned
                     professionals with years of experience and expertise,
@@ -106,7 +102,7 @@ export default function AboutPage() {
               <div className="grid grid-cols md:grid-cols-2 gap-12 justify-items-start items-center mb-12">
                 <div className="">
                   <ParagraphTitle>What Sets CycoServe Apart?</ParagraphTitle>
-                  <p>
+                  <p className="text-white">
                     What sets CycoServe apart is our relentless pursuit of
                     excellence in everything we do. From crafting compelling
                     content to designing captivating websites, optimizing search
@@ -121,7 +117,7 @@ export default function AboutPage() {
                   <ParagraphTitle>
                     We Are Dedicated Professionals
                   </ParagraphTitle>
-                  <p>
+                  <p className="text-white">
                     At the heart of our success is our team of dedicated
                     professionals. Comprising experts in digital marketing, web
                     development, graphic design, content creation, and more, our
@@ -136,7 +132,7 @@ export default function AboutPage() {
               <div className="grid grid-cols md:grid-cols-2 gap-12 justify-items-start items-center mb-12">
                 <div className="">
                   <ParagraphTitle>Why Partner With Us?</ParagraphTitle>
-                  <p>
+                  <p className="text-white">
                     When you partner with CycoServe, you&apos;re not just
                     another client – you&apos;re a valued member of our
                     community. We take the time to understand your unique needs,
@@ -150,7 +146,7 @@ export default function AboutPage() {
                 </div>
                 <div className="">
                   <ParagraphTitle>Helping Clients One by One</ParagraphTitle>
-                  <p>
+                  <p className="text-white">
                     But don&apos;t just take our word for it – let our work
                     speak for itself. Explore our portfolio to see examples of
                     our past projects and success stories. From eye-catching
@@ -162,24 +158,26 @@ export default function AboutPage() {
               </div>
             </div>
           </LongTextSection>
-        </SectionWrap>
-        <SectionWrap>
+        </SectionWrap> */}
+        {/* <SectionWrap>
           <OurTeam />
-        </SectionWrap>
-        <MissionVision />
-        <SectionWrap>
-          <PageEndHero
-            background={"/assets/about-hero-bg.jpg"}
-            title={"The Agency: Discover CycoServe's Vision and Mission"}
-            description={
-              "At CycoServe, we're more than just a digital marketing agency. We're innovators, collaborators, and visionaries dedicated to driving your success."
-            }
-            bptext={"Pricing"}
-            bpurl={"/pricing"}
-            bstext={"Contact Us"}
-            bsurl={"/contact-us"}
-          />
-        </SectionWrap>
+        </SectionWrap> */}
+        <div className="bg-white">
+          <SectionWrap>
+            <PageEndHero
+              background={"/assets/about-hero-bg.jpg"}
+              title={"The Agency: Discover CycoServe's Vision and Mission"}
+              description={
+                "At CycoServe, we're more than just a digital marketing agency. We're innovators, collaborators, and visionaries dedicated to driving your success."
+              }
+              bptext={"Pricing"}
+              bpurl={"/pricing"}
+              bstext={"Contact Us"}
+              bsurl={"/contact-us"}
+            />
+          </SectionWrap>
+          <Spacer />
+        </div>
       </BranchLayout>
     </>
   );

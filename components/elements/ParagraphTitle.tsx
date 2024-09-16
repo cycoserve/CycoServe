@@ -8,7 +8,7 @@ interface ParagraphTitleProps {
 const ParagraphTitle:React.FC<ParagraphTitleProps> = ({children}) => {
   return (
     <>
-    <h2 className="text-xl my-4 max-w-3xl font-semibold">
+    <h2 className="text-xl text-white my-4 max-w-3xl font-semibold">
         {children}
     </h2>
     </>

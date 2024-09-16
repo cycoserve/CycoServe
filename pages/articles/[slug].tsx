@@ -4,7 +4,6 @@ import axios from 'axios';
 import React from 'react';
 import RootLayout from '@/components/Layouts/RootLayout';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface Article {
@@ -23,7 +22,7 @@ interface ArticlePageProps {
 
 const ArticlePage: React.FC<ArticlePageProps> = ({ article }) => {
   const router = useRouter();
-  const defaultImageUrl = '/assets/default-article-image.jpg'; // Make sure to add a default image to your public folder
+  const defaultImageUrl = '/images/dj-trump.webp'; // Make sure to add a default image to your public folder
 
   if (router.isFallback) {
     return <div className="flex justify-center items-center h-screen">
