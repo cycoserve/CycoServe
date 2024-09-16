@@ -56,7 +56,7 @@ const Footer = () => {
       <footer className="bg-black relative bg-[url('')]  bg-cover bg-bottom pt-12">
         <div className="lower bg-black py-4 border-t border-t-gray-700">
           <div className="container px-4 mx-auto text-white text-sm">
-            <p> &copy; {currentYear} CycoServe,LLC. All rights reserved. </p>
+            <p> &copy; {currentYear} CycoServe. All rights reserved. </p>
           </div>
         </div>
       </footer>
