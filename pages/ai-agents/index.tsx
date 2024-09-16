@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import LongTextSection from "@/components/Sections/LongText";
 import SectionWrap from "@/components/elements/SectionWrap";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import Image from "next/image";
@@ -11,7 +10,7 @@ import MissionVision from "@/components/Sections/MissionVision";
 import PageEndHero from "@/components/elements/PageEndHero";
 import RootLayout from "@/components/Layouts/RootLayout";
 
-const inter = Inter({ subsets: ["latin"] });
+
 
 export default function AboutPage() {
   return (
@@ -59,7 +58,7 @@ export default function AboutPage() {
           <OurTeam />
         </SectionWrap>
         <SectionWrap>
-          <LongTextSection>
+     
             <div className="text-zinc-900">
               <div className="grid grid-cols-1 md:grid-cols-2 justify-start items-center gap-12 mb-12">
                 <div className="border p-4 hover:shadow-lg rounded-lg">
@@ -163,7 +162,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </LongTextSection>
+     
         </SectionWrap>
 
         <MissionVision />
