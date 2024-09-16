@@ -1,8 +1,9 @@
 'use client'
 
+import Button from '@mui/material/Button'
+import Input from '@mui/material/Input'
 import { useState } from 'react'
-import { Button } from "@/components/ui/Button"
-import { Input } from "@/components/ui/Input"
+
 
 export function NewsletterSignupComponent() {
   const [email, setEmail] = useState('')
