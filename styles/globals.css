@@ -15,7 +15,7 @@ hr {
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 1rem;
   line-height: 54px;
 }
@@ -23,21 +23,21 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: #444;
+  color: #ffffff;
   margin-bottom: 0.75rem;
 }
 
 h3 {
   font-size: 1.75rem;
   font-weight: bold;
-  color: #555;
+  color: #d7d7d7;
   margin-bottom: 0.5rem;
 }
 
 h4 {
   font-size: 1.25rem;
   font-weight: 500;
-  color: #555;
+  color: #e5e5e5;
   margin-bottom: 0.5rem;
 }
 
