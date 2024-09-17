@@ -1,7 +1,6 @@
 import React from "react";
 import { GetServerSideProps } from "next";
 import axios from "axios";
-import Link from "next/link";
 import RootLayout from "@/components/Layouts/RootLayout";
 import SectionWrap from "@/components/elements/SectionWrap";
 import Spacer from "@/components/ui/Spacer";
@@ -30,15 +29,15 @@ const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
     <RootLayout>
       <SectionWrap>
         <Spacer />
-        <div className="bg-black min-h-screen py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <article className="bg-zinc-800 shadow-lg rounded-lg border border-orange-500 p-8">
-              <h1 className="text-4xl font-bold text-white mb-4">
-                {post.title.rendered}
-              </h1>
-              <p className="text-sm text-gray-400 mb-6">
-                {new Date(post.date).toLocaleDateString()}
-              </p>
+        <div className="bg-gradient-t from-zinc-900 to-black min-h-screen py-24">
+          <div className="max-w-5xl mx-auto">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">
+              {post.title.rendered}
+            </h1>
+            <p className="text-sm text-gray-400 mb-6">
+              {new Date(post.date).toLocaleDateString()}
+            </p>
+            <article className="bg-black ">
               <div
                 className="prose prose-invert max-w-none text-white"
                 dangerouslySetInnerHTML={{ __html: post.content.rendered }}

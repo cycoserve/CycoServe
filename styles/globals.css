@@ -180,6 +180,37 @@ ul ul {
   color: #666;
 }
 
+/* global.css */
+
+/* Styling for code blocks */
+code, pre {
+  display: block;
+  background-color: #1e1e1e; /* Dark background for code */
+  color: #dcdcdc; /* Light text color */
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto; /* Makes the code block scrollable */
+  white-space: pre-wrap; /* Prevents long lines from overflowing */
+  max-width: 100%; /* Limits the width of the code block */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+  margin: 1rem 0; /* Adds space above and below the code block */
+}
+
+/* Optional: Hide scrollbar for a cleaner look */
+code::-webkit-scrollbar, pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+code::-webkit-scrollbar-thumb, pre::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+code::-webkit-scrollbar-thumb:hover, pre::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
 /* Features background */
 .features-bg {
   background-color: #720e0e;
