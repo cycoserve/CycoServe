@@ -33,12 +33,7 @@ export default function Home() {
 
       <RootLayout>
         {/* Hero Section */}
-        <motion.div
-          variants={zoomIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
+
           <Hero
             title="Your Portable Digital Marketing Agency"
             description="A fully portable digital marketing agency, seamlessly integrating AI-driven strategies and on-the-go solutions."
@@ -48,7 +43,7 @@ export default function Home() {
             bstext="Guides"
             bsurl="http://docs.cycoserve.com/"
           />
-        </motion.div>
+
 
         {/* Top Banner */}
         <motion.div
@@ -69,11 +64,11 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <div className="container mx-auto px-4 md:px-0">
+              <div className="mx-auto md:px-0">
                 <div className="bg-gradient-to-br from-zinc-900 to-black p-4 border border-zinc-800 hover:border-orange-500 rounded-lg inset-full max-w-xl">
                   <TitleSection
                     subtitle="Tailored for Success in the Digital Age"
-                    title="Transforming Tomorrow: Discover Our Suite of Cutting-Edge Solutions"
+                    title="Discover Our Suite of Cutting-Edge Solutions"
                   />
                 </div>
               </div>
@@ -164,27 +159,32 @@ export default function Home() {
           viewport={{ once: true }}
           className="max-w-7xl py-12 mx-auto"
         >
-          <PageEndHero
-            background="/images/dj-trump-1.webp"
-            title="Transform Your Digital Presence"
-            description="We offer cutting edge digital services that will enhance your company's online presence. At CycoServe, we pioneer digital transformation. Our innovative solutions drive success in the digital era. Partner with us and thrive in the digital landscape."
-            bptext="Download"
-            bpurl="https://github.com/cycoserve/CycoServe"
-            bstext="Guides"
-            bsurl="https://docs.cycoserve.com/"
-          />
+          <SectionWrap>
+            <PageEndHero
+              background="/images/dj-trump-1.webp"
+              title="Transform Your Digital Presence"
+              description="We offer cutting edge digital services that will enhance your company's online presence. At CycoServe, we pioneer digital transformation. Our innovative solutions drive success in the digital era. Partner with us and thrive in the digital landscape."
+              bptext="Download"
+              bpurl="https://github.com/cycoserve/CycoServe"
+              bstext="Guides"
+              bsurl="https://docs.cycoserve.com/"
+            />
+          </SectionWrap>
         </motion.div>
 
         {/* Newsletter Signup */}
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto"
-        >
-          <NewsletterSignupComponent />
-        </motion.div>
+        <SectionWrap>
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="max-w-7xl mx-auto"
+          >
+            <NewsletterSignupComponent />
+          </motion.div>
+        </SectionWrap>
+
         <Spacer />
       </RootLayout>
     </>

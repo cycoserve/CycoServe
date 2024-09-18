@@ -64,7 +64,7 @@ const MobileMenu = () => {
         >
           <div className="bg-black h-full w-full">
             {/* Logo */}
-            <div className="bg-gradient-to-br from-zinc-900 to-black px-2 pt-4 pb-2">
+            <div className="bg-gradient-to-br from-zinc-900 to-black px-2 pt-4 pb-4">
               <Image src={"/logo-light.svg"} alt={""} width={150} height={100} />
             </div>
             {/* Action Buttons */}

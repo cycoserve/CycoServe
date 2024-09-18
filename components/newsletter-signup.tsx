@@ -1,7 +1,6 @@
 'use client'
-
+import { OutlinedInput } from '@mui/material'
 import Button from '@mui/material/Button'
-import Input from '@mui/material/Input'
 import { useState } from 'react'
 
 
@@ -20,7 +19,7 @@ export function NewsletterSignupComponent() {
   }
 
   return (
-    <section className="bg-zinc-900 border border-zinc-800 rounded-lg hover:border-orange-500 text-zinc-100 py-12 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-tr from-black to-zinc-900  border border-zinc-800 rounded-lg hover:border-orange-500 text-zinc-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl text-white font-extrabold tracking-tight sm:text-4xl">
@@ -35,7 +34,7 @@ export function NewsletterSignupComponent() {
             <label htmlFor="email" className="sr-only">
               Email address
             </label>
-            <Input
+            <OutlinedInput
               id="email"
               name="email"
               type="email"
@@ -43,7 +42,7 @@ export function NewsletterSignupComponent() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-5 py-3 bg-zinc-800 border border-zinc-700 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:border-orange-500"
+              className="w-full rounded-full text-white bg-black border border-zinc-800 placeholder-zinc-200 focus:outline-none focus:border-orange-500"
               placeholder="Enter your email"
             />
           </div>
@@ -51,14 +50,14 @@ export function NewsletterSignupComponent() {
             <Button
               type="submit"
               disabled={status === 'loading'}
-              className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+              className="w-full flex items-center justify-center px-5 py-4 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
             >
               {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
             </Button>
           </div>
         </form>
         {status === 'success' && (
-          <p className="mt-3 text-sm text-green-400">Thank you for subscribing!</p>
+          <p className="mx-auto text-sm mt-3 left-6 text-green-400">Thank you for subscribing!</p>
         )}
         {status === 'error' && (
           <p className="mt-3 text-sm text-red-400">An error occurred. Please try again.</p>

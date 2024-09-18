@@ -49,7 +49,7 @@ function Header() {
             <div className="mr-4 mt-2 hidden lg:inline-block">
               <ButtonAction title="Download" url="https://github.com/cycoserve/CycoServe" />
             </div>
-            <div className="mobile-menu mt-2">
+            <div className="mobile-menu lg:hidden mt-2">
               <MobileMenu />
             </div>
           </div>

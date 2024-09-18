@@ -5,6 +5,8 @@ import Spacer from "@/components/ui/Spacer";
 import MissionVision from "@/components/Sections/MissionVision";
 import RootLayout from "@/components/Layouts/RootLayout";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
+import BlogHero from "@/components/Sections/BlogHero";
+import AboutHero from "@/components/Sections/AboutHero";
 
 export default function AboutPage() {
   return (
@@ -47,11 +49,18 @@ export default function AboutPage() {
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
       <RootLayout>
-        <div className="flex flex-col justify-center items-center bg-gradient-to-tr from-purple-900 to-black min-h-[75vh]">
-          <SectionWrap>
-            <MissionVision />
-          </SectionWrap>
-        </div>
+        <AboutHero
+          title="CycoServe Labs Is Your Premier AI Service Provider"
+          description="We are working around the clok to make sure you have plenty of knowledge base to help build your awareness"
+          background=""
+          bptext="Download"
+          bpurl="https://github.com/cycoserve/CycoServe"
+          bstext="Guides"
+          bsurl="http://docs.cycoserve.com/"
+        />
+        <SectionWrap>
+          <MissionVision />
+        </SectionWrap>
         <Spacer />
         <SectionWrap>
           {/* <SectionWrap>

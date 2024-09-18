@@ -72,7 +72,7 @@ const Blog: React.FC = () => {
                 <div className="h-6 bg-gray-700 rounded w-3/4 mb-3"></div>
                 <div className="h-4 bg-gray-600 rounded w-1/2 mb-4"></div>
                 <div className="h-4 bg-gray-600 rounded w-full mb-4"></div>
-                <div className="h-10 bg-orange-500 rounded w-1/2"></div>
+                <div className="h-10 bg-purple-500 rounded w-1/2"></div>
               </div>
             </div>
           ))}
@@ -89,7 +89,7 @@ const Blog: React.FC = () => {
             <Link
               href={`/blog/${post.slug}`}
               key={post.id}
-              className="bg-gradient-to-br mb-12 from-zinc-900 to-black rounded-md border border-zinc-800 hover:border-orange-500 p-2"
+              className="bg-gradient-to-br mb-12 from-zinc-900 to-black rounded-md border border-zinc-800 hover:border-purple-500 p-2"
             >
               {post._embedded && post._embedded['wp:featuredmedia'] && (
                 <Image

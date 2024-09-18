@@ -14,13 +14,19 @@ interface Post {
     rendered: string;
   };
   date: string;
+  author: number;
+}
+
+interface Author {
+  name: string;
 }
 
 interface BlogPostProps {
   post: Post;
+  author: Author;
 }
 
-const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
+const BlogPost: React.FC<BlogPostProps> = ({ post, author }) => {
   if (!post) {
     return <div className="text-white">Loading...</div>;
   }
@@ -35,9 +41,11 @@ const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
               {post.title.rendered}
             </h1>
             <p className="text-sm text-gray-400 mb-6">
-              {new Date(post.date).toLocaleDateString()}
+              {new Date(post.date).toLocaleDateString()} 
+              <span className="inline-block mx-2">|</span>
+              {author.name}
             </p>
-            <article className="bg-black ">
+            <article className="bg-black">
               <div
                 className="prose prose-invert max-w-none text-white"
                 dangerouslySetInnerHTML={{ __html: post.content.rendered }}
@@ -54,14 +62,22 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const { slug } = context.params as { slug: string };
 
   try {
-    const response = await axios.get(
+    // Fetch the post
+    const postResponse = await axios.get(
       `https://content-api.cycoserve.com/wp-json/wp/v2/posts?slug=${slug}`
     );
-    const post = response.data[0];
+    const post = postResponse.data[0];
+
+    // Fetch the author
+    const authorResponse = await axios.get(
+      `https://content-api.cycoserve.com/wp-json/wp/v2/users/${post.author}`
+    );
+    const author = authorResponse.data;
 
     return {
       props: {
         post,
+        author,
       },
     };
   } catch (error) {

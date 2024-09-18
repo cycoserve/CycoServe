@@ -27,7 +27,7 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
 }) => {
   return (
     <>
-      <div className="px-4 lg:px-0">
+      <div className=" ">
         <section className="container py-4 mx-auto my-0 ">
           <div className="mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">

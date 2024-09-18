@@ -8,9 +8,14 @@ import Spacer from "@/components/ui/Spacer";
 // import PageEndHero from "@/components/elements/PageEndHero";
 import RootLayout from "@/components/Layouts/RootLayout";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
+import { motion } from "framer-motion";
+import Hero from "@/components/Sections/Hero";
 // import Hero from "@/components/Sections/Hero";
 
 function WhyChooseUs() {
+  // Framer Motion animation variants
+
+
   return (
     <>
       <Head>
@@ -51,6 +56,15 @@ function WhyChooseUs() {
         <meta name="twitter:image" content="/assets/development.jpg" />
       </Head>
       <RootLayout>
+          <Hero
+            title="AI Only Agency: No Hassle Dev and Deployments"
+            description="Cut through the confussion with a dedicateds AI Engineer. Save time and money without sacrificing quality."
+            background=""
+            bptext="Download"
+            bpurl="https://github.com/cycoserve/CycoServe"
+            bstext="Guides"
+            bsurl="http://docs.cycoserve.com/"
+          />
         <div className="flex flex-col justify-center items-center bg-gradient-to-b from-black to-zinc-950 pb-24 min-h-screen">
           <SectionWrap>
             <Spacer />

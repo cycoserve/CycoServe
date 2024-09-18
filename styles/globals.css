@@ -180,6 +180,24 @@ ul ul {
   color: #666;
 }
 
+/* Add spacing to the top and bottom of all images in posts */
+.post-content img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style for blockquote elements */
+blockquote {
+  border-left: 4px solid #3b3b3b; /* Add a left border with a custom color */
+  padding: 1rem; /* Add padding around the text */
+  margin: 1.5rem 0; /* Add spacing above and below the blockquote */
+  background-color: #242424; /* Set background color */
+  color: #e5e7eb; /* Set text color */
+  font-style: italic; /* Make the text italic */
+  font-size: 1.1rem; /* Adjust font size */
+  border-radius: 5px; /* Add rounded corners */
+}
+
 /* global.css */
 
 /* Styling for code blocks */
