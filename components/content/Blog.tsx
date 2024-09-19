@@ -33,20 +33,32 @@ interface Post {
 const Blog: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(12);
+  const [postsPerPage] = useState(16);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('https://content-api.cycoserve.com/wp-json/wp/v2/posts?_embed');
-        setPosts(response.data);
+        const baseUrl = 'https://content-api.cycoserve.com/wp-json/wp/v2/posts?_embed';
+        let allPosts: any[] | ((prevState: Post[]) => Post[]) = [];
+        let page = 1;
+        let totalPages;
+
+        do {
+          const response = await axios.get(`${baseUrl}&per_page=100&page=${page}`);
+          totalPages = parseInt(response.headers['x-wp-total-pages'], 15000);
+          allPosts = [...allPosts, ...response.data];
+          page += 1;
+        } while (page <= totalPages);
+
+        setPosts(allPosts);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching posts:', error);
         setLoading(false);
       }
     };
+
     fetchPosts();
   }, []);
 
@@ -89,11 +101,11 @@ const Blog: React.FC = () => {
             <Link
               href={`/blog/${post.slug}`}
               key={post.id}
-              className="bg-gradient-to-br mb-12 from-zinc-900 to-black rounded-md border border-zinc-800 hover:border-purple-500 p-2"
+              className="bg-gradient-to-br mb-12 from-zinc-900 to-black rounded-md border border-zinc-800 hover:border-orange-500 p-2"
             >
               {post._embedded && post._embedded['wp:featuredmedia'] && (
                 <Image
-                  className="w-full rounded-lg mb-4 aspect-square"
+                  className="w-full rounded-lg mb-2 aspect-square"
                   src={post._embedded['wp:featuredmedia'][0].source_url}
                   alt={post.title.rendered}
                   width={500}
@@ -101,7 +113,7 @@ const Blog: React.FC = () => {
                 />
               )}
               <div className="p-2 flex flex-col">
-                <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">{post.title.rendered}</h3>
+                <h3 className="text-2xl font-bold text-white mb-2 line-clamp-2">{post.title.rendered}</h3>
 
                 {/* Date and Author in flex container */}
                 <div className="flex items-center text-sm text-gray-400 mb-4 space-x-4">
@@ -125,7 +137,7 @@ const Blog: React.FC = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-black to-zinc-950 mt-12 flex justify-center border border-zinc-800 rounded-lg p-2 ">
+        <div className="bg-gradient-to-r from-black to-zinc-950 mt-12 flex justify-center border border-zinc-800 rounded-lg p-2">
           <nav className="inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
             {Array.from({ length: Math.ceil(posts.length / postsPerPage) }, (_, i) => i + 1).map((pageNumber) => (
               <button

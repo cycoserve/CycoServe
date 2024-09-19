@@ -57,7 +57,7 @@ function WhyChooseUs() {
       </Head>
       <RootLayout>
           <Hero
-            title="AI Only Agency: No Hassle Dev and Deployments"
+            title="No Hassle Dev and Deployments"
             description="Cut through the confussion with a dedicateds AI Engineer. Save time and money without sacrificing quality."
             background=""
             bptext="Download"

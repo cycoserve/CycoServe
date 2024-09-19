@@ -34,10 +34,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, author }) => {
   return (
     <RootLayout>
       <SectionWrap>
-        <Spacer />
-        <div className="bg-gradient-t from-zinc-900 to-black min-h-screen py-24">
+        <div className="bg-gradient-t from-zinc-900 to-black min-h-screen py-32">
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">
+            <h1 className="text-3xl lg:text-6xl font-bold text-white mb-4">
               {post.title.rendered}
             </h1>
             <p className="text-sm text-gray-400 mb-6">

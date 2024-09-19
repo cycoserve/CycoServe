@@ -48,10 +48,10 @@ const Hero: React.FC<HeroProps> = ({
             viewport={{ once: true }}
           >
             <div className="text-center max-w-5xl mx-auto">
-              <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-violet-500 min-h-full pb-4">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-violet-500 min-h-full pb-4">
                 {title}
               </h1>
-              <p className="max-w-xl mx-auto text-[1.1rem] mb-8 leading-relaxed md:leading-relaxed lg:leading-relaxed">
+              <p className="max-w-xl mx-auto text-[1.0rem] mb-8 leading-relaxed md:leading-relaxed lg:leading-relaxed">
                 {description}
               </p>
               <div className="flex flex-row justify-center items-center gap-4">

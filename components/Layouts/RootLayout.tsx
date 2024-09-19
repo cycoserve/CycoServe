@@ -6,8 +6,6 @@ import Footer from '../footers/Footer';
 import LoadingSpinner from '@/components/elements/LoadingSpinner';
 import { CookieNotice } from '../cookie-notice';
 
-
-
 interface RootLayoutProps {
   children: ReactNode;
 }
@@ -16,23 +14,30 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-
   useEffect(() => {
-    const timer = setTimeout(() => {
+    // Check if the current route is the home page
+    const isHomePage = router.pathname === '/';
+
+    if (isHomePage) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 2000); // 2 seconds loading time
+
+      return () => clearTimeout(timer);
+    } else {
+      // Directly hide loader for non-home pages
       setLoading(false);
-    }, 2000); // 3 seconds loading time
+    }
+  }, [router.pathname]);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <LoadingSpinner />; 
+  if (loading && router.pathname === '/') {
+    return <LoadingSpinner />;
   }
 
   return (
     <div>
       <header>
-       <Header />
+        <Header />
       </header>
       <main>{children}</main>
       <CookieNotice />

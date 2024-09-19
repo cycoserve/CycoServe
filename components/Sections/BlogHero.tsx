@@ -49,12 +49,12 @@ const BlogHero: React.FC<BlogHeroProps> = ({
           >
             <div className="max-w-4xl text-start">
               <div>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-white min-h-full pb-4">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-white min-h-full pb-4">
                   {title}
                 </h1>
               </div>
 
-              <p className="text-[1.2rem] mb-8 leading-relaxed md:leading-relaxed lg:leading-relaxed">
+              <p className="text-[1.0rem] mb-8 leading-relaxed md:leading-relaxed lg:leading-relaxed">
                 {description}
               </p>
               <div className="flex flex-row justify-start items-center gap-4">
