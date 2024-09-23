@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -35,6 +35,9 @@ const Blog: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(16);
   const [loading, setLoading] = useState(true);
+  
+  // Ref to the blog grid container
+  const blogGridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -67,8 +70,20 @@ const Blog: React.FC = () => {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-  // Change page
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+// Change page
+const paginate = (pageNumber: number) => {
+  setCurrentPage(pageNumber);
+
+  // Scroll to the top of the blog grid
+  if (blogGridRef.current) {
+    blogGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Add a slight delay to ensure the scrollIntoView completes before adjusting the scroll position
+    setTimeout(() => {
+      window.scrollBy(0, -236); // Scroll 40px up to add space
+    }, 400); // Delay should match the smooth scroll duration
+  }
+};
 
   if (loading) {
     return (
@@ -96,7 +111,8 @@ const Blog: React.FC = () => {
   return (
     <div className="bg-black py-16">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Blog Grid Ref */}
+        <div ref={blogGridRef} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {currentPosts.map((post) => (
             <Link
               href={`/blog/${post.slug}`}

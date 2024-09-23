@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { motion } from "framer-motion";
 import Hero from "@/components/Sections/Hero";
 import RootLayout from "@/components/Layouts/RootLayout";
@@ -11,6 +10,10 @@ import SectionWrap from "@/components/elements/SectionWrap";
 import TopBanner from "@/components/elements/TopBanner";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
 import Spacer from "@/components/ui/Spacer";
+import MetaTags from "@/components/headers/MetaData";
+
+
+
 
 export default function Home() {
   // Framer Motion animation variants
@@ -26,24 +29,24 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>CycoServe - AI/ML Powered Digital Marketing Agency</title>
-        {/* Meta tags here */}
-      </Head>
+      <MetaTags
+        title="CycoServe - AI/ML Powered Digital Marketing Agency"
+        description="CycoServe Labs is leading the way in open-source innovation, offering powerful tools for web development, AI, and data-driven technologies. Join us in making technology more accessible and open to innovators worldwide."
+        url="https://cycoserve.com"
+        imageUrl="https://cycoserve.com/assets/images/og-image.jpg"
+      />
 
       <RootLayout>
         {/* Hero Section */}
-
-          <Hero
-            title="Your Portable Digital Marketing Agency"
-            description="A fully portable digital marketing agency, seamlessly integrating AI-driven strategies and on-the-go solutions."
-            background=""
-            bptext="Download"
-            bpurl="https://github.com/cycoserve/CycoServe"
-            bstext="Guides"
-            bsurl="http://docs.cycoserve.com/"
-          />
-
+        <Hero
+          title="Your Portable Digital Marketing Agency"
+          description="A fully portable digital marketing agency, seamlessly integrating AI-driven strategies and on-the-go solutions."
+          background=""
+          bptext="Download"
+          bpurl="https://github.com/cycoserve/CycoServe"
+          bstext="Guides"
+          bsurl="http://docs.cycoserve.com/"
+        />
 
         {/* Top Banner */}
         <motion.div

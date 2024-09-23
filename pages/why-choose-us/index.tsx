@@ -10,61 +10,31 @@ import RootLayout from "@/components/Layouts/RootLayout";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
 import { motion } from "framer-motion";
 import Hero from "@/components/Sections/Hero";
+import MetaTags from "@/components/headers/MetaData";
 // import Hero from "@/components/Sections/Hero";
 
 function WhyChooseUs() {
   // Framer Motion animation variants
 
-
   return (
     <>
-      <Head>
-        <title>
-          Why Choose Us? - AI Powered Full Service Digital Marketing Agency
-        </title>
-        <meta
-          name="description"
-          content="Discover the CycoServe advantage: industry-leading customer support, unbeatable pricing, and a free tier web hosting offer. Choose excellence, choose CycoServe"
-        />
-        <meta
-          name="keywords"
-          content="digital marketing, AI, full service, agency, technology, SEO, web design, content creation, marketing strategies"
-        />
-        <meta name="author" content="CycoServe Team" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta
-          property="og:title"
-          content="Why Choose Us? - AI Powered Full Service Digital Marketing Agency"
-        />
-        <meta
-          property="og:description"
-          content="Discover the CycoServe advantage: industry-leading customer support, unbeatable pricing, and a free tier web hosting offer. Choose excellence, choose CycoServe"
-        />
-        <meta property="og:image" content="/assets/development.jpg" />
-        <meta property="og:url" content="https://cycoserve.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@CycoServe" />
-        <meta
-          name="twitter:title"
-          content="Why Choose Us? - AI Powered Full Service Digital Marketing Agency"
-        />
-        <meta
-          name="twitter:description"
-          content="Discover the CycoServe advantage: industry-leading customer support, unbeatable pricing, and a free tier web hosting offer. Choose excellence, choose CycoServe"
-        />
-        <meta name="twitter:image" content="/assets/development.jpg" />
-      </Head>
+      <MetaTags
+        title="Why Choose Us? - AI-Powered Full-Service Digital Marketing Agency"
+        description="Discover why our AI-powered digital marketing agency stands out. From personalized strategies to cutting-edge automation, we offer comprehensive services to grow your brand and drive results."
+        url="https://youragency.com/why-choose-us"
+        imageUrl="https://youragency.com/assets/images/why-choose-us-og-image.jpg"
+      />
+
       <RootLayout>
-          <Hero
-            title="No Hassle Dev and Deployments"
-            description="Cut through the confussion with a dedicateds AI Engineer. Save time and money without sacrificing quality."
-            background=""
-            bptext="Download"
-            bpurl="https://github.com/cycoserve/CycoServe"
-            bstext="Guides"
-            bsurl="http://docs.cycoserve.com/"
-          />
+        <Hero
+          title="No Hassle Dev and Deployments"
+          description="Cut through the confussion with a dedicateds AI Engineer. Save time and money without sacrificing quality."
+          background=""
+          bptext="Download"
+          bpurl="https://github.com/cycoserve/CycoServe"
+          bstext="Guides"
+          bsurl="http://docs.cycoserve.com/"
+        />
         <div className="flex flex-col justify-center items-center bg-gradient-to-b from-black to-zinc-950 pb-24 min-h-screen">
           <SectionWrap>
             <Spacer />
