@@ -39,10 +39,10 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
                   width={500}
                   height={300}
                 />
-                <h2 className="text-xl font-bold text-white mb-2">
+                <h2 className="text-lg font-bold text-white mb-2">
                   {title1}
                 </h2>
-                <p className="text-sm text-white mb-4 line-clamp-2">{description1}</p>
+                <p className="text-[0.8rem] text-white mb-4 line-clamp-2">{description1}</p>
               </Link>
               <Link href={'/'} className=" bg-gradient-to-br from-zinc-900 to-black rounded-md border border-zinc-800 hover:border-orange-500 p-2">
                 <Image
@@ -52,10 +52,10 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
                   width={500}
                   height={300}
                 />
-                <h2 className="text-xl font-bold text-white mb-2">
+                <h2 className="text-lg font-bold text-white mb-2">
                   {title2}
                 </h2>
-                <p className="text-sm text-white mb-4 line-clamp-2">{description2}</p>
+                <p className="text-[0.8rem] text-white mb-4 line-clamp-2">{description2}</p>
               </Link>
               <Link href="/" className=" bg-gradient-to-br from-zinc-900 to-black rounded-md border border-zinc-800 hover:border-orange-500 p-2">
                 <Image
@@ -65,10 +65,10 @@ const ThreeColSection: React.FC<ThreeColSectionProps> = ({
                   width={500}
                   height={300}
                 />
-                <h2 className="text-xl font-bold text-white mb-2">
+                <h2 className="text-lg font-bold text-white mb-2">
                   {title3}
                 </h2>
-                <p className="text-sm text-white mb-4 line-clamp-2">{description3}</p>
+                <p className="text-[0.8rem] text-white mb-4 line-clamp-2">{description3}</p>
               </Link>
             </div>
           </div>

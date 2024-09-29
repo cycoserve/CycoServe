@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({
       <section
         className="hero-section min-h-screen  flex flex-col pt-36 pb-24 items-center justify-center relative text-white bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(to bottom, green, black), url(${background})`,
+          backgroundImage: `linear-gradient(to bottom, black, green), url(${background})`,
         }}
       >
         <div className="max-w-7xl mx-auto px-4 lg:px-4">
@@ -54,7 +54,7 @@ const Hero: React.FC<HeroProps> = ({
                 </h1>
               </div>
 
-              <p className="max-w-7xl mx-auto text-[1.0rem] mb-8 leading-relaxed md:leading-relaxed lg:leading-relaxed">
+              <p className="max-w-7xl mx-auto text-[0.8rem] mb-8 leading-relaxed md:leading-relaxed lg:leading-relaxed">
                 {description}
               </p>
               <div className="flex flex-row justify-start items-center gap-4">

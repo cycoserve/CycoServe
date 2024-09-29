@@ -89,7 +89,7 @@ const paginate = (pageNumber: number) => {
     return (
       <div className="bg-black py-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 mb-12 sm:grid-cols-2 lg:grid-cols-4">
-          {Array.from({ length: 6 }).map((_, index) => (
+          {Array.from({ length: 8 }).map((_, index) => (
             <div
               key={index}
               className="bg-gradient-to-br from-zinc-900 to-black rounded-md border border-zinc-800 p-2 animate-pulse"
@@ -129,7 +129,7 @@ const paginate = (pageNumber: number) => {
                 />
               )}
               <div className="p-2 flex flex-col">
-                <h3 className="text-2xl font-bold text-white mb-2 line-clamp-2">{post.title.rendered}</h3>
+                <h3 className="text-lg font-bold text-white mb-2 line-clamp-2">{post.title.rendered}</h3>
 
                 {/* Date and Author in flex container */}
                 <div className="flex items-center text-sm text-gray-400 mb-4 space-x-4">
@@ -140,7 +140,7 @@ const paginate = (pageNumber: number) => {
                 </div>
 
                 <div
-                  className="text-gray-300 mb-4 line-clamp-2"
+                  className="text-gray-300 mb-4 text-[0.8rem] line-clamp-3"
                   dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
                 />
                 <Link href={`/blog/${post.slug}`}>

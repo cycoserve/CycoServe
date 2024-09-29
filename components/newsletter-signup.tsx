@@ -25,7 +25,7 @@ export function NewsletterSignupComponent() {
           <h2 className="text-3xl text-white font-extrabold tracking-tight sm:text-4xl">
             Stay updated with our newsletter
           </h2>
-          <p className="mt-4 text-lg text-zinc-300">
+          <p className="mt-4 text-[0.8rem] text-zinc-300">
             Get the latest news and updates delivered straight to your inbox.
           </p>
         </div>

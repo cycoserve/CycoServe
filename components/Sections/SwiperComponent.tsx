@@ -77,10 +77,10 @@ const SwiperComponent = () => {
                     width={500}
                     height={500}
                   />
-                  <h2 className="text-xl text-start font-bold text-white mb-2 line-clamp-1">
+                  <h2 className="text-lg text-start font-bold text-white mb-2 line-clamp-1">
                     {slide.title}
                   </h2>
-                  <p className="text-[1.09rem] text-white mb-4 line-clamp-2">
+                  <p className="text-[0.8rem] text-white mb-4 line-clamp-2">
                     {slide.description}
                   </p>
                 </div>

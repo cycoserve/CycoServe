@@ -15,6 +15,7 @@ interface Post {
     rendered: string;
   };
   date: string;
+  slug: string;
   author: number;
   featured_media: number; // ID for the featured image
 }
@@ -43,13 +44,13 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, author, featuredImageUrl }) =
       <MetaTags
         title={`CycoServe - ${post.title.rendered}`}
         description={description}
-        url={`https://cycoserve.com/blog/${post.id}`}
+        url={`https://cycoserve.com/blog/${post.slug}`}
         imageUrl={featuredImageUrl || "https://cycoserve.com/assets/images/default-blog-image.jpg"} // Fallback image if no featured image
       />
 
       <RootLayout>
         <SectionWrap>
-          <div className="bg-gradient-t from-zinc-900 to-black min-h-screen py-32">
+          <div className="bg-gradient-t from-zinc-900 to-black min-h-screen py-24">
             <div className="max-w-5xl mx-auto">
               <h1 className="text-3xl lg:text-6xl font-bold text-white mb-4">
                 {post.title.rendered}
@@ -61,7 +62,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, author, featuredImageUrl }) =
               </p>
               <article className="bg-black">
                 <div
-                  className="prose prose-invert max-w-none text-white"
+                  className="prose prose-invert max-w-none text-white text-[0.8rem]"
                   dangerouslySetInnerHTML={{ __html: post.content.rendered }}
                 />
               </article>

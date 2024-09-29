@@ -70,7 +70,7 @@ export default function Home() {
               <div className="mx-auto md:px-0">
                 <div className="bg-gradient-to-br from-zinc-900 to-black p-4 border border-zinc-800 hover:border-orange-500 rounded-lg inset-full max-w-xl">
                   <TitleSection
-                    subtitle="Tailored for Success in the Digital Age"
+                    subtitle=""
                     title="Discover Our Suite of Cutting-Edge Solutions"
                   />
                 </div>
@@ -97,8 +97,8 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <TitleSection
-                subtitle="Your Success, Our Commitment"
-                title="Choose CycoServe: Where Professionalism Meets Generosity"
+                subtitle=""
+                title="Where Professionalism Meets Generosity"
               />
             </motion.div>
             <motion.div
@@ -129,8 +129,8 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <TitleSection
-                subtitle="Reliable Radio Hosting Services"
-                title="Seamless Broadcasting Solutions Tailored to Your Frequency"
+                subtitle=""
+                title="Radio Management And Podcasting"
               />
             </motion.div>
             <motion.div
@@ -166,7 +166,7 @@ export default function Home() {
             <PageEndHero
               background="/images/dj-trump-1.webp"
               title="Transform Your Digital Presence"
-              description="We offer cutting edge digital services that will enhance your company's online presence. At CycoServe, we pioneer digital transformation. Our innovative solutions drive success in the digital era. Partner with us and thrive in the digital landscape."
+              description="We offer cutting edge digital services that will enhance your company's online presence. "
               bptext="Download"
               bpurl="https://github.com/cycoserve/CycoServe"
               bstext="Guides"

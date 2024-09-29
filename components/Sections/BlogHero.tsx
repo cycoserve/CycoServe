@@ -54,7 +54,7 @@ const BlogHero: React.FC<BlogHeroProps> = ({
                 </h1>
               </div>
 
-              <p className="text-[1.0rem] mb-8 leading-relaxed md:leading-relaxed lg:leading-relaxed">
+              <p className="text-[0.8rem] mb-8 leading-relaxed md:leading-relaxed lg:leading-relaxed">
                 {description}
               </p>
               <div className="flex flex-row justify-start items-center gap-4">

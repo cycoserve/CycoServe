@@ -7,47 +7,17 @@ import RootLayout from "@/components/Layouts/RootLayout";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
 import BlogHero from "@/components/Sections/BlogHero";
 import AboutHero from "@/components/Sections/AboutHero";
+import MetaTags from "@/components/headers/MetaData";
 
 export default function AboutPage() {
   return (
     <>
-      <Head>
-        <title>
-          About Us - AI Powered Full Service Digital Marketing Agency
-        </title>
-        <meta
-          name="description"
-          content="CycoServe is a dynamic and innovative full-service digital marketing agency committed to providing transformative solutions for businesses seeking to thrive in the digital landscape."
-        />
-        <meta
-          name="keywords"
-          content="digital marketing, AI, full service, agency, technology, SEO, web design, content creation, marketing strategies"
-        />
-        <meta name="author" content="CycoServe Team" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta
-          property="og:title"
-          content="About Us - AI Powered Full Service Digital Marketing Agency"
-        />
-        <meta
-          property="og:description"
-          content="CycoServe is a dynamic and innovative full-service digital marketing agency committed to providing transformative solutions for businesses seeking to thrive in the digital landscape."
-        />
-        <meta property="og:image" content="/assets/development.jpg" />
-        <meta property="og:url" content="https://cycoserve.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@CycoServe" />
-        <meta
-          name="twitter:title"
-          content="About Us - AI Powered Full Service Digital Marketing Agency"
-        />
-        <meta
-          name="twitter:description"
-          content="CycoServe is a dynamic and innovative full-service digital marketing agency committed to providing transformative solutions for businesses seeking to thrive in the digital landscape."
-        />
-        <meta name="twitter:image" content="/assets/development.jpg" />
-      </Head>
+      <MetaTags
+        title="About Us - AI/ML Powered Digital Marketing Agency"
+        description="CycoServe Labs is leading the way in open-source innovation, offering powerful tools for web development, AI, and data-driven technologies. Join us in making technology more accessible and open to innovators worldwide."
+        url="https://cycoserve.com"
+        imageUrl="https://cycoserve.com/assets/images/og-image.jpg"
+      />
       <RootLayout>
         <AboutHero
           title="CycoServe Labs Is Your Premier AI Service Provider"
