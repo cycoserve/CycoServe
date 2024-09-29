@@ -5,8 +5,8 @@ import "react-modern-drawer/dist/index.css";
 import ButtonPrimary from "../ui/ButtonPrimary";
 import Image from "next/image";
 import ButtonExplore from "../ui/ButtonExplore";
-import SearchComponent from "../Sections/SearchComponent";
-import { menuItems } from './data/menuItems';
+// import SearchComponent from "../Sections/SearchComponent";
+import { mobileMenuItems } from './data/mobileMenuItems';
 
 
 
@@ -74,22 +74,23 @@ const MobileMenu = () => {
             </div>
             {/* Search */}
             <div className="pt-2 pb-4 bg-black px-2 flex flex-row gap-2 justify-between items-center">
-              <SearchComponent />
+              {/* <SearchComponent /> */}
             </div>
 
             <div className="list flex flex-col justify-stretch h-full items-start text-zinc-900 py-0 text-xl gap-0">
-              {menuItems.map((item) => (
+              {mobileMenuItems.map((item) => (
                 <React.Fragment key={item.id}>
                   <div className="w-full">
                     {/* Top Divider */}
-                    <div className="w-full h-[1px] bg-black" />
+                    <div className="w-full h-[1px] bg-zinc-600" />
                     <Link href={item.url}>
                       <div className="p-4 text-white hover:bg-zinc-600 hover:text-white transition duration-200">
                         {item.title}
                       </div>
+                  
                     </Link>
                     {/* Bottom Divider */}
-                    <div className="w-full h-[1px] bg-black" />
+                    <div className="w-full h-[1px] bg-zinc-600" />
                   </div>
                 </React.Fragment>
               ))}

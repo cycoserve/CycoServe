@@ -1,9 +1,9 @@
 // data/menuItems.ts
 
-export const menuItems = [
+export const mobileMenuItems = [
     {
       id: "1",
-      title: "About",
+      title: "About Us",
       url: "/about",
     },
     {
@@ -13,17 +13,17 @@ export const menuItems = [
     },
     {
       id: "3",
-      title: "Docs",
+      title: "Documentation",
       url: "https://docs.cycoserve.com",
     },
     {
       id: "4",
-      title: "Blog",
+      title: "Helpful Articles",
       url: "/blog",
     },
     {
       id: "5",
-      title: "Contact",
+      title: "Contact Us",
       url: "/contact-us",
     },
   ];
