@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({
       <section
         className="hero-section min-h-screen flex flex-col pt-8 items-center justify-center relative text-white bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(to bottom, purple, black), url(${background})`,
+          backgroundImage: `linear-gradient(to bottom,black , purple), url(${background})`,
         }}
       >
         <div className="container mx-auto px-6 lg:px-12">

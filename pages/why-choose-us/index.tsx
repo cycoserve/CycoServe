@@ -8,10 +8,12 @@ import Spacer from "@/components/ui/Spacer";
 // import PageEndHero from "@/components/elements/PageEndHero";
 import RootLayout from "@/components/Layouts/RootLayout";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Hero from "@/components/Sections/Hero";
 import MetaTags from "@/components/headers/MetaData";
 // import Hero from "@/components/Sections/Hero";
+
+
 
 function WhyChooseUs() {
   // Framer Motion animation variants
@@ -39,16 +41,16 @@ function WhyChooseUs() {
           <SectionWrap>
             <Spacer />
             <TitleSection
-              subtitle="Whay Choose Us?"
-              title="CycoServeis dedicated to high quality and ease of use."
+              subtitle=""
+              title="Dedicated to high quality and ease of use."
             />
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
               <div>
                 <ParagraphTitle>
-                  Choosing CycoServe means partnering with a team of digital
-                  experts dedicated to your success
+                  Partner with a team of
+                  dedicated experts to your success
                 </ParagraphTitle>
-                <div className="text-white">
+                <div className="text-white text-[0.8rem]">
                   With a proven track record of delivering results and driving
                   growth for businesses across industries, we bring a wealth of
                   experience and expertise to every project. Our client-centric
@@ -60,7 +62,7 @@ function WhyChooseUs() {
 
               <div>
                 <ParagraphTitle>Solutions For Any Use Case</ParagraphTitle>
-                <div className="text-white">
+                <div className="text-white text-[0.8rem]">
                   Whether you&apos;re a startup looking to establish your brand
                   presence, a small business aiming to expand your reach, or a
                   large enterprise seeking to innovate and disrupt, we have the
@@ -73,7 +75,7 @@ function WhyChooseUs() {
 
               <div>
                 <ParagraphTitle>Unlock Your Full Potential</ParagraphTitle>
-                <div className="text-white">
+                <div className="text-white text-[0.8rem]">
                   At CycoServe, we&apos;re more than just a digital marketing
                   agency we&apos;re your partner in success. Let us help you
                   unlock your full potential and achieve your goals in the
@@ -88,7 +90,7 @@ function WhyChooseUs() {
         <Spacer />
         <SectionWrap>
           <TitleSection
-            subtitle="Your Success, Our Commitment"
+            subtitle=""
             title="Choose CycoServe: Where Professionalism Meets Generosity"
           />
           <TwoColSection
