@@ -51,7 +51,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, author, featuredImageUrl }) =
       <RootLayout>
         <SectionWrap>
           <div className="bg-gradient-t from-zinc-900 to-black min-h-screen py-24">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto py-4 md:py-8 lg:py-16">
               <h1 className="text-3xl lg:text-6xl font-bold text-white mb-4">
                 {post.title.rendered}
               </h1>
@@ -62,7 +62,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, author, featuredImageUrl }) =
               </p>
               <article className="bg-black">
                 <div
-                  className="prose prose-invert max-w-none text-white text-[0.8rem]"
+                  className="prose prose-invert max-w-none text-white text-[1.0rem]"
                   dangerouslySetInnerHTML={{ __html: post.content.rendered }}
                 />
               </article>

@@ -1,13 +1,14 @@
 import React from "react";
-import Head from "next/head";
 import SectionWrap from "@/components/elements/SectionWrap";
 import Spacer from "@/components/ui/Spacer";
 import MissionVision from "@/components/Sections/MissionVision";
 import RootLayout from "@/components/Layouts/RootLayout";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
-import BlogHero from "@/components/Sections/BlogHero";
 import AboutHero from "@/components/Sections/AboutHero";
 import MetaTags from "@/components/headers/MetaData";
+
+
+
 
 export default function AboutPage() {
   return (

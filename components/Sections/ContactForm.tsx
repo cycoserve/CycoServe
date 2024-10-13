@@ -1,10 +1,6 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import axios from 'axios';
-
-
-
 
 const inputClasses = 'mt-1 block w-full px-3 py-2 border border-zinc-300 rounded-md shadow-sm focus:outline-none focus:ring-zinc-400 focus:border-zinc-400 sm:text-sm';
 const textClasses = 'block text-sm font-medium text-zinc-700';
@@ -15,39 +11,45 @@ const buttonClasses = 'bg-orange-500 text-white py-1 px-8 rounded-full hover:bg-
 const ContactForm = () => {
   return (
     <div className={containerClasses}>
-      <div className="max-w-full px-4 lg:px-4 mx-auto grid grid-cols-1  gap-12">
+      <div className="max-w-full px-4 lg:px-4 mx-auto grid grid-cols-1 gap-12">
         <div className={cardClasses}>
           <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
           <Formik
             initialValues={{
               name: '',
               email: '',
-              phone: '',
-              services: 'digital_marketing',
               message: '',
             }}
             validationSchema={Yup.object({
               name: Yup.string().required('Required'),
               email: Yup.string().email('Invalid email address').required('Required'),
-              services: Yup.string().required('Required'),
               message: Yup.string().required('Required'),
             })}
             onSubmit={async (values, { setSubmitting, resetForm }) => {
               try {
-                const response = await axios.post('/api/contact', values);
-                console.log('Form submitted successfully:', response.data);
-                setSubmitting(false);
-                resetForm();
-                alert('Form submitted successfully!');
-              } catch (error: any) {
-                console.error('Error submitting form:', error);
-                setSubmitting(false);
-                if (error instanceof Error) {
-                  alert('Error submitting form: ' + error.message);
+                const response = await fetch('/api/sendEmail', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(values),
+                });
+
+                if (response.ok) {
+                  console.log('Form submitted successfully');
+                  resetForm();
+                  alert('Form submitted successfully!');
                 } else {
-                  alert('An unknown error occurred');
+                  const errorData = await response.json();
+                  console.error('Error submitting form:', errorData);
+                  alert(`Error submitting form: ${errorData.error}`);
                 }
+              } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('Error submitting form. Please try again.');
               }
+
+              setSubmitting(false);
             }}
           >
             {({ isSubmitting }) => (
@@ -77,19 +79,6 @@ const ContactForm = () => {
                     placeholder="johndoe@example.com"
                   />
                   <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="services" className={textClasses}>
-                    Which Service Do You Require?
-                  </label>
-                  <Field as="select" id="services" name="services" className={inputClasses}>
-                    <option value="digital_marketing">Digital Marketing Services</option>
-                    <option value="seo">SEO Services</option>
-                    <option value="social_media">Social Media Marketing</option>
-                    <option value="ppc">PPC Management</option>
-                    <option value="email_marketing">Email Marketing</option>
-                  </Field>
-                  <ErrorMessage name="services" component="div" className="text-red-500 text-sm" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="message" className={textClasses}>

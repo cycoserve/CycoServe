@@ -2,8 +2,8 @@ import RootLayout from "@/components/Layouts/RootLayout";
 import React from "react";
 import Blog from "@/components/content/Blog";
 import SectionWrap from "@/components/elements/SectionWrap";
-import BlogHero from "@/components/Sections/BlogHero";
 import MetaTags from "@/components/headers/MetaData";
+
 
 
 
@@ -17,7 +17,7 @@ export default function index() {
         imageUrl="https://youragency.com/assets/images/blog-og-image.jpg"
       />
       <RootLayout>
-        <BlogHero
+        {/* <BlogHero
           title="Helpful Articles To Increase Your Knowledge"
           description="Expand your expertise with our curated selection of insightful blog articles. Dive into the latest tips, trends, and tutorials designed to boost your knowledge and keep you ahead in your field."
           background="/assets/ai-content-creation.jpg"
@@ -25,9 +25,11 @@ export default function index() {
           bpurl="https://github.com/cycoserve/CycoServe"
           bstext="Guides"
           bsurl="http://docs.cycoserve.com/"
-        />
+        /> */}
         <SectionWrap>
-          <Blog />
+          <div className="py-16">
+            <Blog />
+          </div>
         </SectionWrap>
       </RootLayout>
     </>

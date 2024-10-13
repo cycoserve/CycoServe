@@ -88,7 +88,7 @@ const paginate = (pageNumber: number) => {
   if (loading) {
     return (
       <div className="bg-black py-16">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 mb-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 mb-12 sm:grid-cols-2 lg:grid-cols-3">
           {Array.from({ length: 8 }).map((_, index) => (
             <div
               key={index}
@@ -112,16 +112,16 @@ const paginate = (pageNumber: number) => {
     <div className="bg-black py-16">
       <div className="max-w-7xl mx-auto">
         {/* Blog Grid Ref */}
-        <div ref={blogGridRef} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div ref={blogGridRef} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {currentPosts.map((post) => (
-            <Link
+            <a
               href={`/blog/${post.slug}`}
               key={post.id}
               className="bg-gradient-to-br mb-12 from-zinc-900 to-black rounded-md border border-zinc-800 hover:border-orange-500 p-2"
             >
               {post._embedded && post._embedded['wp:featuredmedia'] && (
                 <Image
-                  className="w-full rounded-lg mb-2 aspect-square"
+                  className="w-full rounded-lg mb-2 aspect-video"
                   src={post._embedded['wp:featuredmedia'][0].source_url}
                   alt={post.title.rendered}
                   width={500}
@@ -149,7 +149,7 @@ const paginate = (pageNumber: number) => {
                   </span>
                 </Link>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 

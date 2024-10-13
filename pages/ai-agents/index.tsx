@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import SectionWrap from "@/components/elements/SectionWrap";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import Image from "next/image";
