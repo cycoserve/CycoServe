@@ -4,7 +4,7 @@ import RootLayout from "../components/Layouts/RootLayout";
 import TwoColSection from "../components/Sections/TwoColSection";
 import ThreeColSection from "../components/Sections/ThreeColSection";
 import TitleSection from "../components/Sections/TitleSection";
-import SwiperComponent from "@/components/Sections/SwiperComponent";
+import SwiperComponent from "@/components/Sections/BlogSwiperComponent";
 import Spacer from "@/components/ui/Spacer";
 import PageEndHero from "@/components/elements/PageEndHero";
 import SectionWrap from "@/components/elements/SectionWrap";

@@ -36,7 +36,7 @@ function Header() {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 w-full right-0 z-10 transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 w-full right-0 z-50 transition-transform duration-500 ease-in-out ${
           scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
         } ${scrolled ? " backdrop-blur-xl shadow-md" : "bg-transparent"} py-2`}
       >
@@ -47,7 +47,7 @@ function Header() {
           </div>
           <div className="inline-flex">
             <div className="mr-4 mt-2 hidden lg:inline-block">
-              <ButtonAction title="Download" url="https://github.com/cycoserve/CycoServe" />
+              <ButtonAction title="Documentation" url="https://docs.cycoserve.com" />
             </div>
             <div className="mobile-menu lg:hidden mt-2">
               <MobileMenu />

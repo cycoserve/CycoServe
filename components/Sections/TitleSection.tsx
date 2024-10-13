@@ -1,21 +1,25 @@
-import React from "react";
+import React from "react"
 
 interface TitleSectionProps {
-  title: string;
-  subtitle: string;
+  title: string
+  subtitle: string
 }
 
-const TitleSection: React.FC<TitleSectionProps> = ({ title, subtitle }) => {
+export default function TitleSection({ title, subtitle }: TitleSectionProps) {
   return (
-    <>
-      <div className="mx-auto mb-8 max-w-7xl">
-        <div className="max-w-3xl text-start">
-          <div className="text-md text-white font-semibold md:text-lg mb-2">{subtitle}</div>
-          <div className="text-4xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-violet-500 overflow-y-visible pb-2">{title}</div>
+    <div className="relative mb-8 overflow-hidden">
+      <div className="absolute inset-0" />
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
+        <div className="max-w-3xl">
+          <h2 className="text-sm sm:text-base text-orange-400 font-semibold tracking-wide uppercase mb-2">
+            {subtitle}
+          </h2>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+            {title}
+          </h1>
+          <div className="h-1 w-40 bg-orange-500 rounded-full" />
         </div>
       </div>
-    </>
-  );
-};
-
-export default TitleSection;
+    </div>
+  )
+}

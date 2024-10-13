@@ -8,21 +8,16 @@ export const menuItems = [
     },
     {
       id: "2",
-      title: "Why Choose Us?",
+      title: "Choose Us",
       url: "/why-choose-us",
     },
     {
       id: "3",
-      title: "Docs",
-      url: "https://docs.cycoserve.com",
-    },
-    {
-      id: "4",
       title: "Blog",
       url: "/blog",
     },
     {
-      id: "5",
+      id: "4",
       title: "Contact",
       url: "/contact-us",
     },

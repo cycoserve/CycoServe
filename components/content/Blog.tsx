@@ -35,26 +35,15 @@ const Blog: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(16);
   const [loading, setLoading] = useState(true);
-  
+
   // Ref to the blog grid container
   const blogGridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const baseUrl = 'https://content-api.cycoserve.com/wp-json/wp/v2/posts?_embed';
-        let allPosts: any[] | ((prevState: Post[]) => Post[]) = [];
-        let page = 1;
-        let totalPages;
-
-        do {
-          const response = await axios.get(`${baseUrl}&per_page=100&page=${page}`);
-          totalPages = parseInt(response.headers['x-wp-total-pages'], 15000);
-          allPosts = [...allPosts, ...response.data];
-          page += 1;
-        } while (page <= totalPages);
-
-        setPosts(allPosts);
+        const response = await axios.get('/api/posts');
+        setPosts(response.data);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching posts:', error);
@@ -65,25 +54,26 @@ const Blog: React.FC = () => {
     fetchPosts();
   }, []);
 
+
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-// Change page
-const paginate = (pageNumber: number) => {
-  setCurrentPage(pageNumber);
+  // Change page
+  const paginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
 
-  // Scroll to the top of the blog grid
-  if (blogGridRef.current) {
-    blogGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Scroll to the top of the blog grid
+    if (blogGridRef.current) {
+      blogGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    // Add a slight delay to ensure the scrollIntoView completes before adjusting the scroll position
-    setTimeout(() => {
-      window.scrollBy(0, -236); // Scroll 40px up to add space
-    }, 400); // Delay should match the smooth scroll duration
-  }
-};
+      // Add a slight delay to ensure the scrollIntoView completes before adjusting the scroll position
+      setTimeout(() => {
+        window.scrollBy(0, -236); // Scroll 40px up to add space
+      }, 400); // Delay should match the smooth scroll duration
+    }
+  };
 
   if (loading) {
     return (
@@ -153,17 +143,16 @@ const paginate = (pageNumber: number) => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-black to-zinc-950 mt-12 flex justify-center border border-zinc-800 rounded-lg p-2">
+        <div className="bg-gradient-to-r from-black to-zinc-950 mt-0 flex justify-center border border-zinc-800 rounded-lg p-2">
           <nav className="inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
             {Array.from({ length: Math.ceil(posts.length / postsPerPage) }, (_, i) => i + 1).map((pageNumber) => (
               <button
                 key={pageNumber}
                 onClick={() => paginate(pageNumber)}
-                className={`${
-                  currentPage === pageNumber
+                className={`${currentPage === pageNumber
                     ? 'z-10 bg-orange-500 text-white'
                     : 'bg-zinc-800 text-gray-300 hover:bg-zinc-700'
-                } relative inline-flex items-center px-4 py-2 border border-orange-500 text-sm font-medium transition-colors duration-300`}
+                  } relative inline-flex items-center px-4 py-2 border border-orange-500 text-sm font-medium transition-colors duration-300`}
               >
                 {pageNumber}
               </button>

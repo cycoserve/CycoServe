@@ -11,6 +11,8 @@ import { NewsletterSignupComponent } from "@/components/newsletter-signup";
 // import { motion } from "framer-motion";
 import Hero from "@/components/Sections/Hero";
 import MetaTags from "@/components/headers/MetaData";
+import AboutHero from "@/components/Sections/AboutHero";
+import WhyChooseUsHero from "@/components/Sections/ChooseUsHero";
 // import Hero from "@/components/Sections/Hero";
 
 
@@ -28,16 +30,8 @@ function WhyChooseUs() {
       />
 
       <RootLayout>
-        <Hero
-          title="No Hassle Dev and Deployments"
-          description="Cut through the confussion with a dedicateds AI Engineer. Save time and money without sacrificing quality."
-          background=""
-          bptext="Download"
-          bpurl="https://github.com/cycoserve/CycoServe"
-          bstext="Guides"
-          bsurl="http://docs.cycoserve.com/"
-        />
-        <div className="flex flex-col justify-center items-center bg-gradient-to-b from-black to-zinc-950 pb-24 min-h-screen">
+        <WhyChooseUsHero />
+        <div className="flex flex-col justify-center items-center bg-gradient-to-b from-black to-zinc-950 pb-24 h-full">
           <SectionWrap>
             <Spacer />
             <TitleSection
@@ -47,10 +41,9 @@ function WhyChooseUs() {
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
               <div>
                 <ParagraphTitle>
-                  Partner with a team of
-                  dedicated experts to your success
+                  Partner With Dedicated Experts
                 </ParagraphTitle>
-                <div className="text-white text-[0.8rem]">
+                <div className="text-white text-[1rem]">
                   With a proven track record of delivering results and driving
                   growth for businesses across industries, we bring a wealth of
                   experience and expertise to every project. Our client-centric
@@ -62,7 +55,7 @@ function WhyChooseUs() {
 
               <div>
                 <ParagraphTitle>Solutions For Any Use Case</ParagraphTitle>
-                <div className="text-white text-[0.8rem]">
+                <div className="text-white text-[1rem]">
                   Whether you&apos;re a startup looking to establish your brand
                   presence, a small business aiming to expand your reach, or a
                   large enterprise seeking to innovate and disrupt, we have the

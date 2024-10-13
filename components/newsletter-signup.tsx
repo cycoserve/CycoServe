@@ -19,7 +19,7 @@ export function NewsletterSignupComponent() {
   }
 
   return (
-    <section className="bg-gradient-to-tr from-black to-zinc-900  border border-zinc-800 rounded-lg hover:border-orange-500 text-zinc-100 py-12 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-tr from-black to-zinc-900  border border-zinc-800 rounded-lg text-zinc-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl text-white font-extrabold tracking-tight sm:text-4xl">

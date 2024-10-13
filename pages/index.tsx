@@ -1,16 +1,21 @@
 import { motion } from "framer-motion";
-import Hero from "@/components/Sections/Hero";
 import RootLayout from "@/components/Layouts/RootLayout";
 import TwoColSection from "@/components/Sections/TwoColSection";
 import ThreeColSection from "@/components/Sections/ThreeColSection";
 import TitleSection from "@/components/Sections/TitleSection";
-import SwiperComponent from "@/components/Sections/SwiperComponent";
+import SwiperComponent from "@/components/Sections/BlogSwiperComponent";
 import PageEndHero from "@/components/elements/PageEndHero";
 import SectionWrap from "@/components/elements/SectionWrap";
 import TopBanner from "@/components/elements/TopBanner";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
 import Spacer from "@/components/ui/Spacer";
 import MetaTags from "@/components/headers/MetaData";
+import HomeHero from "@/components/Sections/HomeHero";
+import CodeSnippet from "@/components/Sections/CodeSnipet";
+import BlogSwiperComponent from "@/components/Sections/BlogSwiperComponent";
+import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 
 
@@ -30,23 +35,17 @@ export default function Home() {
   return (
     <>
       <MetaTags
-        title="CycoServe - AI/ML Powered Digital Marketing Agency"
+        title="CycoServe Labs - AI/ML Powered Digital Agency"
         description="CycoServe Labs is leading the way in open-source innovation, offering powerful tools for web development, AI, and data-driven technologies. Join us in making technology more accessible and open to innovators worldwide."
-        url="https://cycoserve.com"
+        url="https://cycoserve.com/"
         imageUrl="https://cycoserve.com/assets/images/og-image.jpg"
       />
 
       <RootLayout>
         {/* Hero Section */}
-        <Hero
-          title="Your Portable Digital Marketing Agency"
-          description="A fully portable digital marketing agency, seamlessly integrating AI-driven strategies and on-the-go solutions."
-          background=""
-          bptext="Download"
-          bpurl="https://github.com/cycoserve/CycoServe"
-          bstext="Guides"
-          bsurl="http://docs.cycoserve.com/"
-        />
+        <HomeHero />
+        <TopBanner />
+        <CodeSnippet />
 
         {/* Top Banner */}
         <motion.div
@@ -55,40 +54,11 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <TopBanner />
+
         </motion.div>
 
-        {/* Features Section */}
-        <div className="features-bg wrap min-h-full py-12">
-          <SectionWrap>
-            <motion.div
-              variants={zoomIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <div className="mx-auto md:px-0">
-                <div className="bg-gradient-to-br from-zinc-900 to-black p-4 border border-zinc-800 hover:border-orange-500 rounded-lg inset-full max-w-xl">
-                  <TitleSection
-                    subtitle=""
-                    title="Discover Our Suite of Cutting-Edge Solutions"
-                  />
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              variants={fadeIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <SwiperComponent />
-            </motion.div>
-          </SectionWrap>
-        </div>
-
         {/* 2 Col Section */}
-        <div className="py-24 bg-black">
+        <div className="pt-16 pb-24 bg-black">
           <SectionWrap>
             <motion.div
               variants={fadeIn}
@@ -107,6 +77,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true }}
             >
+
               <TwoColSection
                 title1="Streamlined Web Development"
                 description1="Rest assured with our professional approach using GitHub and CI/CD, safeguarding your code integrity and eliminating worries of loss."
@@ -120,7 +91,7 @@ export default function Home() {
         </div>
 
         {/* 3 Col Section */}
-        <div className="three bg-zinc-950 py-24">
+        <div className="three bg-zinc-950 pt-16 pb-24">
           <SectionWrap>
             <motion.div
               variants={fadeIn}
@@ -154,6 +125,45 @@ export default function Home() {
           </SectionWrap>
         </div>
 
+        {/* Features Section */}
+        <div className="wrap min-h-full py-12">
+          <Spacer />
+          <SectionWrap>
+            <motion.div
+              variants={zoomIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <div className="mx-auto md:px-0">
+
+                <TitleSection
+                  subtitle=""
+                  title="Helpful Articles To Increase Your Knowledge"
+                />
+
+              </div>
+            </motion.div>
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <BlogSwiperComponent />
+              <div className="flex justify-start items-center mx-auto">
+                <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105">
+                  <Link href="/blog">
+                    Get Started
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </motion.div>
+          </SectionWrap>
+        </div>
+
+
         {/* Page End Hero */}
         <motion.div
           variants={zoomIn}
@@ -164,7 +174,7 @@ export default function Home() {
         >
           <SectionWrap>
             <PageEndHero
-              background="/images/dj-trump-1.webp"
+              background=""
               title="Transform Your Digital Presence"
               description="We offer cutting edge digital services that will enhance your company's online presence. "
               bptext="Download"

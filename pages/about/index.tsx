@@ -20,15 +20,7 @@ export default function AboutPage() {
         imageUrl="https://cycoserve.com/assets/images/og-image.jpg"
       />
       <RootLayout>
-        <AboutHero
-          title="CycoServe Labs Is Your Premier AI Service Provider"
-          description="We are working around the clok to make sure you have plenty of knowledge base to help build your awareness"
-          background=""
-          bptext="Download"
-          bpurl="https://github.com/cycoserve/CycoServe"
-          bstext="Guides"
-          bsurl="http://docs.cycoserve.com/"
-        />
+        <AboutHero />
         <SectionWrap>
           <MissionVision />
         </SectionWrap>

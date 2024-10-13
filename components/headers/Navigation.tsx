@@ -40,11 +40,11 @@ const Navigation: React.FC = () => {
               whileTap={{ scale: 0.9 }}
             >
               {/* Use Link component to navigate */}
-              <Link href={item.url} className='hover:bg-orange-500'>
+              <a href={item.url} className='hover:bg-orange-500'>
                 <p className={`${scrolled ? "text-white font-semibold hover:bg-orange-500 hover:text-white hover:shadow-xl px-4 py-1 rounded-full hshadow-xl" : "text-white hover:bg-orange-500 hover:bg-opacity-15 rounded-full py-1  px-4"}`}>
                   {item.title}
                 </p>
-              </Link>
+              </a>
             </motion.li>
           ))}
         </ul>
