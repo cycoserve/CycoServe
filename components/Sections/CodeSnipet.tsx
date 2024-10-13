@@ -47,7 +47,7 @@ export default function HomePage() {
           <div className="space-y-6 md:px-6">
             <h2 className="text-4xl font-bold">Get Started in Minutes</h2>
             <p className="text-zinc-300">
-              CycoServe makes it incredibly easy to build powerful web applications. With our intuitive components and streamlined setup process, you'll be up and running in no time.
+              CycoServe makes it incredibly easy to build powerful web applications. With our intuitive components and streamlined setup process, you&apos;ll be up and running in no time.
             </p>
             <ul className="list-disc list-inside text-zinc-300 space-y-2">
               <li>Simple installation with npm</li>

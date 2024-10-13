@@ -41,7 +41,7 @@ export default function WhyChooseUsHero() {
                         Why Choose <span className="bg-clip-text text-transparent bg-orange-500 ">CycoServe?</span>
                     </h1>
                     <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-                        Revolutionizing digital experiences with cutting-edge solutions. We're on a mission to transform the way you work and interact online.
+                        Revolutionizing digital experiences with cutting-edge solutions. We&apos;re on a mission to transform the way you work and interact online.
                     </p>
                 </div>
 
