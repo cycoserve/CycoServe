@@ -58,7 +58,7 @@ export default function Home() {
         </motion.div>
 
         {/* 2 Col Section */}
-        <div className="pt-16 pb-24 bg-black">
+        <div className="features-bg pt-16 pb-24 bg-black">
           <SectionWrap>
             <motion.div
               variants={fadeIn}
@@ -126,7 +126,7 @@ export default function Home() {
         </div>
 
         {/* Features Section */}
-        <div className="wrap min-h-full py-12">
+        <div className="features-bg wrap min-h-full py-12">
           <Spacer />
           <SectionWrap>
             <motion.div
@@ -151,10 +151,10 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <BlogSwiperComponent />
-              <div className="flex justify-start items-center mx-auto">
+              <div className="flex justify-center items-center mx-auto">
                 <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105">
                   <Link href="/blog">
-                    Get Started
+                    Read More Articles
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>

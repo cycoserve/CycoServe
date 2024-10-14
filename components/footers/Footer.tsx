@@ -42,7 +42,7 @@ export default function Footer() {
         {/* Social Media Links */}
         <div className="mt-8 pt-8 border-t border-zinc-800">
           <div className="flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-sm mb-4 sm:mb-0">&copy; 2024 Your Company Name. All rights reserved.</p>
+            <p className="text-sm mb-4 sm:mb-0">&copy; 2024 CycoServe Labs, LLC. All rights reserved.</p>
             <div className="flex space-x-4">
               <Link href="https://www.facebook.com/CycoServe/" className="text-zinc-400 hover:text-orange-500 transition-colors">
                 <Facebook className="h-6 w-6" />

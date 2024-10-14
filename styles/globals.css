@@ -234,9 +234,9 @@ code::-webkit-scrollbar-thumb:hover, pre::-webkit-scrollbar-thumb:hover {
 
 /* Features background */
 .features-bg {
-  background-color: #720e0e;
+  background-color: #0f0202;
   opacity: 100;
-  background-image: linear-gradient(#f46f00 1.0px, transparent 1.0px), linear-gradient(to right, #f46f00 1.5px, #000000 0px);
+  background-image: linear-gradient(#150a00 1.5px, transparent 1.0px), linear-gradient(to right, #100701 1.5px, #000000 0px);
   background-size: 7rem 7rem;
   background-attachment: scroll;
 }

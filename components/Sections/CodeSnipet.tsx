@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { GitHub } from "@mui/icons-material"
 import { ArrowRight } from "lucide-react"
 import Link from 'next/link'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -56,9 +57,9 @@ export default function HomePage() {
               <li>Responsive design out of the box</li>
             </ul>
             <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105">
-              <Link href="https://docs.cycoserve.com">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Link href="https://github.com/cycoserve/CycoServe">
+                Fork It On GitHub
+                <GitHub className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>

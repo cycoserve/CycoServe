@@ -22,11 +22,11 @@ export default function TopBanner() {
       </div> */}
       <div className="container mx-auto flex items-center justify-between relative z-10">
         <p className="text-sm sm:text-base font-medium">
-          <span className="hidden sm:inline">🎉</span> Welcome to CycoServe: Revolutionizing Your Digital Experience
+          <span className="hidden sm:inline">🎉</span>Revolutionizing Your Digital Experience
         </p>
         <Button asChild variant="ghost" size="sm" className="text-white hover:text-orange-300 hover:bg-zinc-800/50">
-          <Link href="https://www.example.com/learn-more">
-            Learn More <ArrowRight className="ml-2 h-4 w-4" />
+          <Link href="https://docs.cycoserve.com">
+            Docs <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </div>
