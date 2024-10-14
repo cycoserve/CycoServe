@@ -61,7 +61,7 @@ export default function PrivacyPolicyComponent() {
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-zinc-900 mb-4">6. Changes to This Policy</h2>
           <p className="text-zinc-800 mb-4">
-            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
           </p>
         </section>
 
@@ -71,8 +71,8 @@ export default function PrivacyPolicyComponent() {
             If you have any questions about this Privacy Policy, please contact us at:
           </p>
           <address className="text-zinc-800 not-italic">
-            <p>Email: privacy@example.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
+            <p>Email: admin@ahzudirecttech.com</p>
+            <p>Phone: +1 (808) 291-4346</p>
             <p>Address: 123 Privacy Street, Securetown, ST 12345, Country</p>
           </address>
         </section>
