@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "Next JS Frontend",
+      "description": "Enhance your workflow with our powerful tools and intuitive interface."
+    },
+    {
+      "id": 2,
+      "title": "WordPress Backend",
+      "description": "Maximize efficiency with our seamless integration capabilities."
+    },
+    {
+      "id": 3,
+      "title": "Python CLI",
+      "description": "Leverage state-of-the-art technology to boost productivity."
+    },
+    {
+      "id": 4,
+      "title": "Custom API",
+      "description": "Stay ahead of the curve with our cutting-edge innovations."
+    }
+  ]
+  

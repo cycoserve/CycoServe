@@ -6,6 +6,8 @@ import SectionWrap from "@/components/elements/SectionWrap";
 import MetaTags from "@/components/headers/MetaData";
 
 
+
+
 interface Post {
   id: number;
   title: {

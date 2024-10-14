@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { useRouter } from "next/router";
 import Header from "../headers/Header";
 import SecondHeader from "../headers/SecondHeader";
-import Footer from "../footers/CycoFooter";
+import Footer from "../footers/Footer";
 
 
 interface BranchLayoutProps {

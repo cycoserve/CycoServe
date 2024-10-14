@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../headers/Header';
-import Footer from '../footers/CycoFooter';
+import Footer from '../footers/Footer';
 import LoadingSpinner from '@/components/elements/LoadingSpinner';
 import { CookieNotice } from '../cookie-notice';
 

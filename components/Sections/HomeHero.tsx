@@ -5,8 +5,24 @@ import { Button } from "@/components/ui/button"
 import { Star, Download, BookOpen, ChevronRight } from "lucide-react"
 import Link from 'next/link'
 
+interface Feature {
+  id: number
+  title: string
+  description: string
+}
+
+// Fetch feature data function
+async function fetchFeatures(): Promise<Feature[]> {
+  const response = await fetch('/features.json')
+  if (!response.ok) {
+    throw new Error('Failed to fetch features')
+  }
+  return response.json()
+}
+
 export default function Component() {
   const [scrollY, setScrollY] = useState(0)
+  const [features, setFeatures] = useState<Feature[]>([])
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -14,8 +30,15 @@ export default function Component() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  useEffect(() => {
+    // Load feature data from the JSON file
+    fetchFeatures()
+      .then((data) => setFeatures(data))
+      .catch((error) => console.error('Error fetching features:', error))
+  }, [])
+
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-zinc-900 via-black to-zinc-900">
+    <div className="relative min-h-screen py-12 overflow-hidden bg-gradient-to-br from-zinc-900 via-black to-zinc-900">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
         {[...Array(20)].map((_, i) => (
@@ -35,7 +58,7 @@ export default function Component() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8 flex flex-col lg:flex-row items-center">
+      <div className="relative z-20 container mx-auto px-4 py-32 sm:px-6 sm:py-24 lg:px-8 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 lg:pr-12">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
             Revolutionize Your Workflow
@@ -58,7 +81,7 @@ export default function Component() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href={'https://docs.cycoserve.com/'} >
+            <Link href={'https://docs.cycoserve.com/'}>
               <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105">
                 <BookOpen className="w-5 h-5 mr-2" />
                 Guides
@@ -74,18 +97,18 @@ export default function Component() {
         </div>
 
         {/* 3D-like illustration */}
-        <div className="lg:w-1/2 mt-12 lg:mt-0">
+        <div className="hidden md:block lg:w-1/2 mt-12 lg:mt-0">
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-purple-500/20 rounded-3xl transform rotate-3 scale-105" />
             <div className="relative bg-zinc-800 p-8 rounded-3xl shadow-2xl backdrop-blur-lg border border-zinc-700">
               <div className="grid grid-cols-2 gap-6">
-                {[...Array(4)].map((_, i) => (
-                  <div key={i} className="bg-zinc-900/50 p-6 rounded-xl hover:bg-zinc-900/70 transition-colors duration-300">
+                {features.map((feature) => (
+                  <div key={feature.id} className="bg-zinc-900/50 p-6 rounded-xl hover:bg-zinc-900/70 transition-colors duration-300">
                     <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center mb-4">
                       <ChevronRight className="w-6 h-6 text-orange-500" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Feature {i + 1}</h3>
-                    <p className="text-zinc-400 text-sm">Enhance your workflow with our powerful tools and intuitive interface.</p>
+                    <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-zinc-400 text-sm">{feature.description}</p>
                   </div>
                 ))}
               </div>
