@@ -19,31 +19,32 @@ export const footerLinks = [
     {
       title: "Marketplace",
       links: [
-        { name: "Billboard Ads", href: "/contact-us" },
-        { name: "Printing", href: "/contact-us" },
-        { name: "Marketing", href: "/contact-us" },
+        { name: "Billboard Ads", href: "https://marketplace.cycoserve.com/billboard-advertising" },
+        { name: "Printing", href: "https://marketplace.cycoserve.com/printing-services" },
+        { name: "Marketing", href: "https://marketplace.cycoserve.com/digital-marketing" },
       ],
     },
     {
       title: "Resources",
       links: [
-        { name: "Blog Articles", href: "/company/blog" },
-        { name: "Whitepapers", href: "#" },
-        { name: "Case Studies", href: "#" },
+        { name: "Blog Articles", href: "/blog" },
+        { name: "Whitepapers", href: "/resources/white-papers" },
+        { name: "Case Studies", href: "/resources/case-studies" },
+        { name: "Documentation", href: "https://docs.cycoserve.com" },
       ],
     },
     {
       title: "Company",
       links: [
         { name: "About Us", href: "/company/about" },
-        { name: "Why CycoServe?", href: "/company/why-choose-us" },
-        { name: "Contact Us", href: "/company/contact-us" },
+        { name: "Why CycoServe?", href: "/why-choose-us" },
+        { name: "Contact Us", href: "/contact-us" },
       ],
     },
     {
       title: "Developers",
       links: [
-        { name: "Get Started", href: "https://developers.cycoserve.com/" },
+        { name: "Build With Us", href: "https://developers.cycoserve.com/" },
         { name: "API References", href: "https://developers.cycoserve.com/api-reference" },
         { name: "Playground", href: "https://developers.cycoserve.com/playground" },
         { name: "Deployments", href: "https://developers.cycoserve.com/deployments" },

@@ -26,5 +26,10 @@ export const menuItems = [
       title: "Pricing",
       url: "/pricing",
     },
+    {
+      id: "6",
+      title: "Contact Us",
+      url: "/contact-us",
+    },
   ];
   
