@@ -1,6 +1,6 @@
 import SectionWrap from '@/components/elements/SectionWrap'
-import RootLayout from '@/components/Layouts/RootLayout'
-import HomeHero from '@/components/Sections/HomeHero'
+import RootLayout from '@/components/layouts/RootLayout'
+import HomeHero from '@/components/sections/heros/HomeHero'
 import React from 'react'
 
 function AIPage() {

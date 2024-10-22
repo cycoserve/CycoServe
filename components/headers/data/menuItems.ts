@@ -3,23 +3,28 @@
 export const menuItems = [
     {
       id: "1",
-      title: "About",
-      url: "/about",
+      title: "Company",
+      url: "/company",
     },
     {
       id: "2",
-      title: "Choose Us",
-      url: "/why-choose-us",
+      title: "Services",
+      url: "/services",
     },
     {
       id: "3",
-      title: "Blog",
-      url: "/blog",
+      title: "Resources",
+      url: "/resources",
     },
     {
       id: "4",
-      title: "Contact",
-      url: "/contact-us",
+      title: "Developers",
+      url: "https://developers.cycoserve.com/",
+    },
+    {
+      id: "5",
+      title: "Support",
+      url: "https://support.cycserve.com",
     },
   ];
   

@@ -5,7 +5,7 @@ import "react-modern-drawer/dist/index.css";
 import ButtonPrimary from "../ui/ButtonPrimary";
 import Image from "next/image";
 import ButtonExplore from "../ui/ButtonExplore";
-import SearchComponent from "../Sections/SearchComponent";
+import SearchComponent from "../sections/SearchComponent";
 import { menuItems } from './data/menuItems';
 
 

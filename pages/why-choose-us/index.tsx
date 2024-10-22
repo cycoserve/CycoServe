@@ -2,17 +2,17 @@ import React from "react";
 import Head from "next/head";
 import SectionWrap from "@/components/elements/SectionWrap";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
-import TitleSection from "@/components/Sections/TitleSection";
-import TwoColSection from "@/components/Sections/TwoColSection";
+import TitleSection from "@/components/sections/TitleSection";
+import TwoColSection from "@/components/sections/TwoColSection";
 import Spacer from "@/components/ui/Spacer";
 // import PageEndHero from "@/components/elements/PageEndHero";
-import RootLayout from "@/components/Layouts/RootLayout";
+import RootLayout from "@/components/layouts/RootLayout";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
 // import { motion } from "framer-motion";
-import Hero from "@/components/Sections/Hero";
+import Hero from "@/components/sections/heros/Hero";
 import MetaTags from "@/components/headers/MetaData";
-import AboutHero from "@/components/Sections/AboutHero";
-import WhyChooseUsHero from "@/components/Sections/ChooseUsHero";
+import AboutHero from "@/components/sections/heros/AboutHero";
+import WhyChooseUsHero from "@/components/sections/ChooseUsHero";
 // import Hero from "@/components/Sections/Hero";
 
 
@@ -25,8 +25,8 @@ function WhyChooseUs() {
       <MetaTags
         title="Why Choose Us? - AI-Powered Full-Service Digital Marketing Agency"
         description="Discover why our AI-powered digital marketing agency stands out. From personalized strategies to cutting-edge automation, we offer comprehensive services to grow your brand and drive results."
-        url="https://youragency.com/why-choose-us"
-        imageUrl="https://youragency.com/assets/images/why-choose-us-og-image.jpg"
+        url="https://cycoserve.com/why-choose-us"
+        imageUrl="https://cycoserve.com/assets/images/why-choose-us-og-image.jpg"
       />
 
       <RootLayout>
@@ -86,7 +86,7 @@ function WhyChooseUs() {
             subtitle=""
             title="Choose CycoServe: Where Professionalism Meets Generosity"
           />
-          <TwoColSection
+          {/* <TwoColSection
             title1={"Streamlined Web Development"}
             description1={
               "Rest assured with our professional approach using GitHub and CI/CD, safeguarding your code integrity and eliminating worries of loss."
@@ -97,9 +97,8 @@ function WhyChooseUs() {
               "Benefit from our cost-effective model - no hosting fees until your web app exceeds generous usage limits, ensuring scalability without lock in."
             }
             image2={"/assets/hosting.jpg"}
-          />
+          /> */}
           <Spacer />
-          <NewsletterSignupComponent />
           <Spacer />
         </SectionWrap>
       </RootLayout>

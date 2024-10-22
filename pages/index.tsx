@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-import RootLayout from "@/components/Layouts/RootLayout";
-import TwoColSection from "@/components/Sections/TwoColSection";
-import ThreeColSection from "@/components/Sections/ThreeColSection";
-import TitleSection from "@/components/Sections/TitleSection";
-import SwiperComponent from "@/components/Sections/BlogSwiperComponent";
+import RootLayout from "@/components/layouts/RootLayout";
+import TwoColSection from "@/components/sections/TwoColSection";
+import ThreeColSection from "@/components/sections/ThreeColSection";
+import TitleSection from "@/components/sections/TitleSection";
+import SwiperComponent from "@/components/sections/BlogSwiperComponent";
 import PageEndHero from "@/components/elements/PageEndHero";
 import SectionWrap from "@/components/elements/SectionWrap";
 import TopBanner from "@/components/elements/TopBanner";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
 import Spacer from "@/components/ui/Spacer";
 import MetaTags from "@/components/headers/MetaData";
-import HomeHero from "@/components/Sections/HomeHero";
-import CodeSnippet from "@/components/Sections/CodeSnipet";
-import BlogSwiperComponent from "@/components/Sections/BlogSwiperComponent";
+import HomeHero from "@/components/sections/heros/HomeHero";
+import CodeSnippet from "@/components/sections/CodeSnipet";
+import BlogSwiperComponent from "@/components/sections/BlogSwiperComponent";
 import { Button } from "@/components/ui/button"
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -67,8 +67,8 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <TitleSection
-                subtitle=""
-                title="Where Professionalism Meets Generosity"
+                subtitle="Tailored Solutions for a Competitive Edge"
+                title="Unlock Your Business Potential with Our Expert Services"
               />
             </motion.div>
             <motion.div
@@ -78,14 +78,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
 
-              <TwoColSection
-                title1="Streamlined Web Development"
-                description1="Rest assured with our professional approach using GitHub and CI/CD, safeguarding your code integrity and eliminating worries of loss."
-                image1="/assets/development.jpg"
-                title2="Generous Hosting Terms"
-                description2="Benefit from our cost-effective model - no hosting fees until your web app exceeds generous usage limits, ensuring scalability without lock-in."
-                image2="/assets/hosting.jpg"
-              />
+              <TwoColSection />
             </motion.div>
           </SectionWrap>
         </div>
@@ -110,17 +103,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <ThreeColSection
-                title1="Unlimited Reach, Unlimited Audience"
-                description1="Expand your audience without limits with our radio stream hosting services. Enjoy unlimited listeners and bandwidth for seamless broadcasting."
-                image1="/images/dj-trump-1.webp"
-                title2="Effortlessly Managed Playback"
-                description2="Keep the music playing around the clock with our Auto DJ feature. Effortlessly manage your playlists and scheduling for uninterrupted entertainment."
-                image2="/images/trump-coder.webp"
-                title3="Podcast Hosting Made Easy"
-                description3="Dive into the world of podcasting with ease. Our hosting services extend to podcast hosting, empowering you to share your voice with the world."
-                image3="/assets/podcasting.jpg"
-              />
+              <ThreeColSection />
             </motion.div>
           </SectionWrap>
         </div>
@@ -194,7 +177,6 @@ export default function Home() {
             viewport={{ once: true }}
             className="max-w-7xl mx-auto"
           >
-            <NewsletterSignupComponent />
           </motion.div>
         </SectionWrap>
 

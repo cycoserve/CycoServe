@@ -11,7 +11,7 @@ export default function TitleSection({ title, subtitle }: TitleSectionProps) {
       <div className="absolute inset-0" />
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
         <div className="max-w-3xl">
-          <h2 className="text-sm sm:text-base text-orange-400 font-semibold tracking-wide uppercase mb-2">
+          <h2 className="text-sm sm:text-base text-orange-500 font-semibold tracking-wide uppercase mb-2">
             {subtitle}
           </h2>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">

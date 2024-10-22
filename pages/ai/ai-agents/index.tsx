@@ -4,10 +4,10 @@ import SectionWrap from "@/components/elements/SectionWrap";
 import ParagraphTitle from "@/components/elements/ParagraphTitle";
 import Image from "next/image";
 import Spacer from "@/components/ui/Spacer";
-import OurTeam from "@/components/Sections/OurTeam";
-import MissionVision from "@/components/Sections/MissionVision";
+import OurTeam from "@/components/sections/OurTeam";
+import MissionVision from "@/components/sections/MissionVision";
 import PageEndHero from "@/components/elements/PageEndHero";
-import RootLayout from "@/components/Layouts/RootLayout";
+import RootLayout from "@/components/layouts/RootLayout";
 
 
 

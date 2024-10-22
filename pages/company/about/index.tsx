@@ -1,10 +1,10 @@
 import React from "react";
 import SectionWrap from "@/components/elements/SectionWrap";
 import Spacer from "@/components/ui/Spacer";
-import MissionVision from "@/components/Sections/MissionVision";
-import RootLayout from "@/components/Layouts/RootLayout";
+import MissionVision from "@/components/sections/MissionVision";
+import RootLayout from "@/components/layouts/RootLayout";
 import { NewsletterSignupComponent } from "@/components/newsletter-signup";
-import AboutHero from "@/components/Sections/AboutHero";
+import AboutHero from "@/components/sections/heros/AboutHero";
 import MetaTags from "@/components/headers/MetaData";
 
 

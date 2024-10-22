@@ -3,6 +3,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import Image from 'next/image';
 
+
 interface Post {
   id: number;
   title: {
@@ -64,22 +65,19 @@ const Blog: React.FC = () => {
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
 
-    // Scroll to the top of the blog grid
-    if (blogGridRef.current) {
-      blogGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-      // Add a slight delay to ensure the scrollIntoView completes before adjusting the scroll position
-      setTimeout(() => {
-        window.scrollBy(0, -236); // Scroll 40px up to add space
-      }, 400); // Delay should match the smooth scroll duration
-    }
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scrolling
+    });
+    
   };
 
   if (loading) {
     return (
       <div className="bg-black py-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 mb-12 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 8 }).map((_, index) => (
+          {Array.from({ length: 9 }).map((_, index) => (
             <div
               key={index}
               className="bg-gradient-to-br from-zinc-900 to-black rounded-md border border-zinc-800 p-2 animate-pulse"
@@ -102,12 +100,12 @@ const Blog: React.FC = () => {
     <div className="bg-black py-16">
       <div className="max-w-7xl mx-auto">
         {/* Blog Grid Ref */}
-        <div ref={blogGridRef} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div ref={blogGridRef} className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {currentPosts.map((post) => (
             <a
               href={`/blog/${post.slug}`}
               key={post.id}
-              className="bg-gradient-to-br mb-12 from-zinc-900 to-black rounded-md border border-zinc-800 hover:border-orange-500 p-2"
+              className="bg-gradient-to-br mb-8 from-zinc-900 to-black rounded-md border border-zinc-800 hover:border-orange-500 p-2"
             >
               {post._embedded && post._embedded['wp:featuredmedia'] && (
                 <Image
@@ -150,8 +148,8 @@ const Blog: React.FC = () => {
                 key={pageNumber}
                 onClick={() => paginate(pageNumber)}
                 className={`${currentPage === pageNumber
-                    ? 'z-10 bg-orange-500 text-white'
-                    : 'bg-zinc-800 text-gray-300 hover:bg-zinc-700'
+                  ? 'z-10 bg-orange-500 text-white'
+                  : 'bg-zinc-800 text-gray-300 hover:bg-zinc-700'
                   } relative inline-flex items-center px-4 py-2 border border-orange-500 text-sm font-medium transition-colors duration-300`}
               >
                 {pageNumber}

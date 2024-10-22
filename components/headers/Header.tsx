@@ -47,7 +47,7 @@ function Header() {
           </div>
           <div className="inline-flex">
             <div className="mr-4 mt-2 hidden lg:inline-block">
-              <ButtonAction title="Documentation" url="https://docs.cycoserve.com" />
+              <ButtonAction title="Marketplace" url="https://marketplace.cycoserve.com" />
             </div>
             <div className="mobile-menu lg:hidden mt-2">
               <MobileMenu />

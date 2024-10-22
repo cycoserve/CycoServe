@@ -6,7 +6,7 @@ import ButtonPrimary from "../ui/ButtonPrimary";
 import Image from "next/image";
 import ButtonExplore from "../ui/ButtonExplore";
 // import SearchComponent from "../Sections/SearchComponent";
-import { mobileMenuItems } from './data/mobileMenuItems';
+import { menuItems } from './data/menuItems';
 
 
 
@@ -78,7 +78,7 @@ const MobileMenu = () => {
             </div>
 
             <div className="list flex flex-col justify-stretch h-full items-start text-zinc-900 py-0 text-xl gap-0">
-              {mobileMenuItems.map((item) => (
+              {menuItems.map((item) => (
                 <React.Fragment key={item.id}>
                   <div className="w-full">
                     {/* Top Divider */}

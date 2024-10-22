@@ -1,4 +1,4 @@
-import BranchLayout from '@/components/Layouts/BranchLayout'
+import BranchLayout from '@/components/layouts/BranchLayout'
 import React from 'react'
 
 function LegalPage() {

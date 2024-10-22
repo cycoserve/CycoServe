@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@datastax/astra-db-ts": "^1.4.1",
@@ -26,6 +27,7 @@
     "@mui/x-data-grid": "^7.6.0",
     "@pinecone-database/pinecone": "^3.0.3",
     "@play-ai/web-embed": "^0.0.1",
+    "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-scroll-area": "^1.1.0",
@@ -45,7 +47,7 @@
     "firebase": "^10.12.2",
     "firebase-admin": "^12.1.1",
     "formik": "^2.4.6",
-    "framer-motion": "^11.1.7",
+    "framer-motion": "^11.11.9",
     "google-auth-library": "^9.14.1",
     "googleapis": "^144.0.0",
     "heroicons": "^2.1.4",
@@ -55,6 +57,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^3.10.0",
     "next": "^14.2.13",
+    "next-sitemap": "^4.2.3",
     "nodemailer": "^6.9.15",
     "openai": "^4.61.0",
     "openapi": "^1.0.1",

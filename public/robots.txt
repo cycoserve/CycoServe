@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://cycoserve.com
+
+# Sitemaps
+Sitemap: https://cycoserve.com/sitemap.xml

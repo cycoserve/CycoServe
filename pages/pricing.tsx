@@ -1,4 +1,4 @@
-import RootLayout from "../components/Layouts/RootLayout";
+import RootLayout from "../components/layouts/RootLayout";
 import Head from "next/head";
 import PricingTable from "@/components/elements/PricingTable";
 import Spacer from "@/components/ui/Spacer";

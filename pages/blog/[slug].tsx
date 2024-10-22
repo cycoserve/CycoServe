@@ -1,14 +1,17 @@
 import React from "react";
 import { GetServerSideProps } from "next";
 import axios from "axios";
-import RootLayout from "@/components/Layouts/RootLayout";
+import RootLayout from "@/components/layouts/RootLayout";
 import SectionWrap from "@/components/elements/SectionWrap";
 import MetaTags from "@/components/headers/MetaData";
+import BlogSwiperComponent from "@/components/sections/BlogSwiperComponent";
+import Image from "next/image";
 
 
 
 
 interface Post {
+  [x: string]: any;
   id: number;
   title: {
     rendered: string;
@@ -29,7 +32,7 @@ interface Author {
 interface BlogPostProps {
   post: Post;
   author: Author;
-  featuredImageUrl: string; // Featured image URL
+  featuredImageUrl: string;
 }
 
 const BlogPost: React.FC<BlogPostProps> = ({ post, author, featuredImageUrl }) => {
@@ -46,22 +49,30 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, author, featuredImageUrl }) =
       <MetaTags
         title={`CycoServe - ${post.title.rendered}`}
         description={description}
-        url={`https://cycoserve.com/blog/${post.slug}`}
-        imageUrl={featuredImageUrl || "https://cycoserve.com/assets/images/default-blog-image.jpg"} // Fallback image if no featured image
+        url={`https://content-api.cycoserve.com/blog/${post.slug}`}
+        imageUrl={featuredImageUrl || "https://content-api.cycoserve.com/assets/images/default-blog-image.jpg"} // Fallback image if no featured image
       />
 
       <RootLayout>
         <SectionWrap>
           <div className="bg-gradient-t from-zinc-900 to-black min-h-screen py-24">
             <div className="max-w-5xl mx-auto py-4 md:py-8 lg:py-16">
-              <h1 className="text-3xl lg:text-6xl font-bold text-white mb-4">
-                {post.title.rendered}
-              </h1>
+              <h1
+                className="text-3xl lg:text-6xl font-bold text-white mb-4"
+                dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+              />
               <p className="text-sm text-gray-400 mb-6">
-                {new Date(post.date).toLocaleDateString()} 
+                {new Date(post.date).toLocaleDateString()}
                 <span className="inline-block mx-2">|</span>
                 {author.name}
               </p>
+              <Image
+                  className="w-full rounded-lg mb-6 aspect-video"
+                  src={featuredImageUrl}
+                  alt={post.title.rendered}
+                  width={500}
+                  height={300}
+                />
               <article className="bg-black">
                 <div
                   className="prose prose-invert max-w-none text-white text-[1.0rem]"
@@ -69,6 +80,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, author, featuredImageUrl }) =
                 />
               </article>
             </div>
+            <BlogSwiperComponent />
           </div>
         </SectionWrap>
       </RootLayout>

@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['firebasestorage.googleapis.com', 'i.ytimg.com', 'image.com', 'i9.ytimg.com', 'content-api.cycoserve.com',],
+    domains: ['firebasestorage.googleapis.com', 'i.ytimg.com', 'image.com', 'i9.ytimg.com', 'content-api.cycoserve.com', 'splitfiregraphics.com', 'agencypartner.com',],
   },
 }
 

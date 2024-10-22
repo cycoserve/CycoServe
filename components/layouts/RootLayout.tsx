@@ -21,7 +21,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     if (isHomePage) {
       const timer = setTimeout(() => {
         setLoading(false);
-      }, 2000); // 2 seconds loading time
+      }, 100); // 2 seconds loading time
 
       return () => clearTimeout(timer);
     } else {

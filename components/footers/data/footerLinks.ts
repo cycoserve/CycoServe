@@ -17,6 +17,14 @@ export const footerLinks = [
       ],
     },
     {
+      title: "Marketplace",
+      links: [
+        { name: "Billboard Ads", href: "/contact-us" },
+        { name: "Printing", href: "/contact-us" },
+        { name: "Marketing", href: "/contact-us" },
+      ],
+    },
+    {
       title: "Resources",
       links: [
         { name: "Blog Articles", href: "/blog" },
@@ -25,11 +33,20 @@ export const footerLinks = [
       ],
     },
     {
-      title: "The Company",
+      title: "Company",
       links: [
         { name: "About Us", href: "/about" },
         { name: "Statements", href: "/about" },
         { name: "Contact Us", href: "/contact-us" },
+      ],
+    },
+    {
+      title: "Developers",
+      links: [
+        { name: "Get Started", href: "https://developers.cycoserve.com/" },
+        { name: "API References", href: "https://developers.cycoserve.com/api-reference" },
+        { name: "Playground", href: "https://developers.cycoserve.com/playground" },
+        { name: "Deployments", href: "https://developers.cycoserve.com/deployments" },
       ],
     },
     {

@@ -1,13 +1,12 @@
 'use client'
-
 import { useState, FormEvent } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import RootLayout from '@/components/Layouts/RootLayout'
-import Spacer from '@/components/ui/Spacer'
+import RootLayout from '@/components/layouts/RootLayout'
+
 
 interface ContactFormData {
     name: string
@@ -49,7 +48,7 @@ export default function Component() {
     return (
         <>
             <RootLayout>
-                <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 via-black to-zinc-900 pb-24 pt-32 px-4">
+                <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 via-black to-zinc-900 pb-24 pt-28 px-4">
                     <div className="w-full max-w-md pt-4">
                         <Card className="backdrop-blur-lg bg-black/30 border-zinc-800 shadow-xl">
                             <CardHeader>

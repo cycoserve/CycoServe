@@ -6,7 +6,7 @@ import StayUpdated from "./StayUpdated";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-zinc-300">
+    <footer className="bg-zinc-950 text-zinc-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {/* About Section */}
@@ -42,7 +42,7 @@ export default function Footer() {
         {/* Social Media Links */}
         <div className="mt-8 pt-8 border-t border-zinc-800">
           <div className="flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-sm mb-4 sm:mb-0">&copy; 2024 CycoServe Labs, LLC. All rights reserved.</p>
+            <p className="text-sm mb-4 sm:mb-0">&copy; 2024 CycoServe Labs</p>
             <div className="flex space-x-4">
               <Link href="https://www.facebook.com/CycoServe/" className="text-zinc-400 hover:text-orange-500 transition-colors">
                 <Facebook className="h-6 w-6" />

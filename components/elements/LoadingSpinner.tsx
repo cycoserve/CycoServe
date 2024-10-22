@@ -1,6 +1,5 @@
 // components/LoadingSpinner.tsx
 import React from "react";
-import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 

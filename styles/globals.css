@@ -121,6 +121,14 @@ h4 {
   margin-bottom: 20px;
 }
 
+.prose p {
+  margin-bottom: 1.5rem; /* Adjust this value to control the spacing */
+}
+
+strong {
+  font-weight: bold; /* This ensures that <strong> text will be bold */
+}
+
 /* Style for blockquote elements */
 blockquote {
   border-left: 4px solid #3b3b3b; /* Add a left border with a custom color */
