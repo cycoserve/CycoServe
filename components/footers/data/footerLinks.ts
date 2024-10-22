@@ -3,10 +3,10 @@ export const footerLinks = [
     {
       title: "Technologies",
       links: [
-        { name: "Next js by Vercel", href: "https://nextjs.org/" },
-        { name: "Firebase by GCP", href: "https://firebase.google.com" },
-        { name: "WordPress.org", href: "https://wordpress.org/" },
-      ],
+        { name: "Google Cloud", href: "https://cloud.google.com/" },
+        { name: "Firebase", href: "https://firebase.google.com/" },
+        { name: "WordPress", href: "https://www.wordpress.org/" },
+      ], 
     },
     {
       title: "Services",
@@ -21,14 +21,13 @@ export const footerLinks = [
       links: [
         { name: "Billboard Ads", href: "https://marketplace.cycoserve.com/billboard-advertising" },
         { name: "Printing", href: "https://marketplace.cycoserve.com/printing-services" },
-        { name: "Marketing", href: "https://marketplace.cycoserve.com/digital-marketing" },
+        { name: "Digital Marketing", href: "https://marketplace.cycoserve.com/digital-marketing" },
       ],
     },
     {
       title: "Resources",
       links: [
         { name: "Blog Articles", href: "/blog" },
-        { name: "Whitepapers", href: "/resources/white-papers" },
         { name: "Case Studies", href: "/resources/case-studies" },
         { name: "Documentation", href: "https://docs.cycoserve.com" },
       ],
@@ -37,6 +36,7 @@ export const footerLinks = [
       title: "Company",
       links: [
         { name: "About Us", href: "/company/about" },
+        { name: "Statements", href: "/company/statements" },
         { name: "Why CycoServe?", href: "/why-choose-us" },
         { name: "Contact Us", href: "/contact-us" },
       ],

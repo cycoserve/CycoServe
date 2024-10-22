@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import RootLayout from '@/components/layouts/RootLayout'
+import MetaTags from '@/components/headers/MetaData'
 
 
 interface ContactFormData {
@@ -48,6 +49,12 @@ export default function Component() {
     return (
         <>
             <RootLayout>
+                <MetaTags
+                    title="Contact Us - AI/ML Powered Digital Marketing Agency"
+                    description="CycoServe Labs is leading the way in open-source innovation, offering powerful tools for web development, AI, and data-driven technologies. Join us in making technology more accessible and open to innovators worldwide."
+                    url="https://cycoserve.com/company/contact-us"
+                    imageUrl="https://cycoserve.com/assets/images/og-image.jpg"
+                />
                 <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 via-black to-zinc-900 pb-24 pt-28 px-4">
                     <div className="w-full max-w-md pt-4">
                         <Card className="backdrop-blur-lg bg-black/30 border-zinc-800 shadow-xl">

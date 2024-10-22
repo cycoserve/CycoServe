@@ -18,16 +18,11 @@ export const menuItems = [
     },
     {
       id: "4",
-      title: "Developers",
-      url: "https://developers.cycoserve.com/",
-    },
-    {
-      id: "5",
       title: "Pricing",
       url: "/pricing",
     },
     {
-      id: "6",
+      id: "5",
       title: "Contact Us",
       url: "/contact-us",
     },

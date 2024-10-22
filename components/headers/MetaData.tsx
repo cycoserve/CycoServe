@@ -42,7 +42,7 @@ const MetaTags: React.FC<MetaTagsProps> = ({
       <meta name="twitter:image" content={imageUrl} />
 
       {/* Mobile theme color */}
-      <meta name="theme-color" content="#123456" /> {/* Replace with CycoServe's actual brand color */}
+      <meta name="theme-color" content="#000000" /> {/* Replace with CycoServe's actual brand color */}
 
       <title>{title}</title>
       <meta name="description" content={description} />
