@@ -1,13 +1,15 @@
-import BranchLayout from '@/components/layouts/BranchLayout'
+import RootLayout from '@/components/layouts/RootLayout'
 import CookiePolicyComponent from '@/components/legal/CookiePolicyComponent'
 import React from 'react'
+
+
 
 function CookiePolicy() {
     return (
         <>
-            <BranchLayout>
+            <RootLayout>
                 <CookiePolicyComponent />
-            </BranchLayout>
+            </RootLayout>
         </>
 
     )

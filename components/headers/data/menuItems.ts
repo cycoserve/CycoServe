@@ -23,8 +23,8 @@ export const menuItems = [
     },
     {
       id: "5",
-      title: "Support",
-      url: "https://support.cycserve.com",
+      title: "Pricing",
+      url: "/pricing",
     },
   ];
   

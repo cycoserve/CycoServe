@@ -9,11 +9,11 @@ export const footerLinks = [
       ],
     },
     {
-      title: "CycoServices",
+      title: "Services",
       links: [
-        { name: "App Development", href: "/contact-us" },
-        { name: "Deployments", href: "/contact-us" },
-        { name: "Consultations", href: "/contact-us" },
+        { name: "App Development", href: "/company/contact-us" },
+        { name: "Deployments", href: "/company/contact-us" },
+        { name: "Consultations", href: "/company/contact-us" },
       ],
     },
     {
@@ -27,17 +27,17 @@ export const footerLinks = [
     {
       title: "Resources",
       links: [
-        { name: "Blog Articles", href: "/blog" },
-        { name: "Whitepapers", href: "https://docs.cycoserve.com" },
+        { name: "Blog Articles", href: "/company/blog" },
+        { name: "Whitepapers", href: "#" },
         { name: "Case Studies", href: "#" },
       ],
     },
     {
       title: "Company",
       links: [
-        { name: "About Us", href: "/about" },
-        { name: "Statements", href: "/about" },
-        { name: "Contact Us", href: "/contact-us" },
+        { name: "About Us", href: "/company/about" },
+        { name: "Why CycoServe?", href: "/company/why-choose-us" },
+        { name: "Contact Us", href: "/company/contact-us" },
       ],
     },
     {
@@ -52,8 +52,8 @@ export const footerLinks = [
     {
       title: "Support",
       links: [
-        { name: "Help Center", href: "https://help.cycoserve.com" },
-        { name: "FAQs & QAs", href: "https://faqs.cycoserve.com" },
+        { name: "Help Center", href: "https://docs.cycoserve.com" },
+        { name: "FAQs & QAs", href: "https://docs.cycoserve.com" },
         { name: "Community", href: "https://discord.com/channels/1289281306152144958/1295237948983345193" },
       ],
     },

@@ -68,10 +68,10 @@ const MobileMenu = () => {
               <Image src={"/logo-light.svg"} alt={""} width={150} height={100} />
             </div>
             {/* Action Buttons */}
-            <div className="pt-2 pb-4 bg-black px-2 flex flex-row gap-2 justify-between items-center">
+            {/* <div className="pt-2 pb-4 bg-black px-2 flex flex-row gap-2 justify-between items-center">
               <ButtonPrimary title={"Download"} url={"https://github.com/cycoserve/CycoServe"} />
               <ButtonExplore title={"Guides"} url={"https://docs.cycoserve.com"} />
-            </div>
+            </div> */}
             {/* Search */}
             <div className="pt-2 pb-4 bg-black px-2 flex flex-row gap-2 justify-between items-center">
               {/* <SearchComponent /> */}

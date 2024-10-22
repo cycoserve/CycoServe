@@ -1,17 +1,15 @@
 import RootLayout from '@/components/layouts/RootLayout'
-import PrivacyPolicyComponent from '@/components/legal/PrivacyPolicyComponent'
+import ServicesHero from '@/components/page/services/ServicesHero'
 import React from 'react'
 
-
-function PrivacyPolicy() {
+function ServicesPage() {
     return (
         <>
             <RootLayout>
-                <PrivacyPolicyComponent />
+                <ServicesHero />
             </RootLayout>
         </>
-
     )
 }
 
-export default PrivacyPolicy
+export default ServicesPage

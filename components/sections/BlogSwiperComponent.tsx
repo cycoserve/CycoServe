@@ -54,7 +54,7 @@ const BlogSwiperComponent: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="bg-black py-16">
+      <div className="bg-transparent py-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 mb-12 sm:grid-cols-2 lg:grid-cols-3">
           {Array.from({ length: 8 }).map((_, index) => (
             <div
@@ -76,7 +76,7 @@ const BlogSwiperComponent: React.FC = () => {
   }
 
   return (
-    <div className="bg-black">
+    <div className="bg-transparent">
       <section className="container py-6 mx-auto lg:px-0 bg-transparent rounded-md my-4">
         <Swiper
           spaceBetween={10}

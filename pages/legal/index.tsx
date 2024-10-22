@@ -1,12 +1,14 @@
-import BranchLayout from '@/components/layouts/BranchLayout'
+import RootLayout from '@/components/layouts/RootLayout'
 import React from 'react'
+
+
 
 function LegalPage() {
     return (
         <>
-            <BranchLayout>
+            <RootLayout>
                 <div>LegalPage</div>
-            </BranchLayout>
+            </RootLayout>
         </>
     )
 }

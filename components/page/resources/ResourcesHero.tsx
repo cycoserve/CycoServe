@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import CompanyGridComponent from '@/components/page/company/CompanyGrid'
+import ResourcesGridComponent from './ResourcesGridComponent'
 
 
 
-export default function CompanyHero() {
+export default function ResourcesHero() {
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
@@ -37,14 +38,14 @@ export default function CompanyHero() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <div className="text-center pt-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-            Discover <span className="bg-clip-text text-transparent bg-orange-500">CycoServe Labs</span>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+            Explore <span className="bg-clip-text text-transparent bg-orange-500">CycoServe Resources</span>
           </h1>
           <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-            Your trusted partner in innovation. Explore our mission, vision, and services that are shaping the future of technology and business transformation.
+            Empowering you with insights and knowledge. Dive into our extensive collection of white papers, blog articles, documentation, and case studies.
           </p>
         </div>
-        <CompanyGridComponent />
+        <ResourcesGridComponent />
       </div>
 
       {/* Floating elements */}

@@ -1,13 +1,17 @@
-import BranchLayout from '@/components/layouts/BranchLayout'
+import RootLayout from '@/components/layouts/RootLayout'
 import TOSComponent from '@/components/legal/TOSComponent'
 import React from 'react'
+
+
 
 function TermsOfService() {
     return (
         <>
-            <BranchLayout>
+            <RootLayout>
                 <TOSComponent />
-            </BranchLayout>
+            </RootLayout>
+
+
         </>
 
     )

@@ -1,11 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Users, Zap, Target } from "lucide-react"
-import Link from 'next/link'
+import ServicesGridComponent from './ServicesGridComponent'
 
-export default function WhyChooseUsHero() {
+
+
+
+
+export default function ServicesHero() {
     const [scrollY, setScrollY] = useState(0)
 
     useEffect(() => {
@@ -37,37 +39,14 @@ export default function WhyChooseUsHero() {
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
                 <div className="text-center pt-12">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-                        Why Choose <span className="bg-clip-text text-transparent bg-orange-500 ">CycoServe?</span>
+                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+                        Explore <span className="bg-clip-text text-transparent bg-orange-500">CycoServe Services</span>
                     </h1>
                     <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-                        Revolutionizing digital experiences with cutting-edge solutions. We&apos;re on a mission to transform the way you work and interact online.
+                        Empowering you with insights and knowledge. Dive into our extensive collection of white papers, blog articles, documentation, and case studies.
                     </p>
                 </div>
-
-                <div className="mt-12 grid gap-8 md:grid-cols-3">
-                    {[
-                        { icon: Users, title: "Expert Team", description: "Our diverse team of experts brings years of experience and innovation." },
-                        { icon: Zap, title: "Lightning Fast", description: "Optimized performance ensures your work is done at the speed of thought." },
-                        { icon: Target, title: "Precision Focus", description: "Tailored solutions that hit the mark for your specific needs." },
-                    ].map((feature, index) => (
-                        <div key={index} className="bg-zinc-800/50 p-6 rounded-xl backdrop-blur-sm border border-zinc-700/50 hover:bg-zinc-800/70 transition-colors duration-300">
-                            <feature.icon className="w-12 h-12 text-orange-500 mb-4" />
-                            <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                            <p className="text-zinc-300">{feature.description}</p>
-                        </div>
-                    ))}
-                </div>
-
-                <div className="mt-12 text-center">
-                    <Link href={'/about'}>
-                        <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105">
-                            Learn More About Us
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                    </Link>
-
-                </div>
+                <ServicesGridComponent />
             </div>
 
             {/* Floating elements */}

@@ -12,7 +12,7 @@ import { NewsletterSignupComponent } from "@/components/newsletter-signup";
 import Hero from "@/components/sections/heros/Hero";
 import MetaTags from "@/components/headers/MetaData";
 import AboutHero from "@/components/sections/heros/AboutHero";
-import WhyChooseUsHero from "@/components/sections/ChooseUsHero";
+import WhyChooseUsHero from "@/components/sections/heros/WhyChooseUsHero";
 // import Hero from "@/components/Sections/Hero";
 
 
@@ -80,27 +80,6 @@ function WhyChooseUs() {
             </div>
           </SectionWrap>
         </div>
-        <Spacer />
-        <SectionWrap>
-          <TitleSection
-            subtitle=""
-            title="Choose CycoServe: Where Professionalism Meets Generosity"
-          />
-          {/* <TwoColSection
-            title1={"Streamlined Web Development"}
-            description1={
-              "Rest assured with our professional approach using GitHub and CI/CD, safeguarding your code integrity and eliminating worries of loss."
-            }
-            image1={"/assets/development.jpg"}
-            title2={"Generous Hosting Terms"}
-            description2={
-              "Benefit from our cost-effective model - no hosting fees until your web app exceeds generous usage limits, ensuring scalability without lock in."
-            }
-            image2={"/assets/hosting.jpg"}
-          /> */}
-          <Spacer />
-          <Spacer />
-        </SectionWrap>
       </RootLayout>
     </>
   );
