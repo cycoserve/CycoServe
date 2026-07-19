@@ -56,7 +56,7 @@
     "lucide-react": "^0.441.0",
     "mysql": "^2.18.1",
     "mysql2": "^3.10.0",
-    "next": "^14.2.13",
+    "next": "^16.2.10",
     "next-sitemap": "^4.2.3",
     "nodemailer": "^6.9.15",
     "openai": "^4.61.0",
